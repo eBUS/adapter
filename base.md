@@ -3,14 +3,15 @@
 Die Basisplatine dient als Grundlage und stellt den eigentlichen Konverter dar.
 Alleine mit ihr ist die Kommunikation via UART an einen Raspberry oder mittels Wlan direkt an den eBus Dämon möglich.
 
+
 ## Schaltplan
 
-Hier ist sich der Schaltplan der Basisplatine:
+Hier ist der Schaltplan der Basisplatine:
 
 [<img src="base-circuit.png" width="400" alt="Circuitry" title="Schaltplan">](base-circuit.png)
 
 
-## Allgemeiner Aufbau der Basisplatine
+## Allgemeiner Aufbau
 
 Die Basisplatine beinhaltet den Komparator zur Detektierung der RxD Signale, die Optokoppler zur galvanischen Trennung
 und den Sendeteil an den eBus.
@@ -25,7 +26,7 @@ Die Stromversorgung des Uart oder des Wemos erfolgt über ein handelsübliches U
 Leistung (1A-2A).
 
 
-## Bestückung der Basisplatine
+## Bestückung
 
 [<img src="base-assemble1.png" width="200" alt="Assembly" title="Bestückung">](base-assemble1.png)
 
@@ -51,7 +52,7 @@ Es befindet sich links unten jeweils ein Punkt, das ist Pin 1 und ist so zu plat
 Aussparung ist. Gleiches gilt für den Komparator.
 
 
-## UARTs auf der Basisplatine
+## UARTs
 
 [<img src="uarts.png" width="200" alt="UARTs" title="UARTs">](uarts.png)
 
@@ -63,7 +64,9 @@ Bei den FDTI Uarts ist darauf zu achten, dass hier eine gerade Stiftleiste einge
 in der Abbildung nicht aufsteckbar wäre.
 
 
-## Wemos D1 auf der Basisplatine
+## Wemos D1
+
+Über eine einfache Verdrahtung kann der Wemos D1 auch direkt mit der Basisplatine betrieben werden, im Gegensatz [zum Einsatz mit Erweiterungsplatine](extension.md#Bestückung).
 
 [<img src="wemos-wiring.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 Verdrahtung">](wemos-wiring.jpg)  
 **Wemos D1 Verdrahtung**
