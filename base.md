@@ -3,6 +3,12 @@
 Die Basisplatine dient als Grundlage und stellt den eigentlichen Konverter dar.
 Alleine mit ihr ist die Kommunikation via UART an einen Raspberry oder mittels Wlan direkt an den eBus Dämon möglich.
 
+## Schaltplan
+
+Hier ist sich der Schaltplan der Basisplatine:
+
+[<img src="base-circuit.png" width="400" alt="Circuitry" title="Schaltplan">](base-circuit.png)
+
 
 ## Allgemeiner Aufbau der Basisplatine
 
