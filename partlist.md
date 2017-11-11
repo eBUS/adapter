@@ -4,6 +4,9 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 
 | Anzahl | Bezeichnung                          | Wert/Typ | Basis | Erweiterung |
 |-------:|--------------------------------------|---------:|:-----:|:-----------:|
+|      1 | Basisplatine                         |          |     1 |           - |
+|      1 | Erweiterungsplatine                  |          |     - |           1 |
+|      1 | R1 Widerstand                        |      820 |     1 |           - |
 |      1 | R1 Widerstand                        |      820 |     1 |           - |
 |      1 | R2 Widerstand                        |      220 |     1 |           - |
 |      1 | R3 Widerstand                        |     100k |     1 |           - |
