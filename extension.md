@@ -31,6 +31,14 @@ Der Wemos mit der eBus Software kann auch parallel dazu auf der Basisplatine ang
 Auf der Rückseite der Erweiterungsplatine befinden sich einige Jumper, die je nach gewünschten Sensoren bzw. eingesetzter
 Wemos Firmware unterschiedliche Belegungen erlauben.
 
+| Sensor | SJ1 | SJ2 | SJ3 | SJ4 | SJ5 | SJ6 | SJ7 | SJ8 |
+|--------|-----|-----|-----|-----|-----|-----|-----|-----|
+|Wemos   |     |     |     |     |     | 2-3 | 2-3 | 2-3 |
+|ESPEasy |     |     |     |     |     |     |     |     |
+|BME280  | 1-2 | 1-2 |     |     |     |     |     |     |
+|Buzzer  |     |     |     |     |     |     |     |     |
+|OLED    | 1-2 | 1-2 |     |     |     |     |     |     |
+|Nextion |     |     | 1-2 | 1-2 |     |     |     |     |
 
 * `1-2` bedeutet den linken Lötpunkt mit dem mittleren verbinden.
 * `2-3` bedeutet den mittleren Lötpunkt mit dem rechten verbinden.
