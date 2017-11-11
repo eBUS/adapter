@@ -12,14 +12,13 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 |      1 | R4 Widerstand                        |      39k |     1 |           - |
 |      1 | R5 Widerstand                        |      470 |     1 |           - |
 |      2 | R6+R13 Widerstand                    |       1k |     2 |           - |
-|      1 | R7 Widerstand                        |      18k |     1 |           - |
+|      2 | R7 Widerstand (+R2 auf Erweiterung)  |      18k |     1 |           1 |
 |      1 | R8 Widerstand                        |      15k |     1 |           - |
 |      1 | R9 Widerstand                        |     220k |     1 |           - |
 |      1 | R10 Widerstand                       |      100 |     1 |           - |
 |      1 | R11 Widerstand                       |      2k2 |     1 |           - |
 |      1 | R12 Widerstand                       |      10k |     1 |           - |
-|   n.B. | R1 Widerstand (auf Erweiterung!)     |      1k2 |     - |           1 |
-|   n.B. | R2 Widerstand (auf Erweiterung!)     |      18k |     - |           1 |
+|      1 | R1 Widerstand (nur auf Erweiterung)  |      1k2 |     - |           1 |
 |   n.B. | Drahtwiderstand 5 W zum Testen       |      330 |     X |           - |
 |      5 | D1-5 Diode                           |   1N4007 |     5 |           - |
 |      1 | D6 Zenerdiode 1,3W                   |     9,1V |     1 |           - |
