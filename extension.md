@@ -4,7 +4,14 @@ Die Erweiterungsplatine kann in Verbindung mit der Basisplatine genutzt werden, 
 oder um in Verbindung mit einem Wemos D1 den Zugang zum eBUS über WLAN zu ermöglichen.
 
 
-## Bestückung der Erweiterungsplatine
+## Schaltplan
+
+Hier ist der Schaltplan der Erweiterungsplatine:
+
+[<img src="exten-circuit.png" width="800" alt="Circuitry" title="Schaltplan">](exten-circuit.png)
+
+
+## Bestückung
 
 [<img src="exten-assemble1.png" width="200" alt="Assembly" title="Bestückung">](exten-assemble1.png)
 
