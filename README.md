@@ -36,6 +36,9 @@ der wegen zu hoher Latenzzeiten nicht gleichzeitig als eBUS Worker genutzt werde
 
 ## Bauteile
 
+[Hier finden sich die Bauteilelisten für die Basis- und Erweiterungsplatine.](partlist.md)
+
+
 ## Fehlersuche
 
 ## Weiterführende Links
