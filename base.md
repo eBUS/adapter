@@ -8,7 +8,7 @@ Alleine mit ihr ist die Kommunikation via UART an einen Raspberry oder mittels W
 
 Hier ist der Schaltplan der Basisplatine:
 
-[<img src="base-circuit.png" width="400" alt="Circuitry" title="Schaltplan">](base-circuit.png)
+[<img src="base-circuit.png" width="800" alt="Circuitry" title="Schaltplan">](base-circuit.png)
 
 
 ## Allgemeiner Aufbau
