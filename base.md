@@ -21,10 +21,9 @@ Leistung (1A-2A).
 
 ## Bestückung der Basisplatine
 
-![Assembly](base-assemble1.png "Bestückung")  
-**Bestückung**
+[<img src="base-assemble1.png" width="200" alt="Assembly" title="Bestückung">](base-assemble1.png)
 
-Die Platinen sind nicht bleifrei gefertigt (HASL), daher kann mit normalem bleihaltigem Lötzinn gelötet werden.
+Die Platine ist nicht bleifrei gefertigt (HASL), daher kann mit normalem bleihaltigem Lötzinn gelötet werden.
 Der Gesetzgeber lässt dies im privaten und teilweise im kommerziellen Bereich noch zu.
 
 Die Bestückung der Basisplatine erfolgt nach den üblichen Regeln, d.h. die niederen Bauteile zuerst, dann schichtweise
@@ -36,7 +35,7 @@ Beim Einlöten der Widerstände sollte man unbedingt vor dem Einlöten den Wider
 um Verwechslungen zu vermeiden.
 
 
-![Final](base-final.jpg "Fertig aufgebaute Basisplatine")  
+[<img src="base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](base-final.jpg)  
 **Fertig aufgebaute Basisplatine**
 
 Die Buchsenleisten für nicht vorhandene Uarts kann man sich in der Regel sparen und müssen nicht bestückt werden. 
@@ -48,8 +47,7 @@ Aussparung ist. Gleiches gilt für den Komparator.
 
 ## UARTs auf der Basisplatine
 
-![UARTs](uarts.png "UARTs")  
-**UARTs**
+[<img src="uarts.png" width="200" alt="UARTs" title="UARTs">](uarts.png)
 
 Diese 3 UARTs wurden mit der Basisplatine getestet.
 Der ELV UART ist der einzige der keine eigenen Leds auf der Platine hat, die beiden anderen sind jedoch damit bestückt
@@ -61,14 +59,14 @@ in der Abbildung nicht aufsteckbar wäre.
 
 ## Wemos D1 auf der Basisplatine
 
-![Wemos D1 wiring](wemos-wiring.jpg "Wemos D1 Verdrahtung")  
+[<img src="wemos-wiring.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 Verdrahtung">](wemos-wiring.jpg)  
 **Wemos D1 Verdrahtung**
 
 Soll auf der Basisplatine ein Wemos zum Einsatz kommen, muss dieser erst vorbereitet werden und es müssen an Rx, Tx, Vcc
 und Gnd Kabel aufgelötet werden.
 Auf eine Stiftleiste kann in diesem Fall verzichtet werden.
 
-![Wemos D1 wired](wemos-wired.png "Wemos D1 an Basisplatine")  
+[<img src="wemos-wired.png" width="200" alt="Wemos D1 wired" title="Wemos D1 an Basisplatine">](wemos-wired.png)  
 **Wemos D1 an Basisplatine**
 
 Der fertig aufgelötete Wemos wird dann direkt an JP8 angesteckt.
