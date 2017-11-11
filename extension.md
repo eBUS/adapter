@@ -28,6 +28,7 @@ Erst wenn der Taster hält, kann Lötzinn zugeführt werden und wie üblich verl
 
 Die Erweiterungsplatine kann unterschiedliche Sensoren wie Luftdruck, Feuchte und Temperatur aufnehmen.
 Ebenso ist ein Buzzer für eine Alarmausgabe vorgesehen.
+
 Auf der Erweiterungsplatine kann jeweils nur ein Wemos installiert werden.
 Entweder ESPEasy aufstecken und die weiteren Features mit Sensoren nutzen, oder darauf verzichten und den ebusd-esp Wemos aufsetzen.
 Der Wemos mit der eBus Software kann auch parallel dazu auf der Basisplatine angesteckt werden, dann sind beide Varianten gleichzeitig nutzbar.
