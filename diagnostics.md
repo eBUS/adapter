@@ -45,7 +45,7 @@ Im Idealfall sollte das obere Signal dem unteren gleichen, je steiler die Flanke
 Ebenso wird hier ein Signal dargestellt (das stammt übrigens von einem Raspberry am RxD gemessen), welches ebenfalls zu keinem Erfolg führen würde.
 Die maximal erlaubten 50 ysec wurden wegen der Kurvenform bei weitem überschritten.
 
-[<img src="base-measure-oszi-bad2.png" width="200" alt="bad TX 2" title="schlechtes RX">](base-measure-oszi-bad2.png)
+[<img src="base-measure-oszi-bad2.jpg" width="200" alt="bad TX 2" title="schlechtes RX">](base-measure-oszi-bad2.jpg)
 
 Hier ist ein Signal, das viel zu wenig auf Ground gezogen wird (GND ist der unterste erste Rasterblock).
 Hier liegt ein Fehler in der GND Verbindung an der Platine, GND war mit GND2 verbunden.
