@@ -41,6 +41,10 @@ der wegen zu hoher Latenzzeiten nicht gleichzeitig als eBUS Worker genutzt werde
 
 ## Fehlersuche
 
+Tipps zur Fehlersuche auf der Basisplatine für den Fall, dass diesenach Zusammenabu nicht wie erwartet funktioniert,
+[finden sich hier](diagnostics.md).
+
+
 ## Weiterführende Links
 
 Einige Links die zum Thema beitragen, bzw. Basisinformationen und Grundlagen enthalten.
