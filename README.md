@@ -26,7 +26,13 @@ Der Adapter besteht aus einer [Basisplatine](base.md) und kann zusätzlich mit e
 [Basisplatine huckepack auf dem Raspberry PI](raspberrypi.md)
 
 
-## Software
+## Wemos Software
+
+Für den Einsatz des Wemos D1 zur Kommunikation mit eBUS wird eine spezielle Firmware benötigt, [siehe hier](wemosfirmware.md).
+
+Um zusätzliche Sensoren mit der Erweiterungsplatine nutzen zu können, muss derzeit noch ein eigener Wemos D1 verwendet werden,
+der wegen zu hoher Latenzzeiten nicht gleichzeitig als eBUS Worker genutzt werden kann, [siehe hier](wemossensors.md).
+
 
 ## Bauteile
 
