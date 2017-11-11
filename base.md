@@ -19,7 +19,31 @@ Leistung (1A-2A).
 
 
 ## Bestückung der Basisplatine
-(Bestückung)[base-assemble1.png]
+
+![Assembly](base-assemble1.png "Bestückung")  
+**Bestückung**
+
+Die Platinen sind nicht bleifrei gefertigt (HASL), daher kann mit normalem bleihaltigem Lötzinn gelötet werden.
+Der Gesetzgeber lässt dies im privaten und teilweise im kommerziellen Bereich noch zu.
+
+Die Bestückung der Basisplatine erfolgt nach den üblichen Regeln, d.h. die niederen Bauteile zuerst, dann schichtweise
+die nächst höheren.
+
+Mit den Widerständen beginnen, dann die Dioden, ICs, Kondensatoren, Buchsenleisten, Transsistoren, Printklemme usw.
+
+Beim Einlöten der Widerstände sollte man unbedingt vor dem Einlöten den Widerstandswert mit einem Ohm-Meter kontrollieren,
+um Verwechslungen zu vermeiden.
+
+
+![Final](base-final.jpg "Fertig aufgebaute Basisplatine")  
+**Fertig aufgebaute Basisplatine**
+
+Die Buchsenleisten für nicht vorhandene Uarts kann man sich in der Regel sparen und müssen nicht bestückt werden. 
+
+Bei den Optokopplern ist unbedingt zu achten das diese richtig eingesetzt werden.
+Es befindet sich links unten jeweils ein Punkt, das ist Pin 1 und ist so zu platzieren das dieser beim Aufdruck der
+Aussparung ist. Gleiches gilt für den Komparator.
+
 
 ## UARTS auf der Basisplatine
 
