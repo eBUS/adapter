@@ -8,7 +8,7 @@ Alleine mit ihr ist die Kommunikation via UART an einen Raspberry oder mittels W
 
 Hier ist der Schaltplan der Basisplatine:
 
-[<img src="base-circuit.png" width="800" alt="Circuitry" title="Schaltplan">](base-circuit.png)
+[<img src="images/base-circuit.png" width="800" alt="Circuitry" title="Schaltplan">](images/base-circuit.png)
 
 
 ## Allgemeiner Aufbau
@@ -28,7 +28,7 @@ Leistung (1A-2A).
 
 ## Bestückung
 
-[<img src="base-assemble1.png" width="200" alt="Assembly" title="Bestückung">](base-assemble1.png)
+[<img src="images/base-assemble1.png" width="200" alt="Assembly" title="Bestückung">](images/base-assemble1.png)
 
 Die Platine ist nicht bleifrei gefertigt (HASL), daher kann mit normalem bleihaltigem Lötzinn gelötet werden.
 Der Gesetzgeber lässt dies im privaten und teilweise im kommerziellen Bereich noch zu.
@@ -42,7 +42,7 @@ Beim Einlöten der Widerstände sollte man unbedingt vor dem Einlöten den Wider
 um Verwechslungen zu vermeiden.
 
 
-[<img src="base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](base-final.jpg)  
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-final.jpg)  
 **Fertig aufgebaute Basisplatine**
 
 Die Buchsenleisten für nicht vorhandene Uarts kann man sich in der Regel sparen und müssen nicht bestückt werden. 
@@ -54,7 +54,7 @@ Aussparung ist. Gleiches gilt für den Komparator.
 
 ## UARTs
 
-[<img src="uarts.png" width="200" alt="UARTs" title="UARTs">](uarts.png)
+[<img src="images/uarts.png" width="200" alt="UARTs" title="UARTs">](images/uarts.png)
 
 Diese 3 UARTs wurden mit der Basisplatine getestet.
 Der ELV UART ist der einzige der keine eigenen Leds auf der Platine hat, die beiden anderen sind jedoch damit bestückt
@@ -68,14 +68,14 @@ in der Abbildung nicht aufsteckbar wäre.
 
 Über eine einfache Verdrahtung kann der Wemos D1 auch direkt mit der Basisplatine betrieben werden, im Gegensatz [zum Einsatz mit Erweiterungsplatine](extension.md#Bestückung).
 
-[<img src="wemos-wiring.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 Verdrahtung">](wemos-wiring.jpg)  
+[<img src="images/wemos-wiring.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 Verdrahtung">](images/wemos-wiring.jpg)  
 **Wemos D1 Verdrahtung**
 
 Soll auf der Basisplatine ein Wemos zum Einsatz kommen, muss dieser erst vorbereitet werden und es müssen an Rx, Tx, Vcc
 und Gnd Kabel aufgelötet werden.
 Auf eine Stiftleiste kann in diesem Fall verzichtet werden.
 
-[<img src="wemos-wired.png" width="200" alt="Wemos D1 wired" title="Wemos D1 an Basisplatine">](wemos-wired.png)  
+[<img src="images/wemos-wired.png" width="200" alt="Wemos D1 wired" title="Wemos D1 an Basisplatine">](images/wemos-wired.png)  
 **Wemos D1 an Basisplatine**
 
 Der fertig aufgelötete Wemos wird dann direkt an JP8 angesteckt.

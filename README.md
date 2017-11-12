@@ -7,21 +7,21 @@ Der Adapter besteht aus einer [Basisplatine](base.md) und kann zusätzlich mit e
 
 ## Basisplatine
 
-[<img src="base-3d-left.png" width="200" alt="base" title="Basisplatine">](base.md)
+[<img src="images/base-3d-left.png" width="200" alt="base" title="Basisplatine">](base.md)
 
 [Die Infos zur Herstellung der Basisplatine finden sich hier.](base.md)
 
 
 ## Erweiterungsplatine
 
-[<img src="exten-assemble1.png" width="200" alt="extension" title="Erweiterungsplatine">](extension.md)
+[<img src="images/exten-assemble1.png" width="200" alt="extension" title="Erweiterungsplatine">](extension.md)
 
 [Die Infos zur Herstellung der Erweiterungsplatine finden sich hier.](extension.md)
 
 
 ## Raspberry PI
 
-[<img src="base-rpi.jpg" width="200" alt="rpi-base" title="Basisplatine auf Raspberry PI">](raspberrypi.md)
+[<img src="images/base-rpi.jpg" width="200" alt="rpi-base" title="Basisplatine auf Raspberry PI">](raspberrypi.md)
 
 [Basisplatine huckepack auf dem Raspberry PI](raspberrypi.md)
 

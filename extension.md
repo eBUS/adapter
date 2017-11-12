@@ -8,12 +8,12 @@ oder um in Verbindung mit einem Wemos D1 den Zugang zum eBUS über WLAN zu ermö
 
 Hier ist der Schaltplan der Erweiterungsplatine:
 
-[<img src="exten-circuit.png" width="800" alt="Circuitry" title="Schaltplan">](exten-circuit.png)
+[<img src="images/exten-circuit.png" width="800" alt="Circuitry" title="Schaltplan">](images/exten-circuit.png)
 
 
 ## Bestückung
 
-[<img src="exten-assemble1.png" width="200" alt="Assembly" title="Bestückung">](exten-assemble1.png)
+[<img src="images/exten-assemble1.png" width="200" alt="Assembly" title="Bestückung">](images/exten-assemble1.png)
 
 Die Platine ist nicht bleifrei gefertigt (HASL), daher kann mit normalem bleihaltigem Lötzinn gelötet werden.
 Der Gesetzgeber lässt dies im privaten und teilweise im kommerziellen Bereich noch zu.
