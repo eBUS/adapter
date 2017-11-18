@@ -27,7 +27,7 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 |      1 | IC2 Spannungsregler 8V 0,1A positiv  |    78L08 |     1 |           - |
 |      1 | Q1 Transistor NPN                    | BC337-40 |     1 |           - |
 |      2 | C1-2 Elektrolytkondensator           |     10uF |     2 |           - |
-|      1 | C4 Keramik Kondensator               |    100nF |     1 |           1 |
+|      2 | C3/C1 Elektrolytkondensator          |    100nF |     1 |           1 |
 |      3 | LED1-3 LowCurrent (gelb, rot, grün)  |      2mA |     3 |           3 |
 |      3 | LED Abstandshalter f. 3mm            |     15mm |     3 |           3 |
 |      1 | Printklemme 2-fach Raster 5,08       |          |     1 |           - |
