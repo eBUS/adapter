@@ -59,3 +59,10 @@ In diesem Messplan sind alle wichtigen Messpunkte mit den notwendigen Spannungen
 [<img src="images/base-measure-values.png" width="800" alt="measure plan" title="Messplan">](images/base-measure-values.png)
 
 Bei den Spannungen wird farblich zwischen Rx (<span style="color:green">grün</span>) und Tx (<span style="color:red">rot</span>) unterschieden.
+
+
+## Messpunkte an der Platine
+
+
+[<img src="images/base-meassure.jpg" width="800" alt="measure plan" title="Messplan">](images/base-meassure.jpg)
+
