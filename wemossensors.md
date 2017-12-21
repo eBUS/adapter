@@ -14,6 +14,25 @@ Hier ein Beispiel eines Luftdrucksensors/Feuchte/Temperatur BME280 an der Platin
 
 In einem Gehäuse eingebaut sollte der Sensor allerdings dann mit Kabel herausgeführt werden, da die Luftfeuchtigkeit in dem Gehäuse kaum jemand interessiert.
 
+## ESPEasy flashen
+
+Wenn sich jemand die Firmware neu flasht sollte beim ersten einloggen das Passwort „configesp“ verwenden. 
+Da es offensichtlich immer wieder bei einzelnen Usern zu Problemen mit der Konfiguration führt (Login geht nicht), hier eine kleine Anleitung wie ihr mit der seriellen Konsole den Wemos konfigurieren könnt.  
+Ihr könnt aber vorher noch versuchen mit dem Handy eine Verbindung aufzubauen. Eventuell hilft es auch zu kontrollieren, ob ihr am Laptop bei der Verbindung unter Eigenschaften auf "privates Netzwerk" eingestellt habt.
+
+Ich verwende für die serielle Verbindung die Arduino Umgebung ( ich habe 1.8.3 in Verwendung )  mit der eingebauten seriellen Konsole (Werkzeuge / Serieller Monitor), vorher aber bitte die COM Schnittstelle definieren. Baudrate in der seriellen Konsole ist 115200! Zuerst Wemos anschließen und Konsole starten und dann nochmals beim Wemos "Reset" drücken.
+
+**Die Befehlsfolge lautet in Kurzform wie folgt:**
+
+**Settings**            = listet die Konfiguration  
+**WifiSSID Liwest** = setzt die SSID (eure SSID eingeben)  
+**WifiKey geheim** = setzt das Passwort (euer Passwort eingeben)  
+**ip 10.0.0.167**    = setzt die IP Adresse wenn statisch gewünscht wird (eure IP eingeben)  
+**WifiConnect**      = Verbindet sich mit diesen Einstellungen mit dem Wlan    
+**save**                 = sichert die Konfiguration  
+**reboot**              = startet den Wemos neu  
+
+[<img src="images/espeasy-serial.png" width="200" alt="Assembly" title="Bestückung">](images/espeasy-serial.png)
 
 ## ESPEasy mit BME280
 

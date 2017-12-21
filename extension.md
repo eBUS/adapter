@@ -106,4 +106,12 @@ Wichtig sind hier die Jumperbrücken die je nach Einsatzzweck unterschiedlich ge
 **Achtung:** hier ist die Beschriftung auf der Platine bei SJ1+SJ2 falsch und verkehrt rum, also SDA+SCL ist oben!
 So wie hier abgebildet, ist für BME280 + Oled gejumpert.
 
+## ESPEasy auf der Erweiterungsplatine
+
+[<img src="images/exten-wemos.jpg" width="200" alt="Assembly" title="Bestückung">](images/eexten-wemos.jpg)
+
+Wer weitere Sensoren auf der Erweiterungsplatine platzieren will ist mit ESPEasy bestens bedient.
+
+Hier ein Beispiel eines Luftdrucksensors/Feuchte/Temperatur BME280 an der Platine aufgesteckt. 
+In einem Gehäuse eingebaut sollte der Sensor allerdings dann mit Kabel herausgeführt werden, da die Luftfeuchtigkeit in dem Gehäuse kaum jemand interessiert.
 
