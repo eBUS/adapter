@@ -28,7 +28,7 @@ Leistung (1A-2A).
 
 ## Bestückung
 
-[<img src="images/base-assemble1.png" width="200" alt="Assembly" title="Bestückung">](images/base-assemble1.png)
+[<img src="images/base-assemble1.png" width="200" alt="Assembly" title="Bestückung">](images/base-1.png)
 
 Die Platine ist nicht bleifrei gefertigt (HASL), daher kann mit normalem bleihaltigem Lötzinn gelötet werden.
 Der Gesetzgeber lässt dies im privaten und teilweise im kommerziellen Bereich noch zu.
@@ -42,8 +42,24 @@ Beim Einlöten der Widerstände sollte man unbedingt vor dem Einlöten den Wider
 um Verwechslungen zu vermeiden.
 
 
-[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-final.jpg)  
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-1.png)  
+
+**Achtung:** der Elektrolytkondensator C1 entfällt bei dieser Variante. Dieser war bei der 8V Variante vorgesehen, die jedoch wegen anderer Nachteile nicht zur Auslieferung gekommen ist.
+
+**Verlöten der Basisplatine**
+
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-2.png)
+
+Ansicht von hinten, die Drahtenden werden leicht aufgebogen damit die Bauteile beim Umdrehen nicht herausfallen.
+So kann dann alles gemeinsam bequem verlötet werden.
+
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-3.png)  
+
+ertig verlötete Platine, die Drähte werden nach der Verlötung alle mit einem Elektronik Seitenschneider abgelängt.
+
 **Fertig aufgebaute Basisplatine**
+
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-final.png) 
 
 Die Buchsenleisten für nicht vorhandene Uarts kann man sich in der Regel sparen und müssen nicht bestückt werden. 
 
@@ -51,6 +67,15 @@ Bei den Optokopplern ist unbedingt zu achten das diese richtig eingesetzt werden
 Es befindet sich links unten jeweils ein Punkt, das ist Pin 1 und ist so zu platzieren das dieser beim Aufdruck der
 Aussparung ist. Gleiches gilt für den Komparator.
 
+**Bestückung der Leds**
+
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/led.png) 
+
+Bei der Bestückung der Leds ist auf die Polung zu achten. 
+Hält man die Led gegen das Licht so ist die Katode sehr schön als Querbalken erkennbar. Dies ist die mit Minus -  bezeichnete Stelle an der Platine.
+Außerdem ist die Anode + an den Anschlußdrähten immer ein paar Millimeter länger.
+
+**Achtung:** Led3 liegt verkehrt herum auf der Platine.
 
 ## UARTs
 
