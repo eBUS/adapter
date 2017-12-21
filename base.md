@@ -42,18 +42,18 @@ Beim Einlöten der Widerstände sollte man unbedingt vor dem Einlöten den Wider
 um Verwechslungen zu vermeiden.
 
 
-[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-1.png)  
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Bestueckung der Platine vorne">](images/base-1.png)  
 
 **Achtung:** der Elektrolytkondensator C1 entfällt bei dieser Variante. Dieser war bei der 8V Variante vorgesehen, die jedoch wegen anderer Nachteile nicht zur Auslieferung gekommen ist.
 
 **Verlöten der Basisplatine**
 
-[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-2.png)
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Bestueckung der Platine hinten gesteckt ">](images/base-2.png)
 
 Ansicht von hinten, die Drahtenden werden leicht aufgebogen damit die Bauteile beim Umdrehen nicht herausfallen.
 So kann dann alles gemeinsam bequem verlötet werden.
 
-[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/base-3.png)  
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Bestueckung der Platine hinten verloetet">](images/base-3.png)  
 
 ertig verlötete Platine, die Drähte werden nach der Verlötung alle mit einem Elektronik Seitenschneider abgelängt.
 
@@ -69,7 +69,7 @@ Aussparung ist. Gleiches gilt für den Komparator.
 
 **Bestückung der Leds**
 
-[<img src="images/base-final.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine">](images/led.png) 
+[<img src="images/base-final.jpg" width="200" alt="Final" title="Led Polung">](images/led.png) 
 
 Bei der Bestückung der Leds ist auf die Polung zu achten. 
 Hält man die Led gegen das Licht so ist die Katode sehr schön als Querbalken erkennbar. Dies ist die mit Minus -  bezeichnete Stelle an der Platine.
