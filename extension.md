@@ -36,7 +36,8 @@ Auf der Erweiterungsplatine kann jeweils nur ein Wemos installiert werden.
 Entweder ESPEasy aufstecken und die weiteren Features mit Sensoren nutzen, oder darauf verzichten und den ebusd-esp Wemos aufsetzen.
 Der Wemos mit der eBus Software kann auch parallel dazu auf der Basisplatine angesteckt werden, dann sind beide Varianten gleichzeitig nutzbar.
 
-##Bestückungsvarianten
+## Bestückungsvarianten  
+
 [<img src="images/exten-assemble1.png" width="200" alt="Assembly" title="Bestückung">](images/exten-assemble1.png)  
 
 Die Erweiterungsplatine ist so konzipiert, dass sie auf die Basisplatine aufgesteckt werden kann. Die Anzahl der Bauelemente ist hier wesentlich geringer und besteht hauptsächlich aus Buchsen- und Steckleisten zur Aufnahme von Wemos, Uarts, Displays oder Sensoren.  
@@ -73,7 +74,7 @@ Wemos Firmware unterschiedliche Belegungen erlauben.
 
 **Beispiel:** wird ESPEasy mit einem BME280 verwendet, ist Sj1 und SJ2 entsprechend der Tabelle zu setzen, SJ7 und SJ8 bleibt offen.
 
-##Jumper bei Vollausbau
+## Jumper bei Vollausbau
 
 [<img src="images/jumper2.png" width="200" alt="Assembly" title="Bestückung">](images/jumper2.png) 
 
@@ -88,7 +89,7 @@ Der Wemos mit ESPEasy sitzt auf der Erweiterungsplatine und nutzt somit alle vor
 
 **Der Wemos mit ESPEasy darf nicht an Rx und Tx gejumpert werden, da ansonsten die Signale vom gleichzeitig angeschlossenen Wemos mit ebusd-esp verschliffen würden! Solche Fehler können unter Umständen augenblicklich nichts ausmachen und zeigen sich meist erst wenn mehrere Geräte am eBus angeschlossen sind.**
 
-##Bestückung der Erweiterungsplatine
+## Bestückung der Erweiterungsplatine
 
 [<img src="images/exten-assemble3.png" width="200" alt="Assembly" title="Bestückung">](images/exten-assemble3.png)
  
