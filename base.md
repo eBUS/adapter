@@ -53,7 +53,7 @@ So kann dann alles gemeinsam bequem verlötet werden.
 
 [<img src="images/base-3.png" width="200" alt="Final" title="Bestueckung der Platine hinten verloetet">](images/base-3.png)  
 
-ertig verlötete Platine, die Drähte werden nach der Verlötung alle mit einem Elektronik Seitenschneider abgelängt.
+Fertig verlötete Platine, die Drähte werden nach der Verlötung alle mit einem Elektronik Seitenschneider abgelängt.
 
 **Fertig aufgebaute Basisplatine**
 
@@ -94,8 +94,8 @@ in der Abbildung nicht aufsteckbar wäre.
 [<img src="images/wemos-wiring.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 Verdrahtung">](images/wemos-wiring.jpg)  
 **Wemos D1 Verdrahtung**
 
-Soll auf der Basisplatine ein Wemos zum Einsatz kommen, muss dieser erst vorbereitet werden und es müssen an Rx, Tx, Vcc
-und Gnd Kabel aufgelötet werden.
+Soll auf der Basisplatine ein Wemos zum Einsatz kommen, muss dieser erst vorbereitet werden und es müssen an RX, TX, VCC
+und GND Kabel aufgelötet werden.
 Auf eine Stiftleiste kann in diesem Fall verzichtet werden.
 
 [<img src="images/wemos-wired.png" width="200" alt="Wemos D1 wired" title="Wemos D1 an Basisplatine">](images/wemos-wired.png)  
