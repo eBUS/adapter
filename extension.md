@@ -67,20 +67,20 @@ Wemos Firmware unterschiedliche Belegungen erlauben.
 | OLED    | 1-2 | 1-2 |     |     |     |     |     |     |
 | Nextion |     |     | 1-2 | 1-2 |     |     |     |     |
 
-* `1-2` bedeutet den linken Lötpunkt mit dem mittleren verbinden.
-* `2-3` bedeutet den mittleren Lötpunkt mit dem rechten verbinden.
+* `1-2` bedeutet den linken bzw. oberen Lötpunkt mit dem mittleren verbinden.
+* `2-3` bedeutet den mittleren Lötpunkt mit dem rechten bzw. unteren verbinden.
 
-**Beispiel:** soll hier ein eBusd-esp auf der Erweiterungsplatine verwendet werden, ist Sj5-Sj8 entsprechend der Tabelle zu setzen.
+**Beispiel:** soll hier ein eBusd-esp auf der Erweiterungsplatine verwendet werden, ist SJ5-SJ8 entsprechend der Tabelle zu setzen.
 
-**Beispiel:** wird ESPEasy mit einem BME280 verwendet, ist Sj1 und SJ2 entsprechend der Tabelle zu setzen, SJ7 und SJ8 bleibt offen.
+**Beispiel:** wird ESPEasy mit einem BME280 verwendet, ist SJ1 und SJ2 entsprechend der Tabelle zu setzen, SJ7 und SJ8 bleibt offen.
 
 ## Jumper bei Vollausbau
 
 [<img src="images/jumper2.png" width="200" alt="Assembly" title="Bestückung">](images/jumper2.png) 
 
 Hier abgebildet eine Variante mit Vollausbau, Basisplatine mit Wemos ebusd-esp und Erweiterungsplatine mit ESPEasy und einem Temp-Feuchte-Druck-Sensor BME280.
-Bei dieser Variante sind für den Wemos mit ebusd-esp keine Jumper zu setzen, da dieser am Zusatz Konnektor JP8 angesteckt ist und dieser fix das Rx + Tx Signal zugeführt hat.
-Der Wemos mit ESPEasy sitzt auf der Erweiterungsplatine und nutzt somit alle vorgesehenen Stiftleisten. Sitzt wie hier ESPEasy auf der Erweiterungsplatine und ist mit dem Sensor BME280 verbunden, müssen die Jumper Sj1 und Sj2 gesetzt werden.
+Bei dieser Variante sind für den Wemos mit ebusd-esp keine Jumper zu setzen, da dieser am Zusatz Konnektor JP8 angesteckt ist und dieser fix das RX + TX Signal zugeführt hat.
+Der Wemos mit ESPEasy sitzt auf der Erweiterungsplatine und nutzt somit alle vorgesehenen Stiftleisten. Sitzt wie hier ESPEasy auf der Erweiterungsplatine und ist mit dem Sensor BME280 verbunden, müssen die Jumper SJ1 und SJ2 gesetzt werden.
 
 | Sensor  | SJ1 | SJ2 | SJ3 | SJ4 | SJ5 | SJ6 | SJ7 | SJ8 |
 |---------|-----|-----|-----|-----|-----|-----|-----|-----|
@@ -95,6 +95,7 @@ Der Wemos mit ESPEasy sitzt auf der Erweiterungsplatine und nutzt somit alle vor
  
 Bei der Erweiterungsplatine werden eigentlich fast nur Buchsenleisten und Stiftleisten zum Aufstecken auf die Basisplatine bestückt. Die Buchsenleisten für die Verbindung zu den Leds und JP1 sind auf der Unterseite aufzulöten. Die Leds sitzen meist auf Abstandshaltern die gleichzeitig einen Knickschutz darstellen. Bei Verwendung von Gehäusen mit Klarsichtdeckel sollte dann auch der Abstand passen, dass die Leds etwas über dem Wemos hervorragen. 
 Etwas kniffelig sind die beiden SMD Taster, hier ist eine ruhige Hand notwendig, mit einem Finger platziert und drückt man leicht auf den Taster, mit der anderen Hand wird die bereits vorgesehene und verzinnte Lötfläche erhitzt und verlötet. Erst wenn der Taster hält, kann Lötzinn zugeführt werden und wie üblich verlötet.
+
 Die Erweiterungsplatine kann unterschiedliche Sensoren wie Luftdruck, Feuchte und Temperatur aufnehmen. Ebenso ist ein Buzzer für eine Alarmausgabe vorgesehen.
 Auf der Erweiterungsplatine kann jeweils nur ein Wemos installiert werden. Entweder ESPEasy aufstecken und die weiteren Features mit Sensoren nutzen, oder darauf verzichten und den ebusd-esp Wemos aufsetzen. Der Wemos mit der eBus Software kann auch parallel dazu auf der Basisplatine angesteckt werden, dann sind beide Varianten gleichzeitig nutzbar.
 
