@@ -10,8 +10,7 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 |      2 | R2+R14 Widerstand                    |      220 |     2 |           - |
 |      1 | R3 Widerstand                        |     100k |     1 |           - |
 |      1 | R4 Widerstand                        |      22k |     1 |           - |
-|      1 | R5 Widerstand                        |      470 |     1 |           - |
-|      2 | R6+R13 Widerstand                    |      470 |     2 |           - |
+|      1 | R5+R6 Widerstand                     |      470 |     2 |           - |
 |      2 | R7 Widerstand (+R2 auf Erweiterung)  |      18k |     1 |           1 |
 |      1 | R8 Widerstand                        |      15k |     1 |           - |
 |      1 | R9 Widerstand                        |     220k |     1 |           - |
