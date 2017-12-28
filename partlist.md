@@ -19,7 +19,7 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 |      1 | R12 Widerstand                       |      10k |     1 |           - |
 |      1 | R13 Widerstand (+R1 auf Erweiterung) |     1,2k |     1 |           1 |
 |      1 | R14 Widerstand                       |      220 |     1 |           - |
-|      1 | R3 Widerstand  (nur auf Erweiterung) |      39k |     - |           1 |
+|      1 | R3 Widerstand (nur auf Erweiterung)  |      39k |     - |           1 |
 |   n.B. | Drahtwiderstand 5 W zum Testen       |      330 |     X |           - |
 |      5 | D1-5 Diode                           |   1N4007 |     5 |           - |
 |      1 | D6 Zenerdiode 1,3W                   |     9,1V |     1 |           - |
@@ -27,10 +27,10 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 |      1 | IC1 Dual Komparator DIP-8            | TLC393CP |     1 |           - |
 |      1 | IC2 Spannungsregler 8V 0,1A positiv  |    78L08 |     1 |           - |
 |      1 | Q1 Transistor NPN                    | BC337-40 |     1 |           - |
-|      1 | C2 Elektrolytkondensator             |     10uF |     2 |           - |
-|      2 | C3/C1 Elektrolytkondensator          |    100nF |     1 |           1 |
+|      1 | C2 Elektrolytkondensator             |     10uF |     1 |           - |
+|      2 | C3 Keramikkondensator (+C1 auf Erw.) |    100nF |     1 |           1 |
 |      3 | LED1-3 LowCurrent (gelb, rot, grün)  |      2mA |     3 |           3 |
-|      3 | LED Abstandshalter f. 3mm            |     15mm |     3 |           3 |
+|      3 | LED Abstandshalter f. 3mm            |     10mm |     3 |           3 |
 |      1 | Printklemme 2-fach Raster 5,08       |          |     1 |           - |
 |    0-1 | UART nach Wahl (ELV, Mini, FTDI232)  |          |     1 |           - |
 |      4 | 4-pol. Buchsenleiste                 |    4-pol |     3 |           1 |
