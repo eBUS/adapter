@@ -53,15 +53,15 @@ Seitliche Ansicht, hier sind die Leds in gleicher Höhe positioniert, um unter e
 [<img src="images/jumper1.png" width="200" alt="Assembly" title="Bestückung">](images/jumper1.png) 
 
 Je nachdem für welchen Zweck die Erweiterungsplatine eingesetzt wird, ist hier auf die Jumper (Lötbrücken) auf der Rückseite zu achten da diese Sensoren sonst funktionslos bleiben.
-Achtung: hier ist die Beschriftung bei SJ1+SJ2 falsch und verkehrt rum, also SDA+SCL ist oben!
+**Achtung:** hier ist die Beschriftung bei SJ1+SJ2 falsch und verkehrt rum, also SDA+SCL ist oben!
 
 Auf der Rückseite der Erweiterungsplatine befinden sich einige Jumper, die je nach gewünschten Sensoren bzw. eingesetzter
 Wemos Firmware unterschiedliche Belegungen erlauben.
 
 | Sensor  | SJ1 | SJ2 | SJ3 | SJ4 | SJ5 | SJ6 | SJ7 | SJ8 |
 |---------|-----|-----|-----|-----|-----|-----|-----|-----|
-| Wemos   |     |     |     |     |     | 2-3 | 2-3 | 2-3 |
-| ESPEasy |     |     |     |     |     |     |     |     |
+|ebusd-esp|     |     |     |     | 2-3 | 2-3 | 2-3 | 2-3 |
+| ESPEasy |     |     |     |     |     |     |offen|offen|
 | BME280  | 1-2 | 1-2 |     |     |     |     |     |     |
 | Buzzer  |     |     |     |     |     |     |     |     |
 | OLED    | 1-2 | 1-2 |     |     |     |     |     |     |
