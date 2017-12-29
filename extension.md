@@ -28,7 +28,6 @@ Bei Verwendung von Gehäusen mit Klarsichtdeckel sollte dann auch der Abstand pa
 Etwas kniffelig sind die beiden SMD Taster, hier ist eine ruhige Hand notwendig, mit einem Finger platziert und drückt man
 leicht auf den Taster, mit der anderen Hand wird die bereits vorgesehene und verzinnte Lötfläche erhitzt und verlötet.
 Erst wenn der Taster hält, kann Lötzinn zugeführt werden und wie üblich verlötet.
-
 Die Erweiterungsplatine kann unterschiedliche Sensoren wie Luftdruck, Feuchte und Temperatur aufnehmen.
 Ebenso ist ein Buzzer für eine Alarmausgabe vorgesehen.
 
@@ -39,8 +38,7 @@ Der Wemos mit der eBus Software kann auch parallel dazu auf der Basisplatine ang
 ## Bestückungsvarianten  
 
 [<img src="images/exten-assemble1.png" width="200" alt="Assembly" title="Bestückung">](images/exten-assemble1.png)  
-
-Die Erweiterungsplatine ist so konzipiert, dass sie auf die Basisplatine aufgesteckt werden kann. Die Anzahl der Bauelemente ist hier wesentlich geringer und besteht hauptsächlich aus Buchsen- und Steckleisten zur Aufnahme von Wemos, Uarts, Displays oder Sensoren.  
+1Die Erweiterungsplatine ist so konzipiert, dass sie auf die Basisplatine aufgesteckt werden kann. Die Anzahl der Bauelemente ist hier wesentlich geringer und besteht hauptsächlich aus Buchsen- und Steckleisten zur Aufnahme von Wemos, Uarts, Displays oder Sensoren.  
 
 Wer experimentieren will kann die Erweiterungsplatine auch „Solo“ benutzen, d.h. ohne eBus Funktionen können an den Wemos Sensoren oder Displays bequem angeschlossen werden. Die Spannungsversorgung erfolgt über ein USB Stecker Netzteil direkt am C-Stecker des Wemos. 
 
@@ -60,7 +58,7 @@ Wemos Firmware unterschiedliche Belegungen erlauben.
 
 | Sensor  | SJ1 | SJ2 | SJ3 | SJ4 | SJ5 | SJ6 | SJ7 | SJ8 |
 |---------|-----|-----|-----|-----|-----|-----|-----|-----|
-|ebusd-esp|     |     |     |     | 2-3 | 2-3 | 2-3 | 2-3 |
+|ebusd-esp|     |     |     |     | 1-2 | 1-2 | 2-3 | 1-2 |
 | ESPEasy |     |     |     |     |     |     |offen|offen|
 | BME280  | 1-2 | 1-2 |     |     |     |     |     |     |
 | Buzzer  |     |     |     |     |     |     |     |     |
