@@ -1,4 +1,4 @@
-# Bauteilelisten für die Basis- und Erweiterungsplatine
+5# Bauteilelisten für die Basis- und Erweiterungsplatine
 
 Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 
@@ -25,7 +25,7 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 |      1 | D6 Zenerdiode 1,3W                   |     9,1V |     1 |           - |
 |      2 | OK1-2 Optokoppler                    |  CNY17-4 |     2 |           - |
 |      1 | IC1 Dual Komparator DIP-8            | TLC393CP |     1 |           - |
-|      1 | IC2 Spannungsregler 8V 0,1A positiv  |    78L08 |     1 |           - |
+|      1 | IC2 Spannungsregler 5V 0,1A positiv  |    78L05 |     1 |           - |
 |      1 | Q1 Transistor NPN                    | BC337-40 |     1 |           - |
 |      1 | C2 Elektrolytkondensator             |     10uF |     1 |           - |
 |      2 | C3 Keramikkondensator (+C1 auf Erw.) |    100nF |     1 |           1 |
