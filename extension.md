@@ -107,7 +107,7 @@ So wie hier abgebildet, ist für BME280 + Oled gejumpert.
 
 ## ESPEasy auf der Erweiterungsplatine
 
-[<img src="images/exten-wemos.jpg" width="200" alt="Assembly" title="Bestückung">](images/eexten-wemos.jpg)
+[<img src="images/exten-wemos.jpg" width="200" alt="Assembly" title="Bestückung">](images/exten-wemos.jpg)
 
 Wer weitere Sensoren auf der Erweiterungsplatine platzieren will ist mit ESPEasy bestens bedient.
 
