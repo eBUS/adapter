@@ -122,7 +122,7 @@ On the back of the extension board there are some jumpers allowing different ass
 
 ### Jumpers when fully equipped
 
-[<img src="images/jumper2.jpg" width="200" alt="Assembly" title="Assembly">](images/jumper2.jpg)
+[<img src="images/exten-full.jpg" width="200" alt="Assembly" title="Assembly">](images/exten-full.jpg)
 
 This image shows a variant with full configuration: the base board with Wemos ebusd-esp, the extension board with ESPEasy and a BME280 sensor for temperature, humidity, and pressure.
 

@@ -62,8 +62,7 @@ Before soldering the resistors, be sure to check the resistance values with an o
 
 #### Assembly of LEDs
 
-[<img src="images/led.jpg" width="200" alt="Final" title="LED Polung">](images/led.jpg) 
-
+[<img src="images/led.jpg" width="200" alt="Final" title="LED Polung">](images/led.jpg)  
 When placing the LEDs, pay attention to the polarity.
 
 If you hold an LED against the light, then the cathode "-" is recognizable as a crossbar or as a significantly larger area.

@@ -1,10 +1,14 @@
-# Betrieb von zusätzlichen Sensoren auf der Erweiterungsplatine
+---
+ref: wemossensors
+lang: de
+---
+## Betrieb von zusätzlichen Sensoren auf der Erweiterungsplatine
 
 Um zusätzliche Sensoren mit der Erweiterungsplatine nutzen zu können, muss derzeit noch ein eigener Wemos D1 verwendet werden,
 der wegen zu hoher Latenzzeiten nicht gleichzeitig für eBUS genutzt werden kann.
 
 
-## ESPEasy auf der Erweiterungsplatine
+### ESPEasy auf der Erweiterungsplatine
 
 Wer weitere Sensoren auf der Erweiterungsplatine platzieren will ist mit [ESPEasy](https://www.letscontrolit.com/wiki/index.php/ESPEasy) bestens bedient.
 
@@ -14,7 +18,7 @@ Hier ein Beispiel eines Luftdrucksensors/Feuchte/Temperatur BME280 an der Platin
 
 In einem Gehäuse eingebaut sollte der Sensor allerdings dann mit Kabel herausgeführt werden, da die Luftfeuchtigkeit in dem Gehäuse kaum jemand interessiert.
 
-## ESPEasy flashen
+### ESPEasy flashen
 
 Wenn sich jemand die Firmware neu flasht sollte beim ersten einloggen das Passwort „configesp“ verwenden. 
 Da es offensichtlich immer wieder bei einzelnen Usern zu Problemen mit der Konfiguration führt (Login geht nicht), hier eine kleine Anleitung wie ihr mit der seriellen Konsole den Wemos konfigurieren könnt.  
@@ -34,7 +38,7 @@ Ich verwende für die serielle Verbindung die Arduino Umgebung ( ich habe 1.8.3 
 
 [<img src="images/espeasy-serial.png" width="200" alt="Assembly" title="Bestückung">](images/espeasy-serial.png)
 
-## ESPEasy mit BME280
+### ESPEasy mit BME280
 
 Unter Controllers zunächst das FHEM Protokoll aktivieren:
 
@@ -47,14 +51,14 @@ Die Konfiguration des Sensors in ESPEasy ist denkbar einfach:
 Auf diese Art und Weise können verschiedene Sensoren an die Platine angeschlossen werden.
 
 
-## BME280 in FHEM konfigurieren
+### BME280 in FHEM konfigurieren
 
 [<img src="images/espeasy-fhem.png" width="400" alt="FHEM sensors" title="Sensoren in FHEM">](images/espeasy-fhem.png)
 
 In Fhem muss die ESPbridge eingerichtet werden und der Rest wird dann von der Bridge automatisch erledigt:
 
 ```
-############## ESPEasy ###############
+############### ESPEasy ###############
 define espBridge ESPEasy bridge 8383
 attr espBridge room ESPEasy
 ```

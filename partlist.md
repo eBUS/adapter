@@ -1,4 +1,8 @@
-5# Bauteilelisten für die Basis- und Erweiterungsplatine
+---
+ref: partlist
+lang: de
+---
+## Bauteilelisten
 
 Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 
@@ -39,7 +43,7 @@ Die benötigten Bauteile für die Bestückung der beiden Platinen sind folgende:
 |      1 | 10-pol. Buchsenleiste                |    6-pol |     - |           1 |
 |      3 | 2-pol. Stiftleisten                  |    2-pol |     2 |           1 |
 |      3 | 4-pol. Stiftleisten                  |    4-pol |     1 |           2 |
-|   n.B. | Stiftlleiste gwinkelt                |   18-pol |     - |           1 |
+|   n.B. | Stiftleiste gewinkelt                |   18-pol |     - |           1 |
 |   n.B. | div. Distanzhülsen+Muttern           |          |     X |           X |
 |      1 | Kurzhubtaster, h=4,3mm               |    6x6mm |     - |           1 |
 |      2 | SMD-Kurzhubtaster, h=1,9mm           |4,2x2,8mm |     - |           2 |

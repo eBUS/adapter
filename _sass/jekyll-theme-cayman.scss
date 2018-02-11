@@ -41,7 +41,9 @@ a {
     text-decoration: underline;
   }
 }
-
+.page-header a {
+  color: $header-heading-color;
+}
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -93,15 +95,15 @@ a {
   background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 2rem 2rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 1rem 1rem;
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 

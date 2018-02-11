@@ -1,10 +1,14 @@
-# Raspberry Möglichkeiten
+---
+ref: raspberrypi
+lang: de
+---
+## Raspberry Möglichkeiten
 
 Um die Platine mit dem [Raspberry Pi](https://www.raspberrypi.org/) zu nutzen, gibt es derzeit nur die Variante mit eigenem
 UART, also ohne Verwendung des RPi GPIO UART (dessen Latenz ist für eBUS nicht zu gebrauchen).
 
 
-## Platine im Raspberry Pi
+### Platine im Raspberry Pi
 
 Eine mögliche Variante die Platine in oder auf einem Raspberry zu platzieren soll dieses Foto zeigen:
 
