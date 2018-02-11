@@ -74,7 +74,7 @@ The [jumper assignment depends on the variant used](#function-matrix-jumpers) as
 
 #### Assembly of LEDs
 
-[See base board.](base.en#assembly-if-leds)
+[See base board.](base.en#assembly-of-leds)
 
 
 #### Soldering the extension board
