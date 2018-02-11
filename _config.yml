@@ -1,5 +1,6 @@
 theme: jekyll-theme-cayman
 lang: de
+baseurl: /adapter
 title:
   de: eBUS Adapter 2.0
   en: eBUS adapter 2.0
