@@ -14,7 +14,7 @@ Wer weitere Sensoren auf der Erweiterungsplatine platzieren will ist mit [ESPEas
 
 Hier ein Beispiel eines Luftdrucksensors/Feuchte/Temperatur BME280 an der Platine aufgesteckt:
 
-[<img src="images/exten-wemos.jpg" width="200" alt="extension+wemos" title="Erweiterungsplatine mit Wemos und Sensor">](images/exten-wemos.jpg)
+[<img src="images/exten-final.jpg" width="200" alt="extension+wemos" title="Erweiterungsplatine mit Wemos und Sensor">](images/exten-final.jpg)
 
 In einem Gehäuse eingebaut sollte der Sensor allerdings dann mit Kabel herausgeführt werden, da die Luftfeuchtigkeit in dem Gehäuse kaum jemand interessiert.
 
