@@ -2,7 +2,7 @@
 ref: index
 lang: de
 ---
-## Willkommen zum eBUS Adapter 2.0!
+## Willkommen zum eBUS Adapter 2!
 
 Dies ist eine Anleitung zur Herstellung und zur Inbetriebnahme eines eBUS Adapters, mit dessen Hilfe man mit einer eBUS-fähigen Heizungs-, Lüftungs- oder Solaranlage kommunizieren kann.
 
@@ -25,7 +25,7 @@ Nebenbei wurde der Funktionsumfang noch wesentlich erweitert:
 
 ### Aufbau
 
-Der Adapter besteht aus einer [Basisplatine](base) und kann optional mit einer zusätzlichen [Erweiterungsplatine](extension) genutzt werden, die in Verbindung mit einem Wemos D1 den Zugang zum eBUS über WLAN erlaubt.
+Der Adapter besteht aus einer [Basisplatine](base) und kann optional mit einer zusätzlichen [Erweiterungsplatine](extension) genutzt werden, die in Verbindung mit einem [Wemos D1 mini](https://wiki.wemos.cc/products:d1:d1_mini) den Zugang zum eBUS über WLAN erlaubt.
 
 In den folgenden Seiten wird der Aufbau, die Bestückung und das Prüfen der gelöteten Platine beschrieben.  
 Die dafür benötigten [Bauteile sind hier aufgeführt](partlist).
@@ -47,23 +47,23 @@ Die fertig aufgebaute Basis- und/oder Erweiterungsplatine kann in verschiedenen 
 
 * Basisplatine mit Erweiterung:  
   * 2 Wemos:  
-    - ebusd-esp als WLAN Brücke für ebusd
-    - ESPEasy für Sensorik, Display etc.
+    * ebusd-esp als WLAN Brücke für ebusd
+    * ESPEasy für Sensorik, Display etc.
   * UART und Wemos:  
-    - UART für ebusd
-    - ESPEasy für Sensorik, Display etc.
+    * UART für ebusd
+    * ESPEasy für Sensorik, Display etc.
   * 1 Wemos:  
-    - ebusd-esp als WLAN Brücke für ebusd (ohne Sensorik, Display etc.)
+    * ebusd-esp als WLAN Brücke für ebusd (ohne Sensorik, Display etc.)
 
 * Basisplatine solo (ohne Erweiterung):  
   * Wemos:  
-    - ebusd-esp als WLAN Brücke für ebusd
+    * ebusd-esp als WLAN Brücke für ebusd
   * UART:  
-    - UART für ebusd
+    * UART für ebusd
 
 * Erweiterungsplatine solo
   * 1 Wemos:  
-    - ESPEasy für Sensorik, Display etc.
+    * ESPEasy für Sensorik, Display etc.
 
 Zusätzlich wird noch ein Rechner (bspw. Rasperry PI) mit ebusd benötigt, da der Wemos mit ebusd-esp diesen nicht ersetzt, sondern lediglich die serielle Schnittstelle im WLAN bereitstellt.
 
@@ -94,7 +94,7 @@ Hier einige Links, die zum Thema beitragen, bzw. Basisinformationen und Grundlag
 
 * [eBUS Spezifikation (physikalische Schicht OSI 1, Verbindungsschicht OSI 2)](Spec_Prot_12_V1_3_1.pdf)
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
-* [Thread über Platine 2.0](https://forum.fhem.de/index.php/topic,75878.0.html)
+* [Thread über Platine 2.0/2.1](https://forum.fhem.de/index.php/topic,75878.0.html)
 * [Reichelt Warenkorb Basisplatine](https://www.reichelt.de/my/1381342)
 * [Reichelt Warenkorb Erweiterungsplatine](https://www.reichelt.de/my/1389121)
 * [Mini Firmware von John für Wemos D1 auf Erweiterungsplatine](https://github.com/john30/ebusd-esp)
