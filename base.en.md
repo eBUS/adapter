@@ -10,7 +10,7 @@ It enables the communication for the eBUS daemon (ebusd) via UART connected to e
 
 ### Construction
 
-[<img src="images/base-top.jpg" width="200" alt="base" title="base board v2.0">](images/base-top-v20)
+[<img src="images/base-top-v20.jpg" width="200" alt="base" title="base board v2.0">](images/base-top-v20)
 
 The base board includes the comparator for detecting the RX signals, the optocouplers for galvanic isolation, as well as the transmitting part to eBUS.
 
