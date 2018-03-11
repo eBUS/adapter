@@ -10,7 +10,7 @@ Alleine mit ihr ist die Kommunikation via UART z.B. an einen Raspberry Pi oder m
 
 ### Allgemeiner Aufbau
 
-[<img src="images/base-top.jpg" width="200" alt="base" title="Basisplatine v2.0">](images/base-top-v20.jpg)
+[<img src="images/base-top-v20.jpg" width="200" alt="base" title="Basisplatine v2.0">](images/base-top-v20.jpg)
 
 Die Basisplatine beinhaltet den Komparator zur Detektierung der RX Signale, die Optokoppler zur galvanischen Trennung und den Sendeteil an den eBUS.
 
