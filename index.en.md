@@ -2,7 +2,7 @@
 ref: index
 lang: en
 ---
-## Welcome to eBUS adapter 2.0!
+## Welcome to eBUS adapter 2!
 
 This is set of instructions for building and using an eBUS adapter for communicating with an eBUS-enabled heating, ventilation, or solar system.
 
@@ -18,14 +18,14 @@ All these problems are now supposed to be solved and you can connect a wide vari
 Furthermore, the set of features has been significantly extended:
 
 * With the help of the extension board, a Wemos with ESPEasy can be plugged in and sensors can be connected via I2C, as well as a gas counter or a buzzer for alarm output.  
-  Connections for displays (OLED SSD1306 or Nextion) for indicating alarms or measured values ​​are also available.
+  Connections for displays (OLED SSD1306 or Nextion) for indicating alarms or measured values are also available.
 * A special firmware for the Wemos has been developed for the serial to Ethernet communication and thus the board can communicate with the eBUS daemon via WLAN.
 * With the plug-in system many combinations are possible and each user can adapt to his needs.
 
 
 ## Assembly
 
-The adapter consists of a [base board](base.en) and can optionally be used with an additional [extension board](extension.en) which allows access to the eBUS via WLAN in conjunction with a Wemos D1.
+The adapter consists of a [base board](base.en) and can optionally be used with an additional [extension board](extension.en) which allows access to the eBUS via WLAN in conjunction with a [Wemos D1 mini](https://wiki.wemos.cc/products:d1:d1_mini).
 
 The following pages describe the assembly and testing of the soldered circuit board.
 The required [components are listed here](partlist.en).
@@ -47,23 +47,23 @@ The assembled base and/or extension board can be used in different variants with
 
 * Base board and extension board:  
   * 2 Wemos:  
-    - ebusd-esp as WLAN bridge for ebusd
-    - ESPEasy for sensors, display, etc.
+    * ebusd-esp as WLAN bridge for ebusd
+    * ESPEasy for sensors, display, etc.
   * UART and Wemos:  
-    - UART for ebusd
-    - ESPEasy for sensors, display, etc.
+    * UART for ebusd
+    * ESPEasy for sensors, display, etc.
   * 1 Wemos:  
-    - ebusd-esp als WLAN Brücke für ebusd (ohne Sensorik, Display etc.)
+    * ebusd-esp als WLAN Brücke für ebusd (ohne Sensorik, Display etc.)
 
 * Base board only (without extension board):  
   * Wemos:  
-    - ebusd-esp as WLAN bridge for ebusd
+    * ebusd-esp as WLAN bridge for ebusd
   * UART:  
-    - UART for ebusd
+    * UART for ebusd
 
 * Extension board only:
   * 1 Wemos:  
-    - ESPEasy for sensors, display, etc.
+    * ESPEasy for sensors, display, etc.
 
 Additionally, a computer (like a Raspberry Pi) with ebusd is needed, as the Wemos with ebusd-esp does not replace ebusd but merely provides the serial interface in the WLAN.
 
@@ -91,11 +91,11 @@ which can not be used as an eBUS worker at the same time due to excessive latenc
 
 ## Links
 
-Here are some links that contribute to the topic or contain basic information, most of which are in German
+Here are some links that contribute to the topic or contain basic information, most of which are in German:
 
 * [eBUS Spezifikation (physikalische Schicht OSI 1, Verbindungsschicht OSI 2)](Spec_Prot_12_V1_3_1.pdf)
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
-* [Thread über Platine 2.0](https://forum.fhem.de/index.php/topic,75878.0.html)
+* [Thread über Platine 2.0/2.1](https://forum.fhem.de/index.php/topic,75878.0.html)
 * [Reichelt Warenkorb Basisplatine](https://www.reichelt.de/my/1381342)
 * [Reichelt Warenkorb Erweiterungsplatine](https://www.reichelt.de/my/1389121)
 * [Mini Firmware von John für Wemos D1 auf Erweiterungsplatine](https://github.com/john30/ebusd-esp)
