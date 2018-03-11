@@ -10,14 +10,14 @@ Alleine mit ihr ist die Kommunikation via UART z.B. an einen Raspberry Pi oder m
 
 ### Allgemeiner Aufbau
 
-[<img src="images/base-top.jpg" width="200" alt="base" title="Basisplatine">](images/base-top.jpg)
+[<img src="images/base-top.jpg" width="200" alt="base" title="Basisplatine v2.0">](images/base-top-v20.jpg)
 
 Die Basisplatine beinhaltet den Komparator zur Detektierung der RX Signale, die Optokoppler zur galvanischen Trennung und den Sendeteil an den eBUS.
 
 Sie kann drei verschiedene UARTs zur seriellen Kommunikation aufnehmen oder über eine Stiftleiste mit einem Wemos D1 verbunden werden.
 
-Die Stromversorgung der Platine erfolgt direkt aus dem Netz des eBUS.
-Die Gesamtstromaufnahme sollte laut eBUS Spezifikation jedoch nicht mehr als 18 mA betragen.
+Die Stromversorgung der eBUS-Seite der Platine erfolgt direkt aus dem Netz des eBUS. Die Gesamtstromaufnahme sollte laut eBUS Spezifikation jedoch nicht mehr als 18 mA betragen. Seit v2.1 kann die Basisplatine optional mit einem extra DC-DC Wandler bestückt werden, um keinerlei Strom vom eBUS zu verbrauchen.
+
 Der Adapter hat eine galvanische Trennung zwischen eBUS und dem Kommunikationsteil zum eBUS Dämon.
 
 Die Stromversorgung des UART oder des Wemos erfolgt über ein handelsübliches USB-Stecker Netzteil mit ausreichender Leistung (1A-2A).
@@ -25,7 +25,8 @@ Die Stromversorgung des UART oder des Wemos erfolgt über ein handelsübliches U
 
 ### Schaltplan
 
-[Hier ist der Schaltplan der Basisplatine.](images/base-circuit.png)
+[Hier ist der Schaltplan der aktuellen Basisplatine.](images/base-circuit.png)  
+[Hier ist der Schaltplan der v2.0 Basisplatine.](images/base-circuit.png)
 
 
 ### Bauteileliste
@@ -53,9 +54,11 @@ Die Bestückung der Basisplatine erfolgt nach den üblichen Regeln, d.h. die nie
 
 Vor dem Einlöten der Widerstände sollte man unbedingt den Widerstandswert mit einem Ohm-Meter kontrollieren, um Verwechslungen zu vermeiden.
 
-**Wichtige Hinweise:**
+**Wichtige Hinweise zu v2.0**
 - Der Kondensator C1 entfällt!
 - Der Widerstand R10 wird mit einer Drahtbrücke oder 1 Ohm Widerstand bestückt.
+
+**Wichtige Hinweise zu allen Versionen**
 - Die Position der Zenerdiode und der 1N4007 nicht verwechseln.
 - Bei den ICs (OK1, OK2, IC1) unbedingt darauf achten, dass diese richtig herum eingesetzt werden.  
   Es befindet sich links unten jeweils ein Punkt, das ist Pin 1 und ist so zu platzieren, dass dieser beim Aufdruck der Aussparung ist.
