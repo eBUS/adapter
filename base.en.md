@@ -10,14 +10,14 @@ It enables the communication for the eBUS daemon (ebusd) via UART connected to e
 
 ### Construction
 
-[<img src="images/base-top.jpg" width="200" alt="base" title="Basisplatine">](images/base-top.jpg)
+[<img src="images/base-top.jpg" width="200" alt="base" title="base board v2.0">](images/base-top-v20)
 
 The base board includes the comparator for detecting the RX signals, the optocouplers for galvanic isolation, as well as the transmitting part to eBUS.
 
 Three different UARTs can be used for serial communication and it also can be connected to a Wemos D1.
 
-The power supply of the board is taken directly from the eBUS.
-However, according to the eBUS specification, the total current consumption should not exceed 18 mA.
+The power supply of the eBUS part of the board is taken directly from the eBUS. However, according to the eBUS specification, the total current consumption should not exceed 18 mA. Since v2.1, the base board can optionally be equipped with an extra DC-DC converter to not consume any power at all from the eBUS.
+
 The adapter has a galvanic isolation between eBUS and the communication part to the eBUS daemon.
 
 The power supply for the UART or Wemos is a standard USB power supply with sufficient power (1A-2A).
@@ -25,7 +25,8 @@ The power supply for the UART or Wemos is a standard USB power supply with suffi
 
 ### Circuit Diagram
 
-[Here is the circuit diagram of the base board.](images/base-circuit.png)
+[Here is the circuit diagram of the current base board.](images/base-circuit.png)  
+[Here is the circuit diagram of the v2.0 base board.](images/base-circuit-v20.png)
 
 
 ### Part List
@@ -53,12 +54,15 @@ The assembly of the base board is carried out according to usual rules, i.e. fla
 
 Before soldering the resistors, be sure to check the resistance values with an ohm meter to avoid misplacing them.
 
-**Important hints:**
+**Important hints for v2.0:**
 - The capacitor C1 is no longer needed!
 - The resistor R10 is replaced by a wire or a 1 ohm resistor.
+
+**Important hints for all versions:**
 - Do not misplace the Zener diode and the 1N4007.
 - Make sure that the ICs (OK1, OK2, IC1) are placed in the right direction.  
   There is a dot on the bottom left, which is pin 1.
+
 
 #### Assembly of LEDs
 
