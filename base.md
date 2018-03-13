@@ -25,8 +25,8 @@ Die Stromversorgung des UART oder des Wemos erfolgt über ein handelsübliches U
 
 ### Schaltplan
 
-[Hier ist der Schaltplan der aktuellen Basisplatine.](images/base-circuit.png)  
-[Hier ist der Schaltplan der v2.0 Basisplatine.](images/base-circuit.png)
+[Hier ist der Schaltplan der aktuellen Basisplatine.](images/base-circuit-v21.png)  
+[Hier ist der Schaltplan der v2.0 Basisplatine.](images/base-circuit-v20.png)
 
 
 ### Bauteileliste
