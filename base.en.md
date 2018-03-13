@@ -25,7 +25,7 @@ The power supply for the UART or Wemos is a standard USB power supply with suffi
 
 ### Circuit Diagram
 
-[Here is the circuit diagram of the current base board.](images/base-circuit.png)  
+[Here is the circuit diagram of the current base board.](images/base-circuit-v21.png)  
 [Here is the circuit diagram of the v2.0 base board.](images/base-circuit-v20.png)
 
 
