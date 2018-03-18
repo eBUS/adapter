@@ -14,7 +14,7 @@ Wer weitere Sensoren auf der Erweiterungsplatine platzieren will ist mit [ESPEas
 
 Hier ein Beispiel eines Luftdrucksensors/Feuchte/Temperatur BME280 an der Platine aufgesteckt:
 
-[<img src="images/exten-final.jpg" width="200" alt="extension+wemos" title="Erweiterungsplatine mit Wemos und Sensor">](images/exten-final.jpg)
+[<img src="images/exten-final-v21.jpg" width="200" alt="extension+wemos" title="Erweiterungsplatine mit Wemos und Sensor">](images/exten-final-v21.jpg)
 
 In einem Gehäuse eingebaut sollte der Sensor allerdings dann mit Kabel herausgeführt werden, da die Luftfeuchtigkeit in dem Gehäuse kaum jemand interessiert.
 
@@ -28,13 +28,13 @@ Ich verwende für die serielle Verbindung die Arduino Umgebung ( ich habe 1.8.3 
 
 **Die Befehlsfolge lautet in Kurzform wie folgt:**
 
-**Settings**            = listet die Konfiguration  
+**Settings**        = listet die Konfiguration  
 **WifiSSID Liwest** = setzt die SSID (eure SSID eingeben)  
-**WifiKey geheim** = setzt das Passwort (euer Passwort eingeben)  
-**ip 10.0.0.167**    = setzt die IP Adresse wenn statisch gewünscht wird (eure IP eingeben)  
-**WifiConnect**      = Verbindet sich mit diesen Einstellungen mit dem Wlan    
-**save**                 = sichert die Konfiguration  
-**reboot**              = startet den Wemos neu  
+**WifiKey geheim**  = setzt das Passwort (euer Passwort eingeben)  
+**ip 10.0.0.167**   = setzt die IP Adresse wenn statisch gewünscht wird (eure IP eingeben)  
+**WifiConnect**     = Verbindet sich mit diesen Einstellungen mit dem Wlan  
+**save**            = sichert die Konfiguration  
+**reboot**          = startet den Wemos neu  
 
 [<img src="images/espeasy-serial.png" width="200" alt="Assembly" title="Bestückung">](images/espeasy-serial.png)
 

@@ -10,7 +10,7 @@ It enables the communication for the eBUS daemon (ebusd) via UART connected to e
 
 ### Construction
 
-[<img src="images/base-top-v20.jpg" width="200" alt="base" title="base board v2.0">](images/base-top-v20)
+[<img src="images/base-top-v20.jpg" width="200" alt="base" title="base board v2.0">](images/base-top-v20.jpg)
 
 The base board includes the comparator for detecting the RX signals, the optocouplers for galvanic isolation, as well as the transmitting part to eBUS.
 
@@ -25,8 +25,8 @@ The power supply for the UART or Wemos is a standard USB power supply with suffi
 
 ### Circuit Diagram
 
-[Here is the circuit diagram of the current base board.](images/base-circuit-v21.png)  
-[Here is the circuit diagram of the v2.0 base board.](images/base-circuit-v20.png)
+[Here is the circuit diagram of the base board v2.1 (latest version)](images/base-circuit-v21.png)  
+[Here is the circuit diagram of the base board v2.0](images/base-circuit-v20.png)
 
 
 ### Part List
@@ -54,7 +54,7 @@ The assembly of the base board is carried out according to usual rules, i.e. fla
 
 Before soldering the resistors, be sure to check the resistance values with an ohm meter to avoid misplacing them.
 
-**Important hints for v2.0:**
+**Important hints for version 2.0:**
 - The capacitor C1 is no longer needed!
 - The resistor R10 is replaced by a wire or a 1 ohm resistor.
 
@@ -83,19 +83,19 @@ In addition, the anode "+" pin is always a bit longer than the cathode.
 #### Soldering the base board
 
 [<img src="images/base-1.jpg" width="200" alt="Assembly" title="Soldering the base board front">](images/base-1.jpg)  
-**Attention:** The electrolytic capacitor C1 is omitted. It was part of the 8V variant, which could not be used due to other disadvantages.
+**Attention for version 2.0:** The electrolytic capacitor C1 is omitted. It was part of the 8V variant, which could not be used due to other disadvantages.
 
 [<img src="images/base-2.jpg" width="200" alt="Assembly" title="Soldering the base board back">](images/base-2.jpg)  
-View from the back, the wire ends are bent slightly so that the components do not fall out when turned over.
+View from the back (v2.0), the wire ends are bent slightly so that the components do not fall out when turned over.
 This way, everything can be soldered conveniently.
 
 [<img src="images/base-3.jpg" width="200" alt="Assembly" title="Soldering the base board back">](images/base-3.jpg)  
-Soldered board from the back with wires already cut off.
+Soldered board from the back (v2.0) with wires already cut off.
 
 
 #### Finished base board
 
-[<img src="images/base-final.jpg" width="200" alt="Final" title="Finished base board">](images/base-final.jpg) 
+[<img src="images/base-final-v21.jpg" width="200" alt="Final" title="Finished base board v2.1">](images/base-final-v20.jpg) [<img src="images/base-final-v20.jpg" width="200" alt="Final" title="Finished base board v2.0">](images/base-final-v20.jpg) 
 
 The female headers for non-used UARTs can be excluded.
 
@@ -105,10 +105,11 @@ The female headers for non-used UARTs can be excluded.
 To test the soldered board for proper function, the measurement plan should be walked through.
 
 For doing so, the eBUS socket is connected to a power supply (not to the heater!) with the supplied 330 ohm resistor and neither the expansion board nor a UART are connected to the board.
+On version 2.1 with DC-DC converter, an additional 5V supply is needed for measurement, e.g. at JP8.
 
-Here are the main measuring points on the base board seen from top:
+Here are the main measuring points on the base board seen from top (left: v2.1, right: v2.0):
 
-[<img src="images/base-measure.jpg" width="300" alt="measure" title="Messpunkte">](images/base-measure.jpg)  
+[<img src="images/base-measure-v21.jpg" width="300" alt="measure" title="Measuring v2.1">](images/base-measure-v21.jpg) [<img src="images/base-measure-v20.jpg" width="300" alt="measure" title="Measuring v2.0">](images/base-measure-v20.jpg)  
 For the voltages, RX (<span style="color:green">green</span>) and TX (<span style="color:red">red</span>) are distinguished.  
 The first pass is for reception (RX) and the second for transmission (TX) with the short-circuit at OK2.
 
@@ -119,21 +120,21 @@ The [circuit diagram with measure values](images/base-measure-values.png) also s
 
 [<img src="images/uarts.jpg" width="200" alt="UARTs" title="UARTs">](images/uarts.jpg)
 
-These 3 UARTs were tested with the base board.
+These 3 UARTs were tested with the base board. Since v2.1 the FTDI is no longer supported.
 
 The ELV UART is the only one that does not have its own LEDs on-board, but the other two are equipped with those for added control.
 
-With the FTDI UART a straight pin header must be used instead of the angled one shown in the picture.
+With the FTDI UART (only for v2.0) a straight pin header must be used instead of the angled one shown in the picture.
 
 
 ### Wemos D1
 
 With a simple wire connection, the Wemos D1 can also be used directly with the base board, in contrast to using it [with the extension board](extension.en#assembly).
 
-[<img src="images/wemos-wiring.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring">](images/wemos-wiring.jpg)  
+[<img src="images/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring v2.1">](images/wemos-wiring-v21.jpg) [<img src="images/wemos-wiring-v20.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring 2.0">](images/wemos-wiring-v20.jpg)   
 **Wemos D1 wiring**
 
-In case a Wemos shall be used with the base board, it has to be connected by wire to RX, TX, VCC, and GND.
+In case a Wemos shall be used with the base board, it has to be connected by wire to RX, TX, VCC, and GND. Since version 2.1 an additional 5th wire is needed for 5V.
 There is no need for soldering the pin headers to the Wemos D1 in this case.
 
 [<img src="images/wemos-wired.jpg" width="200" alt="Wemos D1 wired" title="Wemos D1 at base board">](images/wemos-wired.jpg)  

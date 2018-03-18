@@ -31,11 +31,11 @@ In den folgenden Seiten wird der Aufbau, die Bestückung und das Prüfen der gel
 Die dafür benötigten [Bauteile sind hier aufgeführt](partlist).
 
 * [Basisplatine](base)  
-  [<img src="images/base-final.jpg" width="200" alt="base" title="Basisplatine">](base)  
+  [<img src="images/base-final-v21.jpg" width="200" alt="base" title="Basisplatine">](base)  
   [Hier finden sich Tipps zur Fehlersuche](diagnostics) für den Fall, dass die Basisplatine nach Zusammenbau nicht wie erwartet funktioniert.
 
 * [Erweiterungsplatine](extension)  
-  [<img src="images/exten-final.jpg" width="200" alt="extension" title="Erweiterungsplatine">](extension)
+  [<img src="images/exten-final-v21.jpg" width="200" alt="extension" title="Erweiterungsplatine">](extension)
 
 * [Raspberry Pi](raspberrypi)  
   [<img src="images/base-rpi.jpg" width="200" alt="rpi-base" title="Basisplatine auf Raspberry Pi">](raspberrypi)

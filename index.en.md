@@ -31,11 +31,11 @@ The following pages describe the assembly and testing of the soldered circuit bo
 The required [components are listed here](partlist.en).
 
 * [Base Board](base.en)  
-  [<img src="images/base-final.jpg" width="200" alt="base" title="base board">](base.en)  
+  [<img src="images/base-final-v21.jpg" width="200" alt="base" title="base board">](base.en)  
   [Here are troubleshooting tips](diagnostics.en) in case the base board does not work as expected after assembly.
 
 * [Extension Board](extension.en)  
-  [<img src="images/exten-final.jpg" width="200" alt="extension" title="extension board">](extension.en)
+  [<img src="images/exten-final-v21.jpg" width="200" alt="extension" title="extension board">](extension.en)
 
 * [Raspberry Pi](raspberrypi.en)  
   [<img src="images/base-rpi.jpg" width="200" alt="rpi-base" title="base board on Raspberry Pi">](raspberrypi.en)
