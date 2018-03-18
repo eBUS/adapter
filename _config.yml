@@ -2,8 +2,8 @@ theme: jekyll-theme-cayman
 lang: de
 baseurl: /adapter
 title:
-  de: eBUS Adapter 2.0
-  en: eBUS adapter 2.0
+  de: eBUS Adapter 2
+  en: eBUS adapter 2
 description:
   de: Hardware-Adapter zur Kommunikation mit eBUS Heizsystemen
   en: Hardware interface for communicating with eBUS heating system
