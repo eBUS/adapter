@@ -92,12 +92,14 @@ der wegen zu hoher Latenzzeiten nicht gleichzeitig als eBUS Worker genutzt werde
 
 Hier einige Links, die zum Thema beitragen, bzw. Basisinformationen und Grundlagen enthalten:
 
-* [eBUS Spezifikation (physikalische Schicht OSI 1, Verbindungsschicht OSI 2)](Spec_Prot_12_V1_3_1.pdf)
+* [eBUS Spezifikation (physikalische Schicht OSI 1)](Spec_Prot_12_V1_3_1.pdf)
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
-* [Thread über Platine 2.0/2.1](https://forum.fhem.de/index.php/topic,75878.0.html)
-* [Reichelt Warenkorb Basisplatine](https://www.reichelt.de/my/1381342)
-* [Reichelt Warenkorb Erweiterungsplatine](https://www.reichelt.de/my/1389121)
-* [Mini Firmware von John für Wemos D1 auf Erweiterungsplatine](https://github.com/john30/ebusd-esp)
+* [Thread über Schaltung 2.0/2.1/2.2](https://forum.fhem.de/index.php/topic,75878.0.html)
+* [Reichelt Warenkorb Grundbausatz](https://www.reichelt.de/my/1518848) (benötigt für Basis und RPi)
+* [Reichelt Warenkorb Basisplatine](https://www.reichelt.de/my/1518853)
+* [Reichelt Warenkorb Erweiterungsplatine](https://www.reichelt.de/my/1518854)
+* [Reichelt Warenkorb RPi](https://www.reichelt.de/my/1518862)
+* [ebusd-esp Firmware für Wemos D1 auf Erweiterungsplatine](https://github.com/john30/ebusd-esp)
 * [ebusd Wiki](https://github.com/john30/ebusd/wiki)
 * [eBUS background in ebusd Wiki](https://github.com/john30/ebusd/wiki/eBUS-background)
 * [eBUS Wiki](http://ebus-wiki.org)

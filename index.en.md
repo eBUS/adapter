@@ -93,12 +93,14 @@ which can not be used as an eBUS worker at the same time due to excessive latenc
 
 Here are some links that contribute to the topic or contain basic information, most of which are in German:
 
-* [eBUS Spezifikation (physikalische Schicht OSI 1, Verbindungsschicht OSI 2)](Spec_Prot_12_V1_3_1.pdf)
-* [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
-* [Thread über Platine 2.0/2.1](https://forum.fhem.de/index.php/topic,75878.0.html)
-* [Reichelt Warenkorb Basisplatine](https://www.reichelt.de/my/1381342)
-* [Reichelt Warenkorb Erweiterungsplatine](https://www.reichelt.de/my/1389121)
-* [Mini Firmware von John für Wemos D1 auf Erweiterungsplatine](https://github.com/john30/ebusd-esp)
+* [eBUS spezification (physikal layer OSI 1)](Spec_Prot_12_V1_3_1.pdf)
+* [Wiki about board V 1.6](https://wiki.fhem.de/wiki/eBUS)
+* [Thread about board 2.0/2.1/2.2](https://forum.fhem.de/index.php/topic,75878.0.html)
+* [Reichelt cart common base](https://www.reichelt.de/my/1518848) (needed for base and RPi)
+* [Reichelt cart base board](https://www.reichelt.de/my/1518853)
+* [Reichelt cart extension board](https://www.reichelt.de/my/1518854)
+* [Reichelt cart RPi board](https://www.reichelt.de/my/1518862)
+* [ebusd-esp firmware for Wemos D1 on extension board](https://github.com/john30/ebusd-esp)
 * [ebusd wiki](https://github.com/john30/ebusd/wiki)
 * [eBUS background in ebusd wiki](https://github.com/john30/ebusd/wiki/eBUS-background)
 * [eBUS Wiki](http://ebus-wiki.org)
