@@ -25,8 +25,8 @@ The power supply for the UART or Wemos is a standard USB power supply with suffi
 
 ### Circuit Diagram
 
-[Here is the circuit diagram of the base board v2.1 (latest version)](images/base-circuit-v21.png)  
-[Here is the circuit diagram of the base board v2.0](images/base-circuit-v20.png)
+[<img src="images/base-circuit-v22.png" width="600" alt="Circuit diagram base board" title="Circuit diagram base board">](images/base-circuit-v22.png)  
+Older versions are here: [v2.1](images/base-circuit-v21.png) [v2.0](images/base-circuit-v20.png)
 
 
 ### Part List
@@ -105,11 +105,13 @@ The female headers for non-used UARTs can be excluded.
 To test the soldered board for proper function, the measurement plan should be walked through.
 
 For doing so, the eBUS socket is connected to a power supply (not to the heater!) with the supplied 330 ohm resistor and neither the expansion board nor a UART are connected to the board.
-On version 2.1 with DC-DC converter, an additional 5V supply is needed for measurement, e.g. at JP8.
+Starting with version 2.1 with DC-DC converter, an additional 5V supply is needed for measurement, e.g. at JP8.
 
-Here are the main measuring points on the base board seen from top (left: v2.1, right: v2.0):
+Here are the main measuring points on the base board seen from top:
 
-[<img src="images/base-measure-v21.jpg" width="300" alt="measure" title="Measuring v2.1">](images/base-measure-v21.jpg) [<img src="images/base-measure-v20.jpg" width="300" alt="measure" title="Measuring v2.0">](images/base-measure-v20.jpg)  
+[<img src="images/base-measure-v22.jpg" width="300" alt="measure" title="Measuring v2.2">](images/base-measure-v22.jpg)  
+Older versions are here: [v2.1](images/base-measure-v21.jpg) [v2.0](images/base-measure-v20.jpg)
+
 For the voltages, RX (<span style="color:green">green</span>) and TX (<span style="color:red">red</span>) are distinguished.  
 The first pass is for reception (RX) and the second for transmission (TX) with the short-circuit at OK2.
 

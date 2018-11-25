@@ -25,8 +25,8 @@ Die Stromversorgung des UART oder des Wemos erfolgt über ein handelsübliches U
 
 ### Schaltplan
 
-[Hier ist der Schaltplan der Basisplatine v2.1 (neueste Version)](images/base-circuit-v21.png)  
-[Hier ist der Schaltplan der Basisplatine v2.0](images/base-circuit-v20.png)
+[<img src="images/base-circuit-v22.png" width="600" alt="Schaltplan Basisplatine" title="Schaltplan Basisplatine">](images/base-circuit-v22.png)  
+Ältere Versionen sind hier: [v2.1](images/base-circuit-v21.png) [v2.0](images/base-circuit-v20.png)
 
 
 ### Bauteileliste
@@ -105,11 +105,13 @@ Die Buchsenleisten für nicht vorhandene UARTs kann man sich in der Regel sparen
 Um die fertig gelötete Platine hinsichtlich der korrekten Funktion zu prüfen, sollte der Messplan durchlaufen werden.
 
 Dabei wird der eBUS mit dem mitgelieferten 330 Ohm Widerstand an ein Netzteil angeschlossen (nicht an die Heizung!) und weder Erweiterungsplatine noch UART mit der Platine verbunden.
-Bei Version 2.1 mit DC-DC Wandler werden zum Messen zusätzlich noch 5V Spannungsversorgung bspw. an JP8 benötigt.
+Ab Version 2.1 mit DC-DC Wandler werden zum Messen zusätzlich noch 5V Spannungsversorgung bspw. an JP8 benötigt.
 
-Hier sind die wichtigsten Messpunkte auf der Basisplatine von oben gesehen abgebildet (links: v2.1, rechts: v2.0):
+Hier sind die wichtigsten Messpunkte auf der Basisplatine von oben gesehen abgebildet:
 
-[<img src="images/base-measure-v21.jpg" width="300" alt="measure" title="Messpunkte v2.1">](images/base-measure-v21.jpg) [<img src="images/base-measure-v20.jpg" width="300" alt="measure" title="Messpunkte v2.0">](images/base-measure-v20.jpg)  
+[<img src="images/base-measure-v22.jpg" width="300" alt="measure" title="Messpunkte v2.2">](images/base-measure-v22.jpg)  
+Ältere Versionen sind hier: [v2.1](images/base-measure-v21.jpg) [v2.0](images/base-measure-v20.jpg)
+
 Bei den Spannungen wird farblich zwischen RX (<span style="color:green">grün</span>) und TX (<span style="color:red">rot</span>) unterschieden.  
 Der erste Durchlauf ist für den Empfang (RX) und der zweite für das Senden (TX) mit Brücke am OK2.
 
