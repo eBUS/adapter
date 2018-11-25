@@ -22,8 +22,8 @@ Die Spannungsversorgung erfolgt über ein USB Stecker Netzteil direkt am C-Steck
 
 ### Schaltplan
 
-[Hier ist der Schaltplan der Erweiterungsplatine v2.1 (neueste Version)](images/exten-circuit-v21.png)  
-[Hier ist der Schaltplan der Erweiterungsplatine v2.0](images/exten-circuit-v20.png)
+[<img src="images/exten-circuit-v22.png" width="600" alt="Schaltplan Erweiterungsplatine" title="Schaltplan Erweiterungsplatine">](images/exten-circuit-v22.png)  
+Ältere Versionen sind hier: [v2.1](images/exten-circuit-v21.png) [v2.0](images/exten-circuit-v20.png)
 
 
 ### Bauteileliste
@@ -98,7 +98,8 @@ Links sieht man das Dupont-Kabel für die Verbindung zum Wemos mit ebusd-esp.
 
 ### Funktionsmatrix Jumper
 
-[<img src="images/exten-jumper-v21.png" width="200" alt="Jumper" title="Jumper v2.1">](images/exten-jumper-v21.png) [<img src="images/exten-jumper-v20.jpg" width="200" alt="Jumper" title="Jumper v2.0">](images/exten-jumper-v20.jpg)
+[<img src="images/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](images/exten-jumper-v22.png)  
+Ältere Versionen sind hier: [v2.1](images/exten-jumper-v21.jpg) [v2.0](images/exten-jumper-v20.jpg)
 
 Auf der Rückseite der Erweiterungsplatine befinden sich einige Jumper (Lötbrücken), die je nach gewünschten Sensoren bzw. eingesetzter Wemos Firmware unterschiedliche Belegungen erlauben.
 
@@ -106,6 +107,28 @@ Je nachdem für welchen Zweck die Erweiterungsplatine eingesetzt wird, ist hier 
 
 **Wichtig:** Der Wemos mit ESPEasy darf nicht an RX und TX gejumpert werden, da ansonsten die Signale vom gleichzeitig angeschlossenen Wemos mit ebusd-esp verschliffen würden!  
 Solche Fehler können unter Umständen augenblicklich nichts ausmachen und zeigen sich meist erst wenn mehrere Geräte am eBUS angeschlossen sind.
+
+
+#### Jumper für Version 2.2
+
+| Sensor      | Wemos PINs | SJ2 | SJ1 |   SJ4   |   SJ3   | Bemerkung                                                     |
+|-------------|------------|-----|-----|---------|---------|---------------------------------------------------------------|
+|ebusd-esp    | RX/TX      |     |     |   3-2   |   3-2   | nur für direkte Verwendung von ebusd-esp auf der Erweiterung! |
+|ebusd-esp    | D5/D4      |     |     |   2-1   |   2-1   | nur für direkte Verwendung von ebusd-esp auf der Erweiterung! |
+| ESPEasy     |            |     |     |**offen**|**offen**|                                                               |
+| JP6 BME280  | **D1/D2**  |     |     |         |         |                                                               |
+| JP7 Buzzer  | **D0**     |     |     |         |         |                                                               |
+| JP3 OLED    | **D1/D2**  |     |     |         |         |                                                               |
+| JP2 Nextion | D8/D7      | 3-2 | 3-2 |         |         |                                                               |
+| JP2 Nextion | RX/TX      | 2-1 | 2-1 |         |         |                                                               |
+
+* Die empfohlenen Einstellungen sind **fett**.
+* `3-2` bedeutet: verbinde den linken Lötpunkt mit dem mittleren
+* `2-1` bedeutet: verbinde den mittleren Lötpunkt mit dem rechten
+
+**Beispiel 1:** soll ein Wemos mit ESPEasy und einem BME280 verwendet werden, dann muss kein Jumper gesetzt werden.
+
+**Beispiel 2:** soll ein Wemos mit ebusd-esp direkt auf der Erweiterungsplatine verwendet werden, dann müssen SJ4/SJ3 entsprechend der Tabelle gesetzt werden.
 
 
 #### Jumper für Version 2.1
@@ -159,12 +182,16 @@ Solche Fehler können unter Umständen augenblicklich nichts ausmachen und zeige
 
 [<img src="images/exten-full.jpg" width="200" alt="Assembly" title="Bestückung">](images/exten-full.jpg)
 
-Hier abgebildet ist eine Variante mit Vollausbau, Basisplatine mit Wemos ebusd-esp und Erweiterungsplatine mit ESPEasy und einem Temp-Feuchte-Druck-Sensor BME280.
+Hier abgebildet ist eine Variante mit Vollausbau, Basisplatine mit Wemos ebusd-esp und Erweiterungsplatine mit ESPEasy und einem Temperatur-Feuchte-Druck-Sensor BME280.
 
 Bei dieser Variante sind für den Wemos mit ebusd-esp keine Jumper zu setzen, da dieser am Konnektor JP8 angesteckt ist und hier fix das RX + TX Signal zugeführt wird.
 
 Der Wemos mit ESPEasy sitzt auf der Erweiterungsplatine und nutzt somit alle vorgesehenen Stiftleisten.
-Sitzt wie hier ESPEasy auf der Erweiterungsplatine und ist mit dem Sensor BME280 verbunden, müssen die Jumper SJ8/SJ4 (v2.1) bzw. SJ2/SJ1 (v2.0) gesetzt werden.
+Sitzt wie hier ESPEasy auf der Erweiterungsplatine und ist mit dem Sensor BME280 verbunden, müssen keine Jumper (v2.2) bzw. die Jumper SJ8/SJ4 (v2.1) bzw. SJ2/SJ1 (v2.0) gesetzt werden.
+
+#### Jumper Vollausbau Version 2.2
+
+Für Version 2.2 müssen keine Jumper für die oben beschriebene Variante des Vollausbaus gesetzt werden und beim ESPEasy können die I2C Einstellungen auf den Standardwerten bleiben (D1/D2).
 
 #### Jumper Vollausbau Version 2.1
 

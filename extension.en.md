@@ -22,8 +22,8 @@ The power is supplied directly to the C-connector of the Wemos via a USB power s
 
 ### Circuit Diagram
 
-[Here is the circuit diagram of the extension board v2.1 (latest version)](images/exten-circuit-v21.png)  
-[Here is the circuit diagram of the extension board v2.0](images/exten-circuit-v20.png)
+[<img src="images/exten-circuit-v22.png" width="600" alt="Circuit diagram exten board" title="Circuit diagram exten board">](images/exten-circuit-v22.png)  
+Older versions are here: [v2.1](images/exten-circuit-v21.png) [v2.0](images/exten-circuit-v20.png)
 
 
 ### Part List
@@ -72,7 +72,7 @@ In particular, one should consider before soldering, whether and how for example
 If, for example, a BME280 is to be used outside the housing for measuring temperature etc., a 4-wire cable is required which is connected via a pin header, socket header, or directly to the extension board.
 Depending on this, the corresponding socket and/or pin headers have to be selected and soldered.
 
-The [jumper assignment depends on the variant used](#function-matrix-jumpers) as well.
+The [jumper assignment depends on the variant used](#jumper-function-matrix) as well.
 
 
 #### Assembly of LEDs
@@ -98,7 +98,8 @@ On the left is the Dupont cable for the connection to the Wemos with ebusd-esp.
 
 ### Jumper Function Matrix
 
-[<img src="images/exten-jumper-v21.png" width="200" alt="Jumper" title="Jumper v2.1">](images/exten-jumper-v21.png) [<img src="images/exten-jumper-v20.jpg" width="200" alt="Jumper" title="Jumper v2.0">](images/exten-jumper-v20.jpg)
+[<img src="images/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](images/exten-jumper-v22.png)  
+Older versions are here: [v2.1](images/exten-jumper-v21.jpg) [v2.0](images/exten-jumper-v20.jpg)
 
 On the back of the extension board there are some jumpers (solder bridges) that allow different assignments depending on the desired sensors or used Wemos firmware.
 
@@ -106,6 +107,29 @@ Depending on the desired application variant for the extension board, the jumper
 
 **Important:** The Wemos with ESPEasy may not be jumpered to RX and TX, as otherwise the signals from the simultaneously connected Wemos would be grounded with ebusd-esp!  
 Such errors may not seem to make any difference at first, but certainly show up once several devices are connected to the eBUS.
+
+
+#### Jumper für Version 2.2
+
+| Sensor      | Wemos PINs | SJ2 | SJ1 |   SJ4  |   SJ3  | Comment                                                   |
+|-------------|------------|-----|-----|--------|--------|-----------------------------------------------------------|
+|ebusd-esp    | RX/TX      |     |     |   3-2  |   3-2  | only for using ebusd-esp directly on the extension board! |
+|ebusd-esp    | D5/D4      |     |     |   2-1  |   2-1  | only for using ebusd-esp directly on the extension board! |
+| ESPEasy     |            |     |     |**open**|**open**|                                                           |
+| JP6 BME280  | **D1/D2**  |     |     |        |        |                                                           |
+| JP7 Buzzer  | **D0**     |     |     |        |        |                                                           |
+| JP3 OLED    | **D1/D2**  |     |     |        |        |                                                           |
+| JP2 Nextion | D8/D7      | 3-2 | 3-2 |        |        |                                                           |
+| JP2 Nextion | RX/TX      | 2-1 | 2-1 |        |        |                                                           |
+
+* Recommended settings are in **bold**.
+* `3-2` means: connect the left soldering point to the middle one.
+* `2-1` means: connect the middle soldering point to the right one.
+
+**Example 1:** in case a Wemos with with ESPEasy and a BME280 shall be connected, no jumpers have to be set.
+
+**Example 2:** in case a Wemos with ebusd-esp shall be used directly on the extension board, the jumpers SJ4/SJ3 have to be connected as stated in the table.
+
 
 
 #### Jumper for version 2.1
@@ -163,7 +187,11 @@ This image shows a variant with full configuration: the base board with Wemos eb
 In this variant no jumpers have to be set for the Wemos with ebusd-esp, since it is attached to connector JP8 and this directly has both, the RX and TX signal.
 
 The Wemos with ESPEasy is plugged onto the expansion board and thus uses all the pin headers provided.
-If ESPEasy is located on the extension board and is connected to the BME280 sensor, jumpers SJ8/SJ4 (v2.1) or SJ2/SJ1 (v2.0) have to be set.
+If ESPEasy is located on the extension board and is connected to the BME280 sensor, no jumpers (v2.2) or jumpers SJ8/SJ4 (v2.1) or SJ2/SJ1 (v2.0) have to be set.
+
+#### Jumpers fully equipped for version 2.2
+
+For version 2.2, no jumper has to be set for the fully equipped variant described above and the I2C settings on ESPEasy can remain on default (D1/D2).
 
 #### Jumpers fully equipped for version 2.1
 
