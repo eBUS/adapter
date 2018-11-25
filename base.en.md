@@ -6,6 +6,7 @@ lang: en
 
 The base board represents the actual converter.
 It enables the communication for the eBUS daemon (ebusd) via UART connected to e.g. a Raspberry Pi or via WLAN directly.
+This base board is also available in an extended [variant for directly plugging onto a Raspberry Pi](raspberrypi.en).
 
 
 ### Construction
@@ -48,7 +49,7 @@ The assembly of the base board is carried out according to usual rules, i.e. fla
 5. Capacitors
 6. Socket headers
 7. Transistors
-8. eBUS socket
+8. eBUS socket and DC-DC converter
 9. LEDs (only without extension board)
 10. Plug in the UART with its pin header or [connect the Wemos with Dupont cable to JP8](#wemos-d1)
 

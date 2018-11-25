@@ -6,6 +6,7 @@ lang: de
 
 Die Basisplatine dient als Grundlage und stellt den eigentlichen Konverter dar.
 Alleine mit ihr ist die Kommunikation via UART z.B. an einen Raspberry Pi oder mittels WLAN direkt an den eBUS Dämon (ebusd) möglich.
+Von dieser Basisplatine gibt es auch eine erweiterte [Variante, die direkt auf einen Raspberry Pi aufgesteckt werden kann](raspberrypi).
 
 
 ### Allgemeiner Aufbau
@@ -48,7 +49,7 @@ Die Bestückung der Basisplatine erfolgt nach den üblichen Regeln, d.h. die nie
 5. Kondensatoren
 6. Buchsenleisten
 7. Transistoren
-8. Printklemme
+8. Printklemme und DC-DC Wandler
 9. LEDs (nur ohne Erweiterungsplatine)
 10. UART mit Stiftleiste aufstecken oder [Wemos mit Dupontkabel an JP8 anstecken](#wemos-d1)
 
