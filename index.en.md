@@ -38,7 +38,7 @@ The required [components are listed here](partlist.en).
   [<img src="images/exten-final-v21.jpg" width="200" alt="extension" title="extension board">](extension.en)
 
 * [Raspberry Pi](raspberrypi.en)  
-  [<img src="images/base-rpi.jpg" width="200" alt="rpi-base" title="base board on Raspberry Pi">](raspberrypi.en)
+  [<img src="images/rpi-final-v22.jpg" width="200" alt="rpi" title="Raspberry Pi Board">](raspberrypi)
 
 
 ## Usage

@@ -38,7 +38,7 @@ Die dafür benötigten [Bauteile sind hier aufgeführt](partlist).
   [<img src="images/exten-final-v21.jpg" width="200" alt="extension" title="Erweiterungsplatine">](extension)
 
 * [Raspberry Pi](raspberrypi)  
-  [<img src="images/base-rpi.jpg" width="200" alt="rpi-base" title="Basisplatine auf Raspberry Pi">](raspberrypi)
+  [<img src="images/rpi-final-v22.jpg" width="200" alt="rpi" title="Raspberry Pi Platine">](raspberrypi)
 
 
 ### Verwendung
