@@ -2,27 +2,28 @@
 ref: raspberrypi
 lang: de
 ---
-## Raspberry Möglichkeiten
+## Raspberry Pi Platine
 
-Um die Platine mit dem [Raspberry Pi](https://www.raspberrypi.org/) zu nutzen, gibt es derzeit nur die Variante mit eigenem
-UART, also ohne Verwendung des RPi GPIO UART (dessen Latenz ist für eBUS nicht zu gebrauchen).
+Diese Variante der erweiterten [Basisplatine](base) wird direkt auf einen [Raspberry Pi](https://www.raspberrypi.org/) aufgesteckt.
+
+Zum allgemeinen Aufbau, Bestückung und Bauteileliste siehe die entsprechenden Kapitel der [Basisplatine](base).
 
 
-### Platine im Raspberry Pi
+### Schaltplan
 
-Eine mögliche Variante die Platine in oder auf einem Raspberry zu platzieren soll dieses Foto zeigen:
+[<img src="images/rpi-circuit-v22.png" width="600" alt="Schaltplan Raspberry Pi Platine" title="Schaltplan Basisplatine">](images/rpi-circuit-v22.png)
 
-[<img src="images/base-rpi.jpg" width="200" alt="rpi-base" title="Basisplatine auf Raspberry PI">](images/base-rpi.jpg)
 
-Hier wurde ein kleines 3mm Loch zwischen den USB Buchsen gebohrt und ein USB-Kabel durchgeführt.
-Als Kabel wurde ein altes USB Kabel mit C-Stecker verwendet und etwa 6 cm abgezwickt.
-Hinten an der Platine des Raspberry ist das Kabel aufgelötet und somit ist nichts nach außen geführt und es gibt keine
-störenden Kabel aus oder in das Gehäuse:
+### Messplan
 
-[<img src="images/base-rpi-bottom.jpg" width="200" alt="rpi-base-bottom" title="Rückseite">](images/base-rpi-bottom.jpg)
+Um die fertig gelötete Platine hinsichtlich der korrekten Funktion zu prüfen, sollte der Messplan durchlaufen werden.
 
-Selbst mit IC Sockel ist hier noch ausreichend Bauhöhe vorhanden:
+Dabei wird der eBUS mit dem mitgelieferten 330 Ohm Widerstand an ein Netzteil angeschlossen (nicht an die Heizung!).
+Ab Version 2.1 mit DC-DC Wandler werden zum Messen zusätzlich noch 5V Spannungsversorgung bspw. an JP1 benötigt.
 
-[<img src="images/base-rpi-side.jpg" width="200" alt="rpi-base-side" title="Seitenansicht">](images/base-rpi-side.jpg)
+Hier sind die wichtigsten Messpunkte auf der Platine von oben gesehen abgebildet:
 
-Der UART kann auch direkt mit der Stiftleiste eingelötet werden, dann wird es noch flacher.
+[<img src="images/rpi-measure-v22.jpg" width="300" alt="measure" title="Messpunkte v2.2">](images/rpi-measure-v22.jpg)
+
+Bei den Spannungen wird farblich zwischen RX (<span style="color:green">grün</span>) und TX (<span style="color:red">rot</span>) unterschieden.  
+Der erste Durchlauf ist für den Empfang (RX) und der zweite für das Senden (TX) mit Brücke am OK2.
