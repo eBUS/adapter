@@ -99,7 +99,7 @@ Links sieht man das Dupont-Kabel für die Verbindung zum Wemos mit ebusd-esp.
 ### Funktionsmatrix Jumper
 
 [<img src="images/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](images/exten-jumper-v22.png)  
-Ältere Versionen sind hier: [v2.1](images/exten-jumper-v21.jpg) [v2.0](images/exten-jumper-v20.jpg)
+Ältere Versionen sind hier: [v2.1](images/exten-jumper-v21.png) [v2.0](images/exten-jumper-v20.jpg)
 
 Auf der Rückseite der Erweiterungsplatine befinden sich einige Jumper (Lötbrücken), die je nach gewünschten Sensoren bzw. eingesetzter Wemos Firmware unterschiedliche Belegungen erlauben.
 

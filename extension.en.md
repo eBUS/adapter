@@ -99,7 +99,7 @@ On the left is the Dupont cable for the connection to the Wemos with ebusd-esp.
 ### Jumper Function Matrix
 
 [<img src="images/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](images/exten-jumper-v22.png)  
-Older versions are here: [v2.1](images/exten-jumper-v21.jpg) [v2.0](images/exten-jumper-v20.jpg)
+Older versions are here: [v2.1](images/exten-jumper-v21.png) [v2.0](images/exten-jumper-v20.jpg)
 
 On the back of the extension board there are some jumpers (solder bridges) that allow different assignments depending on the desired sensors or used Wemos firmware.
 
