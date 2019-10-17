@@ -96,7 +96,7 @@ Soldered board from the back (v2.0) with wires already cut off.
 
 #### Finished base board
 
-[<img src="images/base-final-v21.jpg" width="200" alt="Final" title="Finished base board v2.1">](images/base-final-v20.jpg) [<img src="images/base-final-v20.jpg" width="200" alt="Final" title="Finished base board v2.0">](images/base-final-v20.jpg) 
+[<img src="images/base-final-v21.jpg" width="200" alt="Final" title="Finished base board v2.1">](images/base-final-v21.jpg) [<img src="images/base-final-v20.jpg" width="200" alt="Final" title="Finished base board v2.0">](images/base-final-v20.jpg) 
 
 The female headers for non-used UARTs can be excluded.
 
