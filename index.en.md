@@ -76,14 +76,16 @@ Here is an overview of the individual components with their connections:
 * Heater  
   is connected to the adapter via a 2-wire cable.
 * Adapter  
-  is connected to ebusd via USB (UART) or WLAN (Wemos ebusd-esp).
+  is connected to ebusd via USB (UART) or WLAN ([Wemos ebusd-esp](wemosebus)) or directly via [GPIO to a Raspberry Pi](raspberrypi.en).
 * ebusd  
   provides TCP client, MQTT and HTTP for FHEM, Node-Red and others.
 
 
-### Wemos Firmware
+### Wemos Usage
 
-For using the Wemos D1 for communication with eBUS, a [special firmware is required](wemosebus).
+For using a Wemos D1 for communication with eBUS, a [special firmware is required](wemosebus). It can be connected directly to the adapter like this:
+
+[<img src="images/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring v2.1">](images/wemos-wiring-v21.jpg)
 
 In order to use additional sensors with the extension board, a [separate Wemos D1 is needed](wemossensors),
 which can not be used as an eBUS worker at the same time due to excessive latency.
