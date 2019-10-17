@@ -105,7 +105,7 @@ The female headers for non-used UARTs can be excluded.
 
 To test the soldered board for proper function, the measurement plan should be walked through.
 
-For doing so, the eBUS socket is connected to a power supply (not to the heater!) with the supplied 330 ohm resistor and neither the expansion board nor a UART are connected to the board.
+For doing so, the eBUS socket is connected to a power supply (not to the heater!) with the supplied 330 ohm resistor and neither the expansion board nor a UART are connected to the board. But the RX+TX LEDs have to be connected at least!
 Starting with version 2.1 with DC-DC converter, an additional 5V supply is needed for measurement, e.g. at JP8.
 
 Here are the main measuring points on the base board seen from top:
