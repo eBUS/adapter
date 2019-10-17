@@ -75,14 +75,16 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 * Heizung  
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
 * Adapter  
-  wird mit ebusd über USB (UART) oder WLAN (Wemos ebusd-esp) verbunden.
+  wird mit ebusd über USB (UART) oder WLAN ([Wemos ebusd-esp](wemosebus)) oder direkt via [GPIO mit einem Raspberry Pi](raspberrypi) verbunden.
 * ebusd  
   stellt TCP client, MQTT und HTTP für FHEM, Node-Red und weitere zur Verfügung.
 
 
-#### Wemos Firmware
+#### Wemos Einsatz
 
-Für den Einsatz des Wemos D1 zur Kommunikation mit eBUS wird eine [spezielle Firmware benötigt](wemosebus).
+Für den Einsatz eines Wemos D1 zur Kommunikation mit eBUS wird eine [spezielle Firmware benötigt](wemosebus). Der Anschluss direkt an der Basisplatine sieht dann so aus:
+
+[<img src="images/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 Verdrahtung" title="Wemos D1 Verdrahtung v2.1">](images/wemos-wiring-v21.jpg)
 
 Um zusätzliche Sensoren mit der Erweiterungsplatine nutzen zu können, muss derzeit noch ein [eigener Wemos D1 verwendet werden](wemossensors),
 der wegen zu hoher Latenzzeiten nicht gleichzeitig als eBUS Worker genutzt werden kann.
