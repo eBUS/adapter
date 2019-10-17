@@ -96,7 +96,7 @@ Fertig verlötete Platine von hinten (v2.0), die Drähte werden nach der Verlöt
 
 #### Fertig aufgebaute Basisplatine
 
-[<img src="images/base-final-v21.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.1">](images/base-final-v20.jpg) [<img src="images/base-final-v20.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.0">](images/base-final-v20.jpg)
+[<img src="images/base-final-v21.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.1">](images/base-final-v21.jpg) [<img src="images/base-final-v20.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.0">](images/base-final-v20.jpg)
 
 Die Buchsenleisten für nicht vorhandene UARTs kann man sich in der Regel sparen und müssen nicht bestückt werden.
 
