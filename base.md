@@ -105,7 +105,7 @@ Die Buchsenleisten für nicht vorhandene UARTs kann man sich in der Regel sparen
 
 Um die fertig gelötete Platine hinsichtlich der korrekten Funktion zu prüfen, sollte der Messplan durchlaufen werden.
 
-Dabei wird der eBUS mit dem mitgelieferten 330 Ohm Widerstand an ein Netzteil angeschlossen (nicht an die Heizung!) und weder Erweiterungsplatine noch UART mit der Platine verbunden.
+Dabei wird der eBUS mit dem mitgelieferten 330 Ohm Widerstand an ein Netzteil angeschlossen (nicht an die Heizung!) und weder Erweiterungsplatine noch UART mit der Platine verbunden. Allerdings müssen unbedingt die RX+TX LEDs angeschlossen sein!
 Ab Version 2.1 mit DC-DC Wandler werden zum Messen zusätzlich noch 5V Spannungsversorgung bspw. an JP8 benötigt.
 
 Hier sind die wichtigsten Messpunkte auf der Basisplatine von oben gesehen abgebildet:
