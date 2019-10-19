@@ -60,3 +60,4 @@ Hinweise:
 * `n.B.` steht für `nach Bedarf`
 * In der Spalte `Anzahl` ist die Menge für die Kombination aus Basisplatine und Erweiterungsplatine hinterlegt.
 * In den Spalten `Basis` bzw. `Erweiterung` ist die Menge für die jeweilige Platine einzeln hinterlegt.
+* Die Kondensator Werte können in den Warenkörben etwas abweichen (insbes. der 2,2uF). Das ist OK und liegt an entsprechender Verfügbarkeit.
