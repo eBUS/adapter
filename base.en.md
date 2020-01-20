@@ -73,7 +73,7 @@ When placing the LEDs, pay attention to the polarity.
 If you hold an LED against the light, then the cathode "-" is recognizable as a crossbar or as a significantly larger area.
 In addition, the anode "+" pin is always a bit longer than the cathode.
 
-**Attention:** LED3 has to be turned by 180° compared to the other LEDs (anode/cathode reversed).
+**Attention:** In an older version of the PCB layout, LED3 had to be turned by 180° compared to the other LEDs (anode/cathode reversed). This is no longer necessary with the current version.
 
 **Important:** The 3 LEDs have the following colors (do not exchange these, as each color has a different voltage!)
 * LED1: green, RX
