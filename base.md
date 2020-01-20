@@ -73,7 +73,7 @@ Bei der Bestückung der Leds ist auf die Polung zu achten.
 Hält man die LED gegen das Licht, so ist die Kathode "-" als Querbalken erkennbar bzw. als deutlich größere Fläche.
 Außerdem ist die Anode "+" an den Anschlußdrähten immer ein paar Millimeter länger.
 
-**Achtung:** LED3 ist im Vergleich zu den anderen LEDs um 180° gedreht einzusetzen (Pluspol/Minuspol vertauscht).
+**Achtung:** In einer älteren Version des Layouts war LED3 im Vergleich zu den anderen LEDs um 180° gedreht einzusetzen (Pluspol/Minuspol vertauscht). Das ist mit der aktuellen Version nicht mehr nötig.
 
 **Wichtig:** Die 3 LEDs sind mit folgenden Fraben zu bestücken (nicht anders, da jede Farbe eine andere Spannung hat!)
 * LED1: grün, RX
