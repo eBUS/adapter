@@ -95,7 +95,7 @@ which can not be used as an eBUS worker at the same time due to excessive latenc
 
 Here are some links that contribute to the topic or contain basic information, most of which are in German:
 
-* [eBUS spezification (physikal layer OSI 1)](Spec_Prot_12_V1_3_1.pdf)
+* [eBUS spezification (physikal layer OSI 1)](../Spec_Prot_12_V1_3_1.pdf)
 * [Wiki about board V 1.6](https://wiki.fhem.de/wiki/eBUS)
 * [Thread about board 2.0/2.1/2.2](https://forum.fhem.de/index.php/topic,75878.0.html)
 * [Reichelt cart common base](https://www.reichelt.de/my/1518848) (needed for base and RPi)
