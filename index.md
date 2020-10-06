@@ -39,23 +39,23 @@ Dies kann durch Jumper konfiguriert werden.
 
 #### USB
 Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt gesetzt werden:
-* J1: 2-3
-* J4: 2-3
+* J1: USB
+* J4: RPI
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
 #### Raspberry Pi
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den Raspberry Pi aufstecken.
 Die Jumper müssen dazu wie folgt gesetzt werden:
-* J1: 1-2
-* J4: 1-2
+* J1: RPI
+* J4: USB
 
 Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
 
 #### WIFI
 Wird ein Wemos D1 mini auf J9 gesteckt, dann lässt sicher der Adapter via WLAN ansprechen.
 Die Jumper müssen dazu wie folgt gesetzt werden:
-* J1: 1-2
+* J1: RPI
 * J4: offen
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
@@ -63,8 +63,8 @@ Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
 #### Ethernet
 Wird ein W5500 auf J10 gesteckt, dann lässt sicher der Adapter via LAN nutzen.
 Die Jumper müssen dazu wie folgt gesetzt werden:
-* J1: 1-2
-* J4: 2-3
+* J1: RPI
+* J4: RPI
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
@@ -117,8 +117,8 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 #### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren:
 [TODO Testen]  
 Die Jumper müssen dazu wie folgt gesetzt werden:
-* J1: 2-3
-* J4: 2-3
+* J1: USB
+* J4: RPI
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter und RX/TX des Wemos samt seines USB serial sind
 nicht nutzbar (auf RX kommt ebus Traffic an).
