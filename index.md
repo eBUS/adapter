@@ -109,13 +109,13 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 * Heizung  
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
 * Adapter  
-  wird mit ebusd entweder über USB (UART), über GPIO (UART) des Raspberry Pi, über WLAN ([Wemos ebusd-esp](v2/wemosebus)) TODO überarbeiten  
+  wird mit ebusd entweder über USB (UART), über GPIO (UART) des Raspberry Pi, über WLAN ([Wemos ebusd-esp](v2/wemosebus)) [TODO überarbeiten]  
   oder LAN verbunden.
 * ebusd  
   stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
 
 #### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren:
-TODO Testen:  
+[TODO Testen]  
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: 2-3
 * J4: 2-3

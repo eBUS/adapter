@@ -9,7 +9,7 @@ Auf dem PIC ist ein Bootloader enthalten, womit die Firmware über den USB-Ansch
 aktualisiert werden kann.
 
 Dazu wird entweder das
-[Bootloader Tool](https://github.com/john30/ebus3/tree/master/tools/bootloadercheck) TODO finale URL
+[Bootloader Tool](https://github.com/john30/ebus3/tree/master/tools/bootloadercheck) [TODO finale URL]
 benötigt, mit dem sich auch eine feste IP-Adresse für den W5500 setzen lässt,
 oder die [Bootloader Host Application](https://www.microchip.com/promo/8-bit-bootloader) von Microchip.
 
@@ -28,7 +28,7 @@ Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstel
   * Pin 2: ebusd enhanced protocol: offen=aktiv, GND=inaktiv
   * Pin 3: GND
   * Pin 4: -
-  * Pin 5: Ethernet mit W5500: offen=inaktiv, GND=aktiv TODO
+  * Pin 5: Ethernet mit W5500: offen=inaktiv, GND=aktiv [TODO einbauen]
   * Pin 6: GND
   * Pin 7: -
   * Pin 8: -
@@ -39,7 +39,7 @@ und Geräte am eBUS!
 
 ### Ethernet Konfiguration
 Wenn für den Einsatz mit W5500 eine feste IP Adresse eingestellt werden soll, dann kann das mit dem
-[Bootloader Tool](https://github.com/john30/ebus3/tree/master/tools/bootloadercheck) TODO finale URL
+[Bootloader Tool](https://github.com/john30/ebus3/tree/master/tools/bootloadercheck) [TODO finale URL]
 über den USB-Anschluss oder den Raspberry Pi GPIO/ttyAMA0 vorgenommen werden.
 
-TODO Details
+[TODO Details]
