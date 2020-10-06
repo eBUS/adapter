@@ -71,6 +71,10 @@ Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 Die Ethernet Konfiguration (IP Adresse, Netzmaske, Gateway) wird durch den Bootloader im PIC ermöglicht und über den
 USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernet-konfiguration).
 
+### Schaltplan
+
+[<img src="img/smd-circuit.png" width="600" alt="Schaltplan" title="Schaltplan">](img/smd-circuit.png)
+
 ### Anschluss von Sensoren, Aktoren oder Displays
 In den Varianten Wemos und Raspberry Pi stehen folgende Pin Header für den Anschluss weiterer Komponenten zur Verfügung:
 * J3: Gassensor oder Schalter
