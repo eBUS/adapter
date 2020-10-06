@@ -11,7 +11,7 @@ Von dieser Basisplatine gibt es auch eine erweiterte [Variante, die direkt auf e
 
 ### Allgemeiner Aufbau
 
-[<img src="images/base-top-v20.jpg" width="200" alt="base" title="Basisplatine v2.0">](images/base-top-v20.jpg)
+[<img src="img/base-top-v20.jpg" width="200" alt="base" title="Basisplatine v2.0">](img/base-top-v20.jpg)
 
 Die Basisplatine beinhaltet den Komparator zur Detektierung der RX Signale, die Optokoppler zur galvanischen Trennung und den Sendeteil an den eBUS.
 
@@ -26,8 +26,8 @@ Die Stromversorgung des UART oder des Wemos erfolgt über ein handelsübliches U
 
 ### Schaltplan
 
-[<img src="images/base-circuit-v22.png" width="600" alt="Schaltplan Basisplatine" title="Schaltplan Basisplatine">](images/base-circuit-v22.png)  
-Ältere Versionen sind hier: [v2.1](images/base-circuit-v21.png) [v2.0](images/base-circuit-v20.png)
+[<img src="img/base-circuit-v22.png" width="600" alt="Schaltplan Basisplatine" title="Schaltplan Basisplatine">](img/base-circuit-v22.png)  
+Ältere Versionen sind hier: [v2.1](img/base-circuit-v21.png) [v2.0](img/base-circuit-v20.png)
 
 
 ### Bauteileliste
@@ -67,7 +67,7 @@ Vor dem Einlöten der Widerstände sollte man unbedingt den Widerstandswert mit 
 
 #### Bestückung der LEDs
 
-[<img src="images/led.jpg" width="200" alt="Final" title="LED Polung">](images/led.jpg)  
+[<img src="img/led.jpg" width="200" alt="Final" title="LED Polung">](img/led.jpg)  
 Bei der Bestückung der Leds ist auf die Polung zu achten.
 
 Hält man die LED gegen das Licht, so ist die Kathode "-" als Querbalken erkennbar bzw. als deutlich größere Fläche.
@@ -83,20 +83,20 @@ Außerdem ist die Anode "+" an den Anschlußdrähten immer ein paar Millimeter l
 
 #### Verlöten der Basisplatine
 
-[<img src="images/base-1.jpg" width="200" alt="Assembly" title="Bestueckung der Platine vorne">](images/base-1.jpg)  
+[<img src="img/base-1.jpg" width="200" alt="Assembly" title="Bestueckung der Platine vorne">](img/base-1.jpg)  
 **Achtung bei Version 2.0:** Der Elektrolytkondensator C1 entfällt bei dieser Variante. Dieser war bei der 8V Variante vorgesehen, die jedoch wegen anderer Nachteile nicht zur Auslieferung gekommen ist.
 
-[<img src="images/base-2.jpg" width="200" alt="Assembly" title="Bestueckung der Platine hinten gesteckt">](images/base-2.jpg)  
+[<img src="img/base-2.jpg" width="200" alt="Assembly" title="Bestueckung der Platine hinten gesteckt">](img/base-2.jpg)  
 Ansicht von hinten (v2.0), die Drahtenden werden leicht aufgebogen damit die Bauteile beim Umdrehen nicht herausfallen.
 So kann dann alles gemeinsam bequem verlötet werden.
 
-[<img src="images/base-3.jpg" width="200" alt="Assembly" title="Bestueckung der Platine hinten verloetet">](images/base-3.jpg)  
+[<img src="img/base-3.jpg" width="200" alt="Assembly" title="Bestueckung der Platine hinten verloetet">](img/base-3.jpg)  
 Fertig verlötete Platine von hinten (v2.0), die Drähte werden nach der Verlötung alle mit einem Elektronik Seitenschneider abgelängt.
 
 
 #### Fertig aufgebaute Basisplatine
 
-[<img src="images/base-final-v21.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.1">](images/base-final-v21.jpg) [<img src="images/base-final-v20.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.0">](images/base-final-v20.jpg)
+[<img src="img/base-final-v21.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.1">](img/base-final-v21.jpg) [<img src="img/base-final-v20.jpg" width="200" alt="Final" title="Fertig aufgebaute Basisplatine v2.0">](img/base-final-v20.jpg)
 
 Die Buchsenleisten für nicht vorhandene UARTs kann man sich in der Regel sparen und müssen nicht bestückt werden.
 
@@ -110,18 +110,18 @@ Ab Version 2.1 mit DC-DC Wandler werden zum Messen zusätzlich noch 5V Spannungs
 
 Hier sind die wichtigsten Messpunkte auf der Basisplatine von oben gesehen abgebildet:
 
-[<img src="images/base-measure-v22.jpg" width="300" alt="measure" title="Messpunkte v2.2">](images/base-measure-v22.jpg)  
-Ältere Versionen sind hier: [v2.1](images/base-measure-v21.jpg) [v2.0](images/base-measure-v20.jpg)
+[<img src="img/base-measure-v22.jpg" width="300" alt="measure" title="Messpunkte v2.2">](img/base-measure-v22.jpg)  
+Ältere Versionen sind hier: [v2.1](img/base-measure-v21.jpg) [v2.0](img/base-measure-v20.jpg)
 
 Bei den Spannungen wird farblich zwischen RX (<span style="color:green">grün</span>) und TX (<span style="color:red">rot</span>) unterschieden.  
 Der erste Durchlauf ist für den Empfang (RX) und der zweite für das Senden (TX) mit Brücke am OK2.
 
-Im [Schaltplan mit Messwerten](images/base-measure-values.png) sind auch noch einmal die Spannungen für diese Punkte angegeben.
+Im [Schaltplan mit Messwerten](img/base-measure-values.png) sind auch noch einmal die Spannungen für diese Punkte angegeben.
 
 
 ### UARTs
 
-[<img src="images/uarts.jpg" width="200" alt="UARTs" title="UARTs">](images/uarts.jpg)
+[<img src="img/uarts.jpg" width="200" alt="UARTs" title="UARTs">](img/uarts.jpg)
 
 Diese 3 UARTs wurden mit der Basisplatine getestet. Seit v2.1 wird der FTDI jedoch nicht mehr unterstützt.
 
@@ -134,14 +134,14 @@ Beim FTDI UART (nur für v2.0) ist darauf zu achten, dass hier eine gerade Stift
 
 Über eine einfache Verdrahtung kann der Wemos D1 auch direkt mit der Basisplatine betrieben werden, im Gegensatz [zum Einsatz mit Erweiterungsplatine](extension.md#bestückung).
 
-[<img src="images/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 Verdrahtung" title="Wemos D1 Verdrahtung v2.1">](images/wemos-wiring-v21.jpg) [<img src="images/wemos-wiring-v20.jpg" width="200" alt="Wemos D1 Verdrahtung" title="Wemos D1 Verdrahtung 2.0">](images/wemos-wiring-v20.jpg)   
+[<img src="img/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 Verdrahtung" title="Wemos D1 Verdrahtung v2.1">](img/wemos-wiring-v21.jpg) [<img src="img/wemos-wiring-v20.jpg" width="200" alt="Wemos D1 Verdrahtung" title="Wemos D1 Verdrahtung 2.0">](img/wemos-wiring-v20.jpg)   
 **Wemos D1 Verdrahtung**
 
 Soll auf der Basisplatine ein Wemos zum Einsatz kommen, muss dieser erst vorbereitet werden und es müssen an RX, TX, VCC
 und GND Kabel aufgelötet werden. Seit Version 2.1 wird zusätzlich noch eine 5. Leitung für 5V benötigt.
 Auf eine Stiftleiste kann in diesem Fall verzichtet werden.
 
-[<img src="images/wemos-wired.jpg" width="200" alt="Wemos D1 wired" title="Wemos D1 an Basisplatine">](images/wemos-wired.jpg)  
+[<img src="img/wemos-wired.jpg" width="200" alt="Wemos D1 wired" title="Wemos D1 an Basisplatine">](img/wemos-wired.jpg)  
 **Wemos D1 an Basisplatine**
 
 Der fertig aufgelötete Wemos wird dann direkt an JP8 angesteckt.

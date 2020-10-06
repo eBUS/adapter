@@ -11,7 +11,7 @@ This base board is also available in an extended [variant for directly plugging 
 
 ### Construction
 
-[<img src="images/base-top-v20.jpg" width="200" alt="base" title="base board v2.0">](images/base-top-v20.jpg)
+[<img src="img/base-top-v20.jpg" width="200" alt="base" title="base board v2.0">](img/base-top-v20.jpg)
 
 The base board includes the comparator for detecting the RX signals, the optocouplers for galvanic isolation, as well as the transmitting part to eBUS.
 
@@ -26,8 +26,8 @@ The power supply for the UART or Wemos is a standard USB power supply with suffi
 
 ### Circuit Diagram
 
-[<img src="images/base-circuit-v22.png" width="600" alt="Circuit diagram base board" title="Circuit diagram base board">](images/base-circuit-v22.png)  
-Older versions are here: [v2.1](images/base-circuit-v21.png) [v2.0](images/base-circuit-v20.png)
+[<img src="img/base-circuit-v22.png" width="600" alt="Circuit diagram base board" title="Circuit diagram base board">](img/base-circuit-v22.png)  
+Older versions are here: [v2.1](img/base-circuit-v21.png) [v2.0](img/base-circuit-v20.png)
 
 
 ### Part List
@@ -67,7 +67,7 @@ Before soldering the resistors, be sure to check the resistance values with an o
 
 #### Assembly of LEDs
 
-[<img src="images/led.jpg" width="200" alt="Final" title="LED Polung">](images/led.jpg)  
+[<img src="img/led.jpg" width="200" alt="Final" title="LED Polung">](img/led.jpg)  
 When placing the LEDs, pay attention to the polarity.
 
 If you hold an LED against the light, then the cathode "-" is recognizable as a crossbar or as a significantly larger area.
@@ -83,20 +83,20 @@ In addition, the anode "+" pin is always a bit longer than the cathode.
 
 #### Soldering the base board
 
-[<img src="images/base-1.jpg" width="200" alt="Assembly" title="Soldering the base board front">](images/base-1.jpg)  
+[<img src="img/base-1.jpg" width="200" alt="Assembly" title="Soldering the base board front">](img/base-1.jpg)  
 **Attention for version 2.0:** The electrolytic capacitor C1 is omitted. It was part of the 8V variant, which could not be used due to other disadvantages.
 
-[<img src="images/base-2.jpg" width="200" alt="Assembly" title="Soldering the base board back">](images/base-2.jpg)  
+[<img src="img/base-2.jpg" width="200" alt="Assembly" title="Soldering the base board back">](img/base-2.jpg)  
 View from the back (v2.0), the wire ends are bent slightly so that the components do not fall out when turned over.
 This way, everything can be soldered conveniently.
 
-[<img src="images/base-3.jpg" width="200" alt="Assembly" title="Soldering the base board back">](images/base-3.jpg)  
+[<img src="img/base-3.jpg" width="200" alt="Assembly" title="Soldering the base board back">](img/base-3.jpg)  
 Soldered board from the back (v2.0) with wires already cut off.
 
 
 #### Finished base board
 
-[<img src="images/base-final-v21.jpg" width="200" alt="Final" title="Finished base board v2.1">](images/base-final-v21.jpg) [<img src="images/base-final-v20.jpg" width="200" alt="Final" title="Finished base board v2.0">](images/base-final-v20.jpg) 
+[<img src="img/base-final-v21.jpg" width="200" alt="Final" title="Finished base board v2.1">](img/base-final-v21.jpg) [<img src="img/base-final-v20.jpg" width="200" alt="Final" title="Finished base board v2.0">](img/base-final-v20.jpg) 
 
 The female headers for non-used UARTs can be excluded.
 
@@ -110,18 +110,18 @@ Starting with version 2.1 with DC-DC converter, an additional 5V supply is neede
 
 Here are the main measuring points on the base board seen from top:
 
-[<img src="images/base-measure-v22.jpg" width="300" alt="measure" title="Measuring v2.2">](images/base-measure-v22.jpg)  
-Older versions are here: [v2.1](images/base-measure-v21.jpg) [v2.0](images/base-measure-v20.jpg)
+[<img src="img/base-measure-v22.jpg" width="300" alt="measure" title="Measuring v2.2">](img/base-measure-v22.jpg)  
+Older versions are here: [v2.1](img/base-measure-v21.jpg) [v2.0](img/base-measure-v20.jpg)
 
 For the voltages, RX (<span style="color:green">green</span>) and TX (<span style="color:red">red</span>) are distinguished.  
 The first pass is for reception (RX) and the second for transmission (TX) with the short-circuit at OK2.
 
-The [circuit diagram with measure values](images/base-measure-values.png) also shows the voltages for these points.
+The [circuit diagram with measure values](img/base-measure-values.png) also shows the voltages for these points.
 
 
 ### UARTs
 
-[<img src="images/uarts.jpg" width="200" alt="UARTs" title="UARTs">](images/uarts.jpg)
+[<img src="img/uarts.jpg" width="200" alt="UARTs" title="UARTs">](img/uarts.jpg)
 
 These 3 UARTs were tested with the base board. Since v2.1 the FTDI is no longer supported.
 
@@ -134,13 +134,13 @@ With the FTDI UART (only for v2.0) a straight pin header must be used instead of
 
 With a simple wire connection, the Wemos D1 can also be used directly with the base board, in contrast to using it [with the extension board](extension.en#assembly).
 
-[<img src="images/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring v2.1">](images/wemos-wiring-v21.jpg) [<img src="images/wemos-wiring-v20.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring 2.0">](images/wemos-wiring-v20.jpg)   
+[<img src="img/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring v2.1">](img/wemos-wiring-v21.jpg) [<img src="img/wemos-wiring-v20.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring 2.0">](img/wemos-wiring-v20.jpg)   
 **Wemos D1 wiring**
 
 In case a Wemos shall be used with the base board, it has to be connected by wire to RX, TX, VCC, and GND. Since version 2.1 an additional 5th wire is needed for 5V.
 There is no need for soldering the pin headers to the Wemos D1 in this case.
 
-[<img src="images/wemos-wired.jpg" width="200" alt="Wemos D1 wired" title="Wemos D1 at base board">](images/wemos-wired.jpg)  
+[<img src="img/wemos-wired.jpg" width="200" alt="Wemos D1 wired" title="Wemos D1 at base board">](img/wemos-wired.jpg)  
 **Wemos D1 at base board**
 
 The Wemos with the wired soldered to it is then directly attached to JP8.

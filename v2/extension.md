@@ -13,7 +13,7 @@ Damit können an den Wemos bequem Sensoren oder Displays angeschlossen werden.
 
 
 ### Allgemeiner Aufbau
-[<img src="images/exten-top.jpg" width="200" alt="extension" title="Erweiterungsplatine">](images/exten-top.jpg)
+[<img src="img/exten-top.jpg" width="200" alt="extension" title="Erweiterungsplatine">](img/exten-top.jpg)
 
 Die Anzahl der Bauelemente ist wesentlich geringer als bei der Basisplatine und besteht vor allem aus Buchsen- und Steckleisten zur Aufnahme von Wemos, Displays oder Sensoren.
 
@@ -22,8 +22,8 @@ Die Spannungsversorgung erfolgt über ein USB Stecker Netzteil direkt am C-Steck
 
 ### Schaltplan
 
-[<img src="images/exten-circuit-v22.png" width="600" alt="Schaltplan Erweiterungsplatine" title="Schaltplan Erweiterungsplatine">](images/exten-circuit-v22.png)  
-Ältere Versionen sind hier: [v2.1](images/exten-circuit-v21.png) [v2.0](images/exten-circuit-v20.png)
+[<img src="img/exten-circuit-v22.png" width="600" alt="Schaltplan Erweiterungsplatine" title="Schaltplan Erweiterungsplatine">](img/exten-circuit-v22.png)  
+Ältere Versionen sind hier: [v2.1](img/exten-circuit-v21.png) [v2.0](img/exten-circuit-v20.png)
 
 
 ### Bauteileliste
@@ -82,24 +82,24 @@ Auch die [Jumper-Belegung hängt letztlich von der genutzten Variante ab](#funkt
 
 #### Verlöten der Erweiterungsplatine
 
-[<img src="images/exten-1.jpg" width="200" alt="Assembly" title="Bestueckung der Platine vorne">](images/exten-1.jpg)  
+[<img src="img/exten-1.jpg" width="200" alt="Assembly" title="Bestueckung der Platine vorne">](img/exten-1.jpg)  
 Bestückte und verlötete Platine (v2.0).
 
-[<img src="images/exten-2.jpg" width="200" alt="Final" title="Bestueckung der Platine hinten">](images/exten-2.jpg)  
+[<img src="img/exten-2.jpg" width="200" alt="Final" title="Bestueckung der Platine hinten">](img/exten-2.jpg)  
 Ansicht von hinten (v2.0) mit Jumpern und Stiftleisten für die Verbindung zur Basisplatine.
 
 
 #### Fertig aufgebaute Erweiterungsplatine
 
-[<img src="images/exten-final-v21.jpg" width="200" alt="Final" title="Fertig aufgebaute Erweiterungsplatine">](images/exten-final-v21.jpg)  
+[<img src="img/exten-final-v21.jpg" width="200" alt="Final" title="Fertig aufgebaute Erweiterungsplatine">](img/exten-final-v21.jpg)  
 So sieht die fertige Erweiterungsplatine (v2.1) aufgesteckt auf die Basisplatine aus inkl. Wemos mit ESPEasy und direkt aufgestecktem BME280.  
 Links sieht man das Dupont-Kabel für die Verbindung zum Wemos mit ebusd-esp.
 
 
 ### Funktionsmatrix Jumper
 
-[<img src="images/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](images/exten-jumper-v22.png)  
-Ältere Versionen sind hier: [v2.1](images/exten-jumper-v21.png) [v2.0](images/exten-jumper-v20.jpg)
+[<img src="img/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](img/exten-jumper-v22.png)  
+Ältere Versionen sind hier: [v2.1](img/exten-jumper-v21.png) [v2.0](img/exten-jumper-v20.jpg)
 
 Auf der Rückseite der Erweiterungsplatine befinden sich einige Jumper (Lötbrücken), die je nach gewünschten Sensoren bzw. eingesetzter Wemos Firmware unterschiedliche Belegungen erlauben.
 
@@ -180,7 +180,7 @@ Solche Fehler können unter Umständen augenblicklich nichts ausmachen und zeige
 
 ### Jumper bei Vollausbau
 
-[<img src="images/exten-full.jpg" width="200" alt="Assembly" title="Bestückung">](images/exten-full.jpg)
+[<img src="img/exten-full.jpg" width="200" alt="Assembly" title="Bestückung">](img/exten-full.jpg)
 
 Hier abgebildet ist eine Variante mit Vollausbau, Basisplatine mit Wemos ebusd-esp und Erweiterungsplatine mit ESPEasy und einem Temperatur-Feuchte-Druck-Sensor BME280.
 

@@ -14,7 +14,7 @@ Wer weitere Sensoren auf der Erweiterungsplatine platzieren will ist mit [ESPEas
 
 Hier ein Beispiel eines Luftdrucksensors/Feuchte/Temperatur BME280 an der Platine aufgesteckt:
 
-[<img src="images/exten-final-v21.jpg" width="200" alt="extension+wemos" title="Erweiterungsplatine mit Wemos und Sensor">](images/exten-final-v21.jpg)
+[<img src="img/exten-final-v21.jpg" width="200" alt="extension+wemos" title="Erweiterungsplatine mit Wemos und Sensor">](img/exten-final-v21.jpg)
 
 In einem Gehäuse eingebaut sollte der Sensor allerdings dann mit Kabel herausgeführt werden, da die Luftfeuchtigkeit in dem Gehäuse kaum jemand interessiert.
 
@@ -36,24 +36,24 @@ Ich verwende für die serielle Verbindung die Arduino Umgebung ( ich habe 1.8.3 
 **save**            = sichert die Konfiguration  
 **reboot**          = startet den Wemos neu  
 
-[<img src="images/espeasy-serial.png" width="200" alt="Assembly" title="Bestückung">](images/espeasy-serial.png)
+[<img src="img/espeasy-serial.png" width="200" alt="Assembly" title="Bestückung">](img/espeasy-serial.png)
 
 ### ESPEasy mit BME280
 
 Unter Controllers zunächst das FHEM Protokoll aktivieren:
 
-[<img src="images/espeasy-config1.png" width="300" alt="ESPEasy config" title="ESPEasy Konfiguration">](images/espeasy-config1.png)
+[<img src="img/espeasy-config1.png" width="300" alt="ESPEasy config" title="ESPEasy Konfiguration">](img/espeasy-config1.png)
 
 Die Konfiguration des Sensors in ESPEasy ist denkbar einfach:
 
-[<img src="images/espeasy-config2.png" width="600" alt="ESPEasy config sensor" title="ESPEasy Konfiguration Sensor">](images/espeasy-config2.png)
+[<img src="img/espeasy-config2.png" width="600" alt="ESPEasy config sensor" title="ESPEasy Konfiguration Sensor">](img/espeasy-config2.png)
 
 Auf diese Art und Weise können verschiedene Sensoren an die Platine angeschlossen werden.
 
 
 ### BME280 in FHEM konfigurieren
 
-[<img src="images/espeasy-fhem.png" width="400" alt="FHEM sensors" title="Sensoren in FHEM">](images/espeasy-fhem.png)
+[<img src="img/espeasy-fhem.png" width="400" alt="FHEM sensors" title="Sensoren in FHEM">](img/espeasy-fhem.png)
 
 In Fhem muss die ESPbridge eingerichtet werden und der Rest wird dann von der Bridge automatisch erledigt:
 

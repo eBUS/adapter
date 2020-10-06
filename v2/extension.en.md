@@ -13,7 +13,7 @@ This makes it easy to connect sensors or displays to the Wemos.
 
 
 ### Construction
-[<img src="images/exten-top.jpg" width="200" alt="extension" title="Extension board">](images/exten-top.jpg)
+[<img src="img/exten-top.jpg" width="200" alt="extension" title="Extension board">](img/exten-top.jpg)
 
 The number of components is a lot less compared to the base board and it consists mainly of female and male headers for connecting Wemos, displays, and sensors.
 
@@ -22,8 +22,8 @@ The power is supplied directly to the C-connector of the Wemos via a USB power s
 
 ### Circuit Diagram
 
-[<img src="images/exten-circuit-v22.png" width="600" alt="Circuit diagram exten board" title="Circuit diagram exten board">](images/exten-circuit-v22.png)  
-Older versions are here: [v2.1](images/exten-circuit-v21.png) [v2.0](images/exten-circuit-v20.png)
+[<img src="img/exten-circuit-v22.png" width="600" alt="Circuit diagram exten board" title="Circuit diagram exten board">](img/exten-circuit-v22.png)  
+Older versions are here: [v2.1](img/exten-circuit-v21.png) [v2.0](img/exten-circuit-v20.png)
 
 
 ### Part List
@@ -82,24 +82,24 @@ The [jumper assignment depends on the variant used](#jumper-function-matrix) as 
 
 #### Soldering the extension board
 
-[<img src="images/exten-1.jpg" width="200" alt="Assembly" title="Soldering the board front">](images/exten-1.jpg)  
+[<img src="img/exten-1.jpg" width="200" alt="Assembly" title="Soldering the board front">](img/exten-1.jpg)  
 Assembled and soldered board (v2.0).
 
-[<img src="images/exten-2.jpg" width="200" alt="Final" title="Soldering the board back">](images/exten-2.jpg)  
+[<img src="img/exten-2.jpg" width="200" alt="Final" title="Soldering the board back">](img/exten-2.jpg)  
 View from the back (v2.0) with jumpers and pin headers for connection to the base board.
 
 
 #### Finished extension board
 
-[<img src="images/exten-final-v21.jpg" width="200" alt="Final" title="Finished extension board">](images/exten-final-v21.jpg)  
+[<img src="img/exten-final-v21.jpg" width="200" alt="Final" title="Finished extension board">](img/exten-final-v21.jpg)  
 That's how the finished extension board (v2.1) looks like when plugged onto the base board including Wemos with ESPEasy and directly attached BME280.
 On the left is the Dupont cable for the connection to the Wemos with ebusd-esp.
 
 
 ### Jumper Function Matrix
 
-[<img src="images/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](images/exten-jumper-v22.png)  
-Older versions are here: [v2.1](images/exten-jumper-v21.png) [v2.0](images/exten-jumper-v20.jpg)
+[<img src="img/exten-jumper-v22.png" width="200" alt="Jumper" title="Jumper v2.2">](img/exten-jumper-v22.png)  
+Older versions are here: [v2.1](img/exten-jumper-v21.png) [v2.0](img/exten-jumper-v20.jpg)
 
 On the back of the extension board there are some jumpers (solder bridges) that allow different assignments depending on the desired sensors or used Wemos firmware.
 
@@ -180,7 +180,7 @@ Such errors may not seem to make any difference at first, but certainly show up 
 
 ### Jumpers when fully equipped
 
-[<img src="images/exten-full.jpg" width="200" alt="Assembly" title="Assembly">](images/exten-full.jpg)
+[<img src="img/exten-full.jpg" width="200" alt="Assembly" title="Assembly">](img/exten-full.jpg)
 
 This image shows a variant with full configuration: the base board with Wemos ebusd-esp, the extension board with ESPEasy and a BME280 sensor for temperature, humidity, and pressure.
 

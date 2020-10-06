@@ -31,14 +31,14 @@ In den folgenden Seiten wird der Aufbau, die Bestückung und das Prüfen der gel
 Die dafür benötigten [Bauteile sind hier aufgeführt](partlist).
 
 * [Basisplatine](base)  
-  [<img src="images/base-final-v21.jpg" width="200" alt="base" title="Basisplatine">](base)  
+  [<img src="img/base-final-v21.jpg" width="200" alt="base" title="Basisplatine">](base)  
   [Hier finden sich Tipps zur Fehlersuche](diagnostics) für den Fall, dass die Basisplatine nach Zusammenbau nicht wie erwartet funktioniert.
 
 * [Erweiterungsplatine](extension)  
-  [<img src="images/exten-final-v21.jpg" width="200" alt="extension" title="Erweiterungsplatine">](extension)
+  [<img src="img/exten-final-v21.jpg" width="200" alt="extension" title="Erweiterungsplatine">](extension)
 
 * [Raspberry Pi](raspberrypi)  
-  [<img src="images/rpi-final-v22.jpg" width="200" alt="rpi" title="Raspberry Pi Platine">](raspberrypi)
+  [<img src="img/rpi-final-v22.jpg" width="200" alt="rpi" title="Raspberry Pi Platine">](raspberrypi)
 
 
 ### Verwendung
@@ -70,7 +70,7 @@ Zusätzlich wird noch ein Rechner (bspw. Rasperry PI) mit ebusd benötigt, da de
 #### Verbindungen
 
 Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
-[<img src="images/schema.png" width="600" alt="schema" title="Verbindungsschema">](images/schema.png)
+[<img src="img/schema.png" width="600" alt="schema" title="Verbindungsschema">](img/schema.png)
 
 * Heizung  
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
@@ -84,7 +84,7 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 
 Für den Einsatz eines Wemos D1 zur Kommunikation mit eBUS wird eine [spezielle Firmware benötigt](wemosebus). Der Anschluss direkt an der Basisplatine sieht dann so aus:
 
-[<img src="images/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 Verdrahtung" title="Wemos D1 Verdrahtung v2.1">](images/wemos-wiring-v21.jpg)
+[<img src="img/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 Verdrahtung" title="Wemos D1 Verdrahtung v2.1">](img/wemos-wiring-v21.jpg)
 
 Um zusätzliche Sensoren mit der Erweiterungsplatine nutzen zu können, muss derzeit noch ein [eigener Wemos D1 verwendet werden](wemossensors),
 der wegen zu hoher Latenzzeiten nicht gleichzeitig als eBUS Worker genutzt werden kann.

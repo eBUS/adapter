@@ -31,14 +31,14 @@ The following pages describe the assembly and testing of the soldered circuit bo
 The required [components are listed here](partlist.en).
 
 * [Base Board](base.en)  
-  [<img src="images/base-final-v21.jpg" width="200" alt="base" title="base board">](base.en)  
+  [<img src="img/base-final-v21.jpg" width="200" alt="base" title="base board">](base.en)  
   [Here are troubleshooting tips](diagnostics.en) in case the base board does not work as expected after assembly.
 
 * [Extension Board](extension.en)  
-  [<img src="images/exten-final-v21.jpg" width="200" alt="extension" title="extension board">](extension.en)
+  [<img src="img/exten-final-v21.jpg" width="200" alt="extension" title="extension board">](extension.en)
 
 * [Raspberry Pi](raspberrypi.en)  
-  [<img src="images/rpi-final-v22.jpg" width="200" alt="rpi" title="Raspberry Pi Board">](raspberrypi.en)
+  [<img src="img/rpi-final-v22.jpg" width="200" alt="rpi" title="Raspberry Pi Board">](raspberrypi.en)
 
 
 ## Usage
@@ -71,7 +71,7 @@ Additionally, a computer (like a Raspberry Pi) with ebusd is needed, as the Wemo
 ### Connections
 
 Here is an overview of the individual components with their connections:
-[<img src="images/schema.png" width="600" alt="schema" title="Connection schema">](images/schema.png)
+[<img src="img/schema.png" width="600" alt="schema" title="Connection schema">](img/schema.png)
 
 * Heater  
   is connected to the adapter via a 2-wire cable.
@@ -85,7 +85,7 @@ Here is an overview of the individual components with their connections:
 
 For using a Wemos D1 for communication with eBUS, a [special firmware is required](wemosebus). It can be connected directly to the adapter like this:
 
-[<img src="images/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring v2.1">](images/wemos-wiring-v21.jpg)
+[<img src="img/wemos-wiring-v21.jpg" width="200" alt="Wemos D1 wiring" title="Wemos D1 wiring v2.1">](img/wemos-wiring-v21.jpg)
 
 In order to use additional sensors with the extension board, a [separate Wemos D1 is needed](wemossensors),
 which can not be used as an eBUS worker at the same time due to excessive latency.

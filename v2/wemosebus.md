@@ -75,11 +75,11 @@ Enter your choice:
 
 Nachdem einer neuer Wemos (oder ein alter, der einen Factory Reset via serieller Konsole bekommen hat) mit der ebusd-esp Firmware geflasht wurde, aktiviert dieser einen WLAN Access Point mit SSID "EBUS".
 
-[<img src="images/wemosebus-wlan.jpg" width="200" alt="WLAN" title="WLAN">](images/wemosebus-wlan.jpg)  
+[<img src="img/wemosebus-wlan.jpg" width="200" alt="WLAN" title="WLAN">](img/wemosebus-wlan.jpg)  
 Hat man sich mit diesem WLAN verbunden (kein Passwort notwendig), lässt sich der Wemos im Web-Browser unter der Adresse [http://192.168.4.1](http://192.168.4.1) aufrufen und konfigurieren.
 
 Dabei werden neu eingegebene Werte/Parameter zunächst mit "Check & Update" geprüft und anschließend mit "Save & Reset" gespeichert und der Wemos neu gestartet.
-[<img src="images/wemosebus-webcfg.png" width="300" alt="Web configuration" title="Web configuration">](images/wemosebus-webcfg.png)
+[<img src="img/wemosebus-webcfg.png" width="300" alt="Web configuration" title="Web configuration">](img/wemosebus-webcfg.png)
 
 
 ### ebusd Konfiguration
