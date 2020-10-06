@@ -16,7 +16,7 @@ Dies wird durch Einsatz eines PIC ermöglicht, der u.a. folgende Vorteile mit si
  * minimale Zeitverzögerung durch Hardware-nahe Programmierung
  * flexible, konfigurierbare Varianten zur Verbindung mit dem Host:
    * USB serial mit CP2102
-   * Raspberry Pi GPIO mit ttyebus Treiber
+   * Raspberry Pi über GPIO/ttyAMA0
    * WIFI durch Wemos D1 mini mit ebusd-esp
    * Ethernet durch W5500
  * aktualisierbare Firmware mittels seriellem Bootloader
@@ -58,7 +58,7 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: 1-2
 * J4: offen
 
-Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos. TODO korrekt?
+Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
 
 #### Ethernet
 Wird ein W5500 auf J10 gesteckt, dann lässt sicher der Adapter via LAN nutzen.
@@ -68,10 +68,11 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
-TODO Konfiguration IP Adresse
+Die Ethernet Konfiguration (IP Adresse, Netzmaske, Gateway) wird durch den Bootloader im PIC ermöglicht und über den
+USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernet-konfiguration).
 
 ### Anschluss von Sensoren, Aktoren oder Displays
-In den Varianten Wemos und Raspberry Pi stehen folgenden Header für den Anschluss weiterer Komponenten zur Verfügung:
+In den Varianten Wemos und Raspberry Pi stehen folgende Pin Header für den Anschluss weiterer Komponenten zur Verfügung:
 * J3: Gassensor oder Schalter
 * J5: I2C, z.B. OLED SSD1306 oder Nextion 
 * J6:
@@ -90,10 +91,15 @@ Das sollte nur in den seltensten Fällen notwendig sein, da der PIC vor Ausliefe
 Dieser Anschluss führt Leitungen des PIC und deren Belegung und Nutzungsmöglichkeiten hängen ausschließlich von der
 PIC Firmware ab. Details dazu siehe [PIC Firmware](picfirmware).
 
-**Wichtiger Hinweis**: Die Pins am J12 dürfen nie mit irgendeinem Pin der anderen Jumper/Stecker-/Buchsenleisten in
+**Wichtiger Hinweis:** Die Pins am J12 dürfen nie mit irgendeinem Pin der anderen Jumper/Stecker-/Buchsenleisten in
 Verbindung gebracht werden, da hier getrennte Stromquellen zum Einsatz kommen. Jegliche Verbindung gefährdet den Adapter
 und Geräte am eBUS!
 
+
+### Verwendung
+
+Neben dem Adapter wird eine Software benötigt, die den eBUS Verkehr interpretiert und auswertet. Das übernimmt bspw.
+[ebusd](https://github.com/john30/ebusd/), der ebenfalls auf einen Rasperry PI installiert werden kann.
 
 #### Verbindungen
 
@@ -103,9 +109,24 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 * Heizung  
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
 * Adapter  
-  wird mit ebusd über USB (UART), via GPIO mit einem Raspberry Pi, über WLAN ([Wemos ebusd-esp](v2/wemosebus)) oder LAN verbunden. TODO überarbeiten
+  wird mit ebusd entweder über USB (UART), über GPIO (UART) des Raspberry Pi, über WLAN ([Wemos ebusd-esp](v2/wemosebus)) TODO überarbeiten  
+  oder LAN verbunden.
 * ebusd  
-  stellt TCP client, MQTT und HTTP für FHEM, Node-Red und weitere zur Verfügung.
+  stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
+
+#### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren:
+TODO Testen:  
+Die Jumper müssen dazu wie folgt gesetzt werden:
+* J1: 2-3
+* J4: 2-3
+
+Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter und RX/TX des Wemos samt seines USB serial sind
+nicht nutzbar (auf RX kommt ebus Traffic an).
+
+**Achtung:** immer nur eine Stromversorgung verbinden, also maximal einen Anschluss von:
+* USB-Anschluss J2 des Adapters
+* Raspberry Pi Buchsenleiste J8 des Adapters
+* USB Anschluss am Wemos 
 
 
 ### Weiterführende Links
@@ -115,16 +136,6 @@ Hier einige Links, die zum Thema beitragen, bzw. Basisinformationen und Grundlag
 * [eBUS Spezifikation (physikalische Schicht OSI 1)](Spec_Prot_12_V1_3_1.pdf)
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
 * [Dokumentation Adapter V 2.0-2.2](https://ebus.github.io/adapter/v2/)
-* [Reichelt Warenkorb Stift-/Buchsenleisten](https://www.reichelt.de/my/TODO)
+* [Reichelt Warenkorb Stift-/Buchsenleisten](https://www.reichelt.de/my/1758624)
 * [ebusd-esp Firmware für Wemos D1](https://github.com/john30/ebusd-esp)
 * [ebusd Wiki](https://github.com/john30/ebusd/wiki)
-
-
-
-#### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren:
-TODO Testen
-Die Jumper müssen dazu wie folgt gesetzt werden:
-* J1: 2-3
-* J4: 2-3
-
-Die Stromversorgung erfolgt direkt über den USB-Anschluss am Adapter und RX/TX des Wemos samt seines USB serial sind nicht nutzbar (auf RX kommt ebus Traffic an).
