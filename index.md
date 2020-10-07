@@ -130,7 +130,7 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 [TODO Testen]  
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: USB
-* J4: RPI
+* J4: USB
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter und RX/TX des Wemos samt seines USB serial sind
 nicht nutzbar (auf RX kommt ebus Traffic an).
@@ -155,7 +155,7 @@ nicht nutzbar (auf RX kommt ebus Traffic an).
 |**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-           |-              |
 |**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos       |-              |
 |**J10**      |Buchsenleiste W5500   |-            |-           |-           |W5500          |
-|**J11**      |PIC PROG              |-            |-           |-           |-              |
+|**J11**      |PIC PROG              |-            |-           |-           |5-6            |
 |**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper  |PIC Jumper     |
 |**J13**      |eBUS-Anschluss        |eBUS         |eBUS        |eBUS        |eBUS           |
 
