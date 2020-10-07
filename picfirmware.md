@@ -16,6 +16,8 @@ oder die [Bootloader Host Application](https://www.microchip.com/promo/8-bit-boo
 Um die Firmware zu aktualisieren, muss der Adapter in die USB oder Raspberry Pi Variante versetzt werden (also
 Wemos oder W5500 entfernen und Jumper J1 und J4 richtig einstellen).
 
+Um den Bootloader zu aktivieren, am Jumper J11 Pins 3-4 verbinden und erst dann die Stromversorgung herstellen.
+
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Adresse 0x400 geflasht.
 
 ### Firmware Versionen
