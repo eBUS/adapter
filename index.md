@@ -40,17 +40,21 @@ Dies kann durch Jumper konfiguriert werden.
 #### USB
 Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt gesetzt werden:
 * J1: USB
-* J4: RPI
+* J4: USB
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
+
+ebusd config: z.B. "-d enh:/dev/ttyUSB0"
 
 #### Raspberry Pi
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den Raspberry Pi aufstecken.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
-* J4: USB
+* J4: RPI
 
 Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
+
+ebusd config: "-d enh:/dev/ttyAMA0"
 
 #### WIFI
 Wird ein Wemos D1 mini auf J9 gesteckt, dann lässt sicher der Adapter via WLAN ansprechen.
@@ -60,16 +64,20 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
 
+ebusd config: z.B. "-d enhtcp:192.168.178.2:8880"
+
 #### Ethernet
 Wird ein W5500 auf J10 gesteckt, dann lässt sicher der Adapter via LAN nutzen.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
-* J4: RPI
+* J4: USB
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
 Die Ethernet Konfiguration (IP Adresse, Netzmaske, Gateway) wird durch den Bootloader im PIC ermöglicht und über den
 USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernet-konfiguration).
+
+ebusd config: z.B. "-d enhtcp:192.168.178.2:8880"
 
 ### Schaltplan
 
@@ -132,6 +140,24 @@ nicht nutzbar (auf RX kommt ebus Traffic an).
 * Raspberry Pi Buchsenleiste J8 des Adapters
 * USB Anschluss am Wemos 
 
+
+### Überblick Jumper/Pinleisten, Funktionen
+
+|**Anschluss**|Funktion              |USB          |Raspberry Pi|Wemos       |W5500          |
+|:-----------:|----------------------|-------------|------------|------------|---------------|
+|**J1**       |Jumper TX             |USB          |RPI         |RPI         |RPI            |
+|**J2**       |USB-Anschluss         |USB-Anschluss|-           |-           |Strom-Anschluss|
+|**J3**       |Gassensor             |-            |Gassensor   |Gassensor   |-              |
+|**J4**       |Jumper POW            |USB          |RPI         |-           |USB            |
+|**J5**       |I2C                   |-            |I2C         |I2C         |-              |
+|**J6**       |I2C                   |-            |I2C         |I2C+ext     |-              |
+|**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor|-              |
+|**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-           |-              |
+|**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos       |-              |
+|**J10**      |Buchsenleiste W5500   |-            |-           |-           |W5500          |
+|**J11**      |PIC PROG              |-            |-           |-           |-              |
+|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper  |PIC Jumper     |
+|**J13**      |eBUS-Anschluss        |eBUS         |eBUS        |eBUS        |eBUS           |
 
 ### Weiterführende Links
 
