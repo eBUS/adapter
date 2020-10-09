@@ -15,13 +15,14 @@ Dies wird durch Einsatz eines PIC ermöglicht, der u.a. folgende Vorteile mit si
 
  * minimale Zeitverzögerung durch Hardware-nahe Programmierung
  * flexible, konfigurierbare Varianten zur Verbindung mit dem Host:
-   * USB serial mit CP2102
+   * USB serial über CP2102
    * Raspberry Pi über GPIO/ttyAMA0
-   * WIFI durch Wemos D1 mini mit ebusd-esp
-   * Ethernet durch W5500
+   * WIFI über Wemos D1 mini
+   * Ethernet über W5500
+ * volle Unterstützung für ebusd enhanced Protokoll Version 1 sowie standard Protokoll
  * aktualisierbare Firmware mittels seriellem Bootloader
 
-Um all diese Optionen auf einer 5cm x 5cm großen Platine realisieren zu können, wird fast nur in SMD bestückt:
+Um all diese Optionen auf einer 5cm x 5cm großen Platine realisieren zu können, wird fast nur mit SMD bestückt:
 
 [<img src="img/smd-layout.png" width="200" alt="schema" title="Layout">](img/smd-layout.png)
 
@@ -31,7 +32,7 @@ Die SMD Technik bietet ebenfalls einige Vorteile:
 * kein CP2102 Aufsteckmodul mehr notwendig
 * günstige Bestückung
 
-Die einzelnen Varianten bieten zum Teil Optionen zum Anschluss von Sensoren und/oder Displays.
+Zwei der Varianten bieten auch die Option zum Anschluss von Sensoren und/oder Displays.
 
 ### Varianten
 In allen Varianten ist die Unterstützung für USB fest verbaut, da der CP2102 immer direkt auf der Platine bestückt ist.
@@ -44,7 +45,8 @@ Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
-ebusd config: z.B. "-d enh:/dev/ttyUSB0"
+Die ebusd device Konfiguration lautet z.B. `-d enh:/dev/ttyUSB0`, wobei `ttyUSB0` bei mehreren angeschlossenen
+USB serial Adaptern anders lauten kann. 
 
 #### Raspberry Pi
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den Raspberry Pi aufstecken.
@@ -54,37 +56,40 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 
 Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
 
-ebusd config: "-d enh:/dev/ttyAMA0"
+Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
 
 #### WIFI
-Wird ein Wemos D1 mini auf J9 gesteckt, dann lässt sicher der Adapter via WLAN ansprechen.
+Wird ein Wemos D1 mini auf J9 gesteckt, dann lässt sicher der Adapter via WLAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
 * J4: offen
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
 
-ebusd config: z.B. "-d enhtcp:192.168.178.2:8880"
+Die ebusd device Konfiguration lautet z.B. `-d enhtcp:192.168.178.2:8880`, wobei `192.168.178.2` durch die richtige
+IP-Adresse ersetzt werden muss.
 
 #### Ethernet
-Wird ein W5500 auf J10 gesteckt, dann lässt sicher der Adapter via LAN nutzen.
+Wird ein W5500 auf J10 gesteckt, dann lässt sich der Adapter via LAN nutzen.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
 * J4: USB
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
-Die Ethernet Konfiguration (IP Adresse, Netzmaske, Gateway) wird durch den Bootloader im PIC ermöglicht und über den
+Die Ethernet Konfiguration (IP-Adresse, Netzmaske, Gateway) wird durch den Bootloader im PIC ermöglicht und über den
 USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernet-konfiguration).
 
-ebusd config: z.B. "-d enhtcp:192.168.178.2:8880"
+Die ebusd device Konfiguration lautet z.B. `-d enhtcp:192.168.178.2:8880`, wobei `192.168.178.2` durch die richtige
+IP-Adresse ersetzt werden muss.
 
 ### Schaltplan
 
 [<img src="img/smd-circuit.png" width="600" alt="Schaltplan" title="Schaltplan">](img/smd-circuit.png)
 
 ### Anschluss von Sensoren, Aktoren oder Displays
-In den Varianten Wemos und Raspberry Pi stehen folgende Pin Header für den Anschluss weiterer Komponenten zur Verfügung:
+In den Varianten mit Wemos und Raspberry Pi stehen folgende Pin Header für den Anschluss weiterer Komponenten zur
+Verfügung:
 * J3: Gassensor oder Schalter
 * J5: I2C, z.B. OLED SSD1306 oder Nextion 
 * J6:
@@ -96,22 +101,25 @@ In den Varianten Wemos und Raspberry Pi stehen folgende Pin Header für den Ansc
 ### weitere Anschlüsse
 
 #### PIC Programmieranschluss J11
-Am J11 lässt sich die Firmaware des PIC mit einem entsprechenden Programmiergerät austauschen inkl. des Bootloaders.
-Das sollte nur in den seltensten Fällen notwendig sein, da der PIC vor Auslieferung bereits programmiert wird.
+Am Programmieranschluss J11 lässt sich die Firmware des PIC mit einem entsprechenden Programmiergerät austauschen inkl.
+des Bootloaders.
+Das sollte nur in den seltensten Fällen notwendig sein, da der PIC vor Auslieferung bereits programmiert wurde und
+der Adapter somit sofort einsetzbar ist.
 
 #### PIC Anschluss J12
 Dieser Anschluss führt Leitungen des PIC und deren Belegung und Nutzungsmöglichkeiten hängen ausschließlich von der
 PIC Firmware ab. Details dazu siehe [PIC Firmware](picfirmware).
 
-**Wichtiger Hinweis:** Die Pins am J12 dürfen nie mit irgendeinem Pin der anderen Jumper/Stecker-/Buchsenleisten in
-Verbindung gebracht werden, da hier getrennte Stromquellen zum Einsatz kommen. Jegliche Verbindung gefährdet den Adapter
-und Geräte am eBUS!
+**Wichtiger Hinweis:** Die Pins am J12 dürfen mit keinem Pin der anderen Jumper/Stecker-/Buchsenleisten in
+Verbindung gebracht werden, da hier verschiedene isolierte Stromquellen zum Einsatz kommen.
+Jegliche Verbindung gefährdet den Adapter und potentiell auch Geräte am eBUS!
 
+[TODO Bild]
 
 ### Verwendung
 
 Neben dem Adapter wird eine Software benötigt, die den eBUS Verkehr interpretiert und auswertet. Das übernimmt bspw.
-[ebusd](https://github.com/john30/ebusd/), der ebenfalls auf einen Rasperry PI installiert werden kann.
+[ebusd](https://github.com/john30/ebusd/), der auch auf einen Raspberry Pi installiert werden kann.
 
 #### Verbindungen
 
@@ -122,7 +130,7 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
 * Adapter  
   wird mit ebusd entweder über USB (UART), über GPIO (UART) des Raspberry Pi, über WLAN ([Wemos ebusd-esp](v2/wemosebus)) [TODO überarbeiten]  
-  oder LAN verbunden.
+  oder LAN (W5500) verbunden.
 * ebusd  
   stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
 
@@ -133,12 +141,12 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 * J4: USB
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter und RX/TX des Wemos samt seines USB serial sind
-nicht nutzbar (auf RX kommt ebus Traffic an).
+nicht nutzbar (auf RX kommt eBUS Traffic an).
 
 **Achtung:** immer nur eine Stromversorgung verbinden, also maximal einen Anschluss von:
 * USB-Anschluss J2 des Adapters
 * Raspberry Pi Buchsenleiste J8 des Adapters
-* USB Anschluss am Wemos 
+* USB-Anschluss am Wemos 
 
 
 ### Überblick Jumper/Pinleisten, Funktionen
