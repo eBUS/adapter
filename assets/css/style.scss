@@ -1,9 +1,42 @@
 ---
 ---
 
-@import "jekyll-theme-cayman";
+@import "{{ site.theme }}";
 $fa-font-path: "/assets/fonts/font-awesome";
 @import "font-awesome";
+
+.main-content {
+  @include large {
+    max-width: 70rem;
+    padding: 2rem 20rem 2rem 2rem;
+  }
+}
+.main-menu {
+  &:before {
+    content: 'Inhalt';
+  }
+  word-wrap: break-word;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+
+  @include large {
+    top: 14rem;
+    width: 20rem;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  @include medium {
+    display: none;
+  }
+
+  @include small {
+    display: none;
+  }
+}
 
 @mixin fasicon($name) {
   &:before {
