@@ -1,5 +1,5 @@
 ---
-ref: index
+ref: v2
 lang: en
 ---
 ## Welcome to eBUS adapter 2!
