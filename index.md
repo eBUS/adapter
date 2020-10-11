@@ -181,13 +181,25 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 |**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper   |PIC Jumper     |
 |**J13**      |eBUS-Anschluss        |eBUS         |eBUS        |eBUS         |eBUS           |
 
+### LEDs
+Der Adapter verfügt über 4 LEDs mit folgender Zuordnung:
+* gelb: Stromversorgung PIC
+* blau: Signale vom PIC
+* grün: eBUS Empfangen
+* rot: eBUS Senden
+
+Nur wenn die gelbe LED leuchtet, ist der PIC mit Strom versorgt und kann überhaupt arbeiten.
+Die grüne und rote LED leuchten beim entsprechenden eBUS Traffic, wobei die grüne permanent leuchtet, wenn die eBUS
+Leitung noch nicht angeschlossen ist oder wenn auf der Leitung zu wenig Spannung vorgefunden wird.
+Die blaue LED wird von der PIC Firmware gesteuert, was [hier beschrieben ist](picfirmware#led).
+
 ### Weiterführende Links
 
 Hier einige Links, die zum Thema beitragen, bzw. Basisinformationen und Grundlagen enthalten:
 
 * [eBUS Spezifikation (physikalische Schicht OSI 1)](Spec_Prot_12_V1_3_1.pdf)
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
-* [Dokumentation Adapter V 2.0-2.2](https://ebus.github.io/adapter/v2/)
+* [Dokumentation Adapter V 2.0-2.2](v2/)
 * [Reichelt Warenkorb Stift-/Buchsenleisten](https://www.reichelt.de/my/1758624)
 * [ebusd-esp Firmware für Wemos D1](https://github.com/john30/ebusd-esp)
 * [ebusd Wiki](https://github.com/john30/ebusd/wiki)

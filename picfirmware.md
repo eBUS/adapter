@@ -21,7 +21,7 @@ Wemos oder W5500 entfernt und die Jumper J1 und J4 richtig eingestellt, [siehe h
 Um den Bootloader zu aktivieren, werden am Jumper J11 die Pins 3 und 4 verbunden und erst dann die Stromversorgung
 hergestellt.
 
-Wenn der Bootloader aktiv ist, dann leuchtet die blaue LED permanent.
+Wenn der Bootloader aktiv ist, dann leuchtet die blaue LED permanent, [siehe hier](#led).
 
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Adresse 0x400 geflasht.
 
@@ -50,3 +50,25 @@ Wenn für den Einsatz mit W5500 eine feste IP Adresse eingestellt werden soll, d
 über den USB-Anschluss oder den Raspberry Pi GPIO/ttyAMA0 vorgenommen werden.
 
 [TODO Details]
+
+### LED
+Die blaue LED wird zur Signalisierung von Zuständen aus der PIC Firmware genutzt. Hier muss grundsätzlich zwischen
+Bootloader und normalem Modus unterschieden werden.
+
+#### LED im Bootloader
+Wenn die LED nach Anschließen der Stromversorgung sofort permanent in voller Helligkeit leuchtet, dann ist der PIC im
+Bootloader-Modus und wartet auf Daten an der seriellen Schnittstelle.
+
+#### LED bei normalem Betrieb (ohne Ethernet)
+Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zunächst aus und erhöht dann in mehreren
+Schritten die Helligkeit:
+* Bleibt die LED mit sehr geringer Helligkeit an, dann ist das enhanced ebusd Protokoll deaktiviert
+  ([siehe Jumper](index#jumper)). 
+* Ansonsten wird die Helligkeit bis zum Maximum erhöht und bleibt dann an.
+
+#### LED bei Betrieb mit Ethernet
+Ist das Ethernet Modul aufgesteckt und der Jumper an J12 entsprechend gesetzt, dann hat die blaue LED noch weitere
+Bedeutungen zusätzlich zu den oben beschriebenen, die in folgenden Stufen durchlaufen werden:
+1. Bis der W5500 Chip nach dem Reset antwortet, blinkt die LED (2x pro Sekunde).
+2. Bis ein Link auf der Leitung gefunden wurde, blinkt die LED sehr schnell LED (20x pro Sekunde).
+3. Im Fall von DHCP blinkt die LED schnell LED (4x pro Sekunde), bis eine IP-Adresse per DHCP ausgehandelt wurde. 
