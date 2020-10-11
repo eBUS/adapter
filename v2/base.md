@@ -1,6 +1,8 @@
 ---
 ref: base
 lang: de
+navorder: 2
+navtitle: Basis
 ---
 ## Basisplatine
 

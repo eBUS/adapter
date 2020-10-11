@@ -1,6 +1,8 @@
 ---
 ref: partlist
 lang: en
+navorder: 7
+navtitle: Parts
 ---
 ## Part list
 

@@ -1,6 +1,8 @@
 ---
 ref: index
 lang: de
+navorder: 1
+navtitle: Willkommen
 ---
 ## Willkommen zum eBUS Adapter 3!
 
@@ -20,7 +22,7 @@ Dies wird durch Einsatz eines PIC ermöglicht, der u.a. folgende Vorteile mit si
    * [WIFI](#wifi){:.wifi} über LOLIN/Wemos D1 mini mit ESP-8266
    * [Ethernet](#ethernet){:.ethernet} über USR-ES1 Modul mit W5500
  * volle Unterstützung für ebusd enhanced Protokoll Version 1 sowie standard Protokoll
- * aktualisierbare Firmware mittels seriellem Bootloader
+ * aktualisierbare [Firmware](picfirmware) mittels seriellem Bootloader
 
 Um all diese Optionen auf einer 5cm x 5cm großen Platine realisieren zu können, wird fast nur mit SMD bestückt:
 
@@ -50,7 +52,7 @@ Die ebusd device Konfiguration lautet z.B. `-d enh:/dev/ttyUSB0`, wobei `ttyUSB0
 USB serial Adaptern anders lauten kann. 
 
 #### Raspberry Pi
-{:.rpi}
+{:.rpi id="rpi"}
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den
 [Raspberry Pi](https://www.raspberrypi.org/) aufstecken.
 Die Jumper müssen dazu wie folgt gesetzt werden:
@@ -108,14 +110,15 @@ Verfügung:
 ### weitere Anschlüsse
 
 #### PIC Programmieranschluss J11
-Am Programmieranschluss J11 lässt sich die Firmware des PIC mit einem entsprechenden Programmiergerät austauschen inkl.
-des Bootloaders.
+Am Programmieranschluss J11 lässt sich die [Firmware](picfirmware) des PIC mit einem entsprechenden Programmiergerät
+austauschen inkl. des Bootloaders.
 Das sollte nur in den seltensten Fällen notwendig sein, da der PIC vor Auslieferung bereits programmiert wurde und
 der Adapter somit sofort einsetzbar ist.
+Details dazu unter [PIC Firmware](picfirmware#firmware-update).
 
 #### PIC Anschluss J12
 Dieser Anschluss führt Leitungen des PIC und deren Belegung und Nutzungsmöglichkeiten hängen ausschließlich von der
-PIC Firmware ab. Details dazu siehe [PIC Firmware](picfirmware).
+PIC Firmware ab, siehe unter [PIC Firmware](picfirmware#versions).
 
 **Wichtiger Hinweis:** Die Pins am J12 dürfen mit keinem Pin der anderen Jumper/Stecker-/Buchsenleisten in
 Verbindung gebracht werden, da hier verschiedene isolierte Stromquellen zum Einsatz kommen.
@@ -160,6 +163,7 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 
 
 ### Überblick Jumper/Pinleisten, Funktionen
+{:id="jumper"}
 
 |**Anschluss**|Funktion              |USB          |Raspberry Pi|Wemos D1 mini|USR-ES1-W5500  |
 |:-----------:|----------------------|-------------|------------|-------------|---------------|

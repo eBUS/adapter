@@ -1,6 +1,8 @@
 ---
 ref: raspberrypi
 lang: en
+navorder: 4
+navtitle: Raspberry Pi
 ---
 ## Raspberry Pi Board
 

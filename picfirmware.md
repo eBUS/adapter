@@ -1,8 +1,10 @@
 ---
 ref: picfirmware
 lang: de
+navorder: 2
+navtitle: Firmware
 ---
-## eBUS Adapter 3 - PIC Firmware
+## PIC Firmware
 
 ### Firmware Update
 Auf dem PIC ist ein Bootloader enthalten, womit die Firmware über den USB-Anschluss oder den Raspberry Pi GPIO/ttyAMA0
@@ -24,8 +26,8 @@ Wenn der Bootloader aktiv ist, dann leuchtet die blaue LED permanent.
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Adresse 0x400 geflasht.
 
 ### Firmware Versionen
-* Version 1.0:  
-  Released: 01.11.2020  
+{:id="versions"}
+* Version 20201101:  
   Features: ebusd enhanced protocol V1, Ethernet  
   Minimale ebusd Version: 4.0  
   Anschlussbelegung J12:  

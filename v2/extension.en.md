@@ -1,6 +1,8 @@
 ---
 ref: extension
 lang: en
+navorder: 2
+navtitle: Extension
 ---
 ## Extension Board
 

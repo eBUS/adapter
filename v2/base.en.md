@@ -1,6 +1,8 @@
 ---
 ref: base
 lang: en
+navorder: 2
+navtitle: Base
 ---
 ## Base Board
 

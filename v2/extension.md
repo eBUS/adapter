@@ -1,6 +1,8 @@
 ---
 ref: extension
 lang: de
+navorder: 2
+navtitle: Erweiterung
 ---
 ## Erweiterungsplatine
 

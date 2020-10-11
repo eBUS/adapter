@@ -1,6 +1,8 @@
 ---
 ref: partlist
 lang: de
+navorder: 7
+navtitle: Bauteile
 ---
 ## Bauteilelisten
 

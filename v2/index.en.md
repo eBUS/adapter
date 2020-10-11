@@ -1,6 +1,8 @@
 ---
 ref: v2
 lang: en
+navorder: 1
+navtitle: Adapter V2
 ---
 ## Welcome to eBUS adapter 2!
 

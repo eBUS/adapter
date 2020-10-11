@@ -1,6 +1,8 @@
 ---
 ref: raspberrypi
 lang: de
+navorder: 4
+navtitle: Raspberry Pi
 ---
 ## Raspberry Pi Platine
 

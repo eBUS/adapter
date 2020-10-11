@@ -31,10 +31,24 @@
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
     </section>
-	<div class="wrapper" style="text-align: right; line-height: 2em">
-	  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-	  {% for page in pages %} <a href="{{ page.url | prepend: site.baseurl }}" class="{{ page.lang }}">{{ page.lang }}</a> {% endfor %}
-	</div>
+	<section class="nav-wrapper">
+      <div class="nav-menu-wrapper">
+        <ul class="nav-menu">
+          {% assign pages=site.pages | where: "dir", page.dir | where: "lang", page.lang | sort: 'navorder' %}
+          {% for other in pages %} {% if other.navorder > 0 %}
+          {% if page.url == other.url %}
+          <li><span>{{ other.navtitle }}</span></li>
+          {% else %}
+          <li><a href="{{ other.url | prepend: site.baseurl }}" class="nav">{{ other.navtitle }}</a></li>
+          {% endif %}
+          {% endif %} {% endfor %}
+        </ul>
+      </div>
+      <div class="nav-lang-wrapper">
+        {% assign pages=site.pages | where: "ref", page.ref | sort: 'lang' %}
+        {% for other in pages %} <a href="{{ other.url | prepend: site.baseurl }}" class="lang {{ other.lang }}">{{ other.lang }}</a> {% endfor %}
+      </div>
+    </section>
     <section class="main-menu">
       {% include toc.html html=content h_min=3 %}
     </section>

@@ -1,6 +1,8 @@
 ---
 ref: wemosebus
 lang: de
+navorder: 6
+navtitle: Wemos
 ---
 ## Wemos D1 Mini Firmware für eBUS
 
