@@ -13,10 +13,13 @@ Dazu wird entweder das
 benötigt, mit dem sich auch eine feste IP-Adresse für den W5500 setzen lässt,
 oder die [Bootloader Host Application](https://www.microchip.com/promo/8-bit-bootloader) von Microchip.
 
-Um die Firmware zu aktualisieren, muss der Adapter in die USB oder Raspberry Pi Variante versetzt werden (also
-Wemos oder W5500 entfernen und Jumper J1 und J4 richtig einstellen).
+Um die Firmware zu aktualisieren, wird der Adapter in die USB oder Raspberry Pi Variante versetzt: Dazu werden
+Wemos oder W5500 entfernt und die Jumper J1 und J4 richtig eingestellt, [siehe hier](index#varianten).
 
-Um den Bootloader zu aktivieren, am Jumper J11 Pins 3-4 verbinden und erst dann die Stromversorgung herstellen.
+Um den Bootloader zu aktivieren, werden am Jumper J11 die Pins 3 und 4 verbunden und erst dann die Stromversorgung
+hergestellt.
+
+Wenn der Bootloader aktiv ist, dann leuchtet die blaue LED permanent.
 
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Adresse 0x400 geflasht.
 

@@ -1,0 +1,38 @@
+---
+---
+
+@import "jekyll-theme-cayman";
+$fa-font-path: "/assets/fonts/font-awesome";
+@import "font-awesome";
+
+@mixin fasicon($name) {
+  &:before {
+    padding-right: 5px;
+    @extend .fas;
+  }
+  @extend .fa-#{$name};
+}
+
+@mixin fabicon($name) {
+  &:before {
+    padding-right: 5px;
+    @extend .fab;
+  }
+  @extend .fa-#{$name};
+}
+
+.main-content .usb, .usb {
+  @include fabicon(usb);
+}
+
+.main-content .rpi, .rpi {
+  @include fabicon(raspberry-pi);
+}
+
+.main-content .wifi, .wifi {
+  @include fasicon(wifi);
+}
+
+.main-content .ethernet, .ethernet {
+  @include fasicon(network-wired);
+}

@@ -15,10 +15,10 @@ Dies wird durch Einsatz eines PIC ermöglicht, der u.a. folgende Vorteile mit si
 
  * minimale Zeitverzögerung durch Hardware-nahe Programmierung
  * flexible, konfigurierbare Varianten zur Verbindung mit dem Host:
-   * USB serial über CP2102
-   * Raspberry Pi über GPIO/ttyAMA0
-   * WIFI über Wemos D1 mini
-   * Ethernet über W5500
+   * [USB](#usb){:.usb} serial über CP2102 (onboard)
+   * [Raspberry Pi](#raspberry-pi){:.rpi} über GPIO/ttyAMA0
+   * [WIFI](#wifi){:.wifi} über LOLIN/Wemos D1 mini mit ESP-8266
+   * [Ethernet](#ethernet){:.ethernet} über USR-ES1 Modul mit W5500
  * volle Unterstützung für ebusd enhanced Protokoll Version 1 sowie standard Protokoll
  * aktualisierbare Firmware mittels seriellem Bootloader
 
@@ -39,6 +39,7 @@ In allen Varianten ist die Unterstützung für USB fest verbaut, da der CP2102 i
 Dies kann durch Jumper konfiguriert werden.
 
 #### USB
+{:.usb}
 Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt gesetzt werden:
 * J1: USB
 * J4: USB
@@ -49,7 +50,9 @@ Die ebusd device Konfiguration lautet z.B. `-d enh:/dev/ttyUSB0`, wobei `ttyUSB0
 USB serial Adaptern anders lauten kann. 
 
 #### Raspberry Pi
-Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den Raspberry Pi aufstecken.
+{:.rpi}
+Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den
+[Raspberry Pi](https://www.raspberrypi.org/) aufstecken.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
 * J4: RPI
@@ -59,7 +62,9 @@ Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
 Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
 
 #### WIFI
-Wird ein Wemos D1 mini auf J9 gesteckt, dann lässt sicher der Adapter via WLAN verwenden.
+{:.wifi}
+Wird ein [LOLIN/Wemos D1 mini mit ESP-8266](https://docs.wemos.cc/en/latest/d1/d1_mini.html) auf J9 gesteckt,
+dann lässt sicher der Adapter via WLAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
 * J4: offen
@@ -70,7 +75,9 @@ Die ebusd device Konfiguration lautet z.B. `-d enhtcp:192.168.178.2:8880`, wobei
 IP-Adresse ersetzt werden muss.
 
 #### Ethernet
-Wird ein W5500 auf J10 gesteckt, dann lässt sich der Adapter via LAN nutzen.
+{:.ethernet}
+Wird ein [USR-ES1 Modul mit W5500](https://www.pusr.com/download/ES1/USR-ES1-EN-V1.0.pdf) auf J10 gesteckt,
+dann lässt sich der Adapter via LAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
 * J4: USB
@@ -114,7 +121,7 @@ PIC Firmware ab. Details dazu siehe [PIC Firmware](picfirmware).
 Verbindung gebracht werden, da hier verschiedene isolierte Stromquellen zum Einsatz kommen.
 Jegliche Verbindung gefährdet den Adapter und potentiell auch Geräte am eBUS!
 
-[TODO Bild]
+[TODO Bild mit zwei Hälften]
 
 ### Verwendung
 
@@ -129,8 +136,11 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 * Heizung  
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
 * Adapter  
-  wird mit ebusd entweder über USB (UART), über GPIO (UART) des Raspberry Pi, über WLAN ([Wemos ebusd-esp](v2/wemosebus)) [TODO überarbeiten]  
-  oder LAN (W5500) verbunden.
+  wird mit ebusd entweder
+  über USB (UART),
+  über GPIO (UART) des Raspberry Pi,
+  über WLAN ([Wemos ebusd-esp](v2/wemosebus)) [TODO überarbeiten]
+  oder LAN (USR-ES1 Modul mit W5500) verbunden.
 * ebusd  
   stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
 
@@ -151,21 +161,21 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 
 ### Überblick Jumper/Pinleisten, Funktionen
 
-|**Anschluss**|Funktion              |USB          |Raspberry Pi|Wemos       |W5500          |
-|:-----------:|----------------------|-------------|------------|------------|---------------|
-|**J1**       |Jumper TX             |USB          |RPI         |RPI         |RPI            |
-|**J2**       |USB-Anschluss         |USB-Anschluss|-           |-           |Strom-Anschluss|
-|**J3**       |Gassensor             |-            |Gassensor   |Gassensor   |-              |
-|**J4**       |Jumper POW            |USB          |RPI         |-           |USB            |
-|**J5**       |I2C                   |-            |I2C         |I2C         |-              |
-|**J6**       |I2C                   |-            |I2C         |I2C+ext     |-              |
-|**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor|-              |
-|**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-           |-              |
-|**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos       |-              |
-|**J10**      |Buchsenleiste W5500   |-            |-           |-           |W5500          |
-|**J11**      |PIC PROG              |-            |-           |-           |5-6            |
-|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper  |PIC Jumper     |
-|**J13**      |eBUS-Anschluss        |eBUS         |eBUS        |eBUS        |eBUS           |
+|**Anschluss**|Funktion              |USB          |Raspberry Pi|Wemos D1 mini|USR-ES1-W5500  |
+|:-----------:|----------------------|-------------|------------|-------------|---------------|
+|**J1**       |Jumper TX             |USB          |RPI         |RPI          |RPI            |
+|**J2**       |USB-Anschluss         |USB-Anschluss|-           |-            |Strom-Anschluss|
+|**J3**       |Gassensor             |-            |Gassensor   |Gassensor    |-              |
+|**J4**       |Jumper POW            |USB          |RPI         |-            |USB            |
+|**J5**       |I2C                   |-            |I2C         |I2C          |-              |
+|**J6**       |I2C                   |-            |I2C         |I2C+ext      |-              |
+|**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor |-              |
+|**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-            |-              |
+|**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos D1 mini|-              |
+|**J10**      |Buchsenleiste USR-ES1 |-            |-           |-            |USR-ES1-W5500  |
+|**J11**      |PIC PROG              |-            |-           |-            |5-6            |
+|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper   |PIC Jumper     |
+|**J13**      |eBUS-Anschluss        |eBUS         |eBUS        |eBUS         |eBUS           |
 
 ### Weiterführende Links
 

@@ -1,7 +1,6 @@
 theme: jekyll-theme-cayman
 lang: de
-url: https://ebus.github.io/adapter/
-baseurl: /adapter
+url: https://adapter.ebusd.eu
 title:
   de: eBUS Adapter 3
   en: eBUS adapter 3
@@ -10,4 +9,6 @@ description:
   en: Hardware interface for communicating with eBUS heating system
 github:
   is_project_page: false
-
+markdown: kramdown
+gems:
+  - jekyll-font-awesome-sass
