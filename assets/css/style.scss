@@ -22,11 +22,10 @@ $fa-font-path: "/assets/fonts/font-awesome";
   padding: 0;
 
   @include large {
-    top: 14rem;
+    top: 16rem;
     width: 20rem;
-    padding: 2rem 1rem;
+    padding: 0rem 1rem;
     margin: 0 auto;
-    font-size: 1.1rem;
   }
 
   @include medium {
