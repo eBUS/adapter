@@ -35,7 +35,7 @@ Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstel
   * Pin 2: ebusd enhanced protocol: offen=aktiv, GND=inaktiv
   * Pin 3: GND
   * Pin 4: -
-  * Pin 5: Ethernet mit W5500: offen=inaktiv, GND=aktiv [TODO einbauen]
+  * Pin 5: Ethernet mit W5500: offen=inaktiv, GND=aktiv
   * Pin 6: GND
   * Pin 7: -
   * Pin 8: -
