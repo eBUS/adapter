@@ -36,6 +36,22 @@ Die SMD Technik bietet ebenfalls einige Vorteile:
 
 Zwei der Varianten bieten auch die Option zum Anschluss von Sensoren und/oder Displays.
 
+### Verbindungen
+
+Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
+[<img src="img/smd-schema.png" width="600" alt="schema" title="Verbindungsschema">](img/smd-schema.png)
+
+* Heizung  
+  wird mit dem Adapter über eine 2-Drahtleitung verbunden.
+* Adapter  
+  wird mit ebusd entweder
+  über USB (UART),
+  über GPIO (UART) des Raspberry Pi,
+  über WLAN ([Wemos ebusd-esp](v2/wemosebus)) [TODO überarbeiten]
+  oder LAN (USR-ES1 Modul mit W5500) verbunden.
+* ebusd  
+  stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
+
 ### Varianten
 In allen Varianten ist die Unterstützung für USB fest verbaut, da der CP2102 immer direkt auf der Platine bestückt ist.
 Dies kann durch Jumper konfiguriert werden.
@@ -124,28 +140,13 @@ PIC Firmware ab, siehe unter [PIC Firmware](picfirmware#versions).
 Verbindung gebracht werden, da hier verschiedene isolierte Stromquellen zum Einsatz kommen.
 Jegliche Verbindung gefährdet den Adapter und potentiell auch Geräte am eBUS!
 
-[TODO Bild mit zwei Hälften]
+Hier ist ein Bild, das die beiden isolierten Hälften der Platine darstellt: rot für eBUS und grün für USB etc.:  
+<img src="img/smd-2power.png" width="200" alt="schema" title="Layout">
 
 ### Verwendung
 
 Neben dem Adapter wird eine Software benötigt, die den eBUS Verkehr interpretiert und auswertet. Das übernimmt bspw.
 [ebusd](https://github.com/john30/ebusd/), der auch auf einen Raspberry Pi installiert werden kann.
-
-#### Verbindungen
-
-Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
-[<img src="img/smd-schema.png" width="600" alt="schema" title="Verbindungsschema">](img/smd-schema.png)
-
-* Heizung  
-  wird mit dem Adapter über eine 2-Drahtleitung verbunden.
-* Adapter  
-  wird mit ebusd entweder
-  über USB (UART),
-  über GPIO (UART) des Raspberry Pi,
-  über WLAN ([Wemos ebusd-esp](v2/wemosebus)) [TODO überarbeiten]
-  oder LAN (USR-ES1 Modul mit W5500) verbunden.
-* ebusd  
-  stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
 
 #### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren:
 [TODO Testen]  
