@@ -202,5 +202,6 @@ Hier einige Links, die zum Thema beitragen, bzw. Basisinformationen und Grundlag
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
 * [Dokumentation Adapter V 2.0-2.2](v2/)
 * [Reichelt Warenkorb Stift-/Buchsenleisten](https://www.reichelt.de/my/1758624)
+  [TODO "BKL 10120910" für 2 Jumper "MPE 149-3-002-F0" einsetzen]
 * [ebusd-esp Firmware für Wemos D1](https://github.com/john30/ebusd-esp)
 * [ebusd Wiki](https://github.com/john30/ebusd/wiki)
