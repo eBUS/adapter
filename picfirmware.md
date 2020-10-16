@@ -27,10 +27,9 @@ Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstel
 
 ### Firmware Versionen
 {:id="versions"}
-* Version 20201101:  
-  [TODO Download URL]  
+* [Version 20201101](firmware/20201101-offset.hex):  
   Features: ebusd enhanced protocol V1, Ethernet  
-  Minimale ebusd Version: 4.0  
+  Minimale ebusd Version: 3.5 (enhanced protocol)  
   Anschlussbelegung J12:  
   * Pin 1: Vdd
   * Pin 2: ebusd protocol: offen=enhanced, GND=standard
