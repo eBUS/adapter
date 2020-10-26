@@ -10,8 +10,8 @@ navtitle: Firmware
 Auf dem PIC ist ein Bootloader enthalten, womit die Firmware über den USB-Anschluss oder den Raspberry Pi GPIO/ttyAMA0
 aktualisiert werden kann.
 
-Dazu wird entweder das
-[Bootloader Tool](https://github.com/john30/ebus3/tree/master/tools/bootloadercheck) [TODO finale URL]
+Dazu wird entweder der
+[PIC Loader](https://github.com/john30/ebus3/tree/master/tools/picloader) [TODO finale URL]
 benötigt, mit dem sich auch eine feste IP-Adresse für den W5500 des USR-ES1 Moduls setzen lässt,
 oder die [Bootloader Host Application](https://www.microchip.com/promo/8-bit-bootloader) von Microchip.
 
@@ -23,7 +23,12 @@ hergestellt.
 
 Wenn der Bootloader aktiv ist, dann leuchtet die blaue LED sofort in voller Helligkeit, [siehe hier](#led).
 
-Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Adresse 0x400 geflasht.
+Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Wort-Adresse 0x400 geflasht.
+
+Mit dem
+[PIC Loader](https://github.com/john30/ebus3/tree/master/tools/picloader) [TODO finale URL]
+geht das bspw. so (wobei `/dev/ttyUSB0` evt. durch das richtige USB serial device ersetzt werden muss):
+`picloader -f firmware.hex /dev/ttyUSB0`
 
 ### Firmware Versionen
 {:id="versions"}
@@ -45,11 +50,14 @@ Verbindung gebracht werden, da hier getrennte Stromquellen zum Einsatz kommen. J
 und Geräte am eBUS!
 
 ### Ethernet Konfiguration
-Wenn für den Einsatz mit USR-ES1 Modul eine feste IP Adresse eingestellt werden soll, dann kann das mit dem
-[Bootloader Tool](https://github.com/john30/ebus3/tree/master/tools/bootloadercheck) [TODO finale URL]
+Wenn für den Einsatz mit USR-ES1 Modul eine feste IP-Adresse eingestellt werden soll, anstelle diese via DHCP zu beziehen,
+dann kann das mit dem
+[PIC Loader](https://github.com/john30/ebus3/tree/master/tools/picloader) [TODO finale URL]
 über den USB-Anschluss oder den Raspberry Pi GPIO/ttyAMA0 vorgenommen werden.
 
-[TODO Details]
+Um bspw. die IP-Adresse 192.168.10.20 mit einer Netzmaske von 255.255.255.0 (=Länge 24) einzustellen, wird der PIC
+Loader wie folgt aufgerufen (wobei `/dev/ttyUSB0` evt. durch das richtige USB serial device ersetzt werden muss):
+`picloader -i 192.168.10.20 -m 24 /dev/ttyUSB0`
 
 ### LED
 Die blaue LED wird zur Signalisierung von Zuständen aus der PIC Firmware genutzt. Hier muss grundsätzlich zwischen
