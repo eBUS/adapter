@@ -2,7 +2,7 @@
 ref: picfirmware
 lang: de
 navorder: 2
-navtitle: Firmware
+navtitle: PIC Firmware
 ---
 ## PIC Firmware
 
