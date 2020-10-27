@@ -44,17 +44,19 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 * Heizung  
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
 * Adapter  
-  wird mit ebusd entweder
-  über USB (UART),
-  über GPIO (UART) des Raspberry Pi,
-  über WLAN ([Wemos ebusd-esp](wemosebus))
-  oder LAN (USR-ES1 Modul mit W5500) verbunden.
+  wird mit ebusd entweder über
+  * USB (UART),
+  * GPIO (UART) des Raspberry Pi,
+  * WLAN ([Wemos](wemosebus)) oder
+  * LAN (USR-ES1 Modul mit W5500) verbunden.
 * ebusd  
   stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
 
 ### Varianten
 In allen Varianten ist die Unterstützung für USB fest verbaut, da der CP2102 immer direkt auf der Platine bestückt ist.
-Dies kann durch Jumper konfiguriert werden.
+Diese ist notwendig, um bspw. die PIC Firmware zu aktualisieren oder die Ethernet Konfiguration vorzunehmen.
+
+Über Jumper kann die gewünschte Variante konfiguriert werden.
 
 #### USB
 {:.usb}
