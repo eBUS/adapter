@@ -4,7 +4,7 @@ lang: de
 navorder: 3
 navtitle: Wemos
 ---
-## Wemos D1 mini Firmware für eBUS
+## Wemos D1 mini für eBUS
 
 Die Kommunikation am eBUS ist heikel in Bezug auf Latenzzeiten, also die Verzögerung von gesendeten oder empfangenen
 Bytes. So muss bspw. ein Folgebyte einer Nachricht zwingend innerhalb von nur 50 ms gesendet werden, da die Nachricht
