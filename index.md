@@ -47,7 +47,7 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
   wird mit ebusd entweder
   über USB (UART),
   über GPIO (UART) des Raspberry Pi,
-  über WLAN ([Wemos ebusd-esp](v2/wemosebus)) [TODO überarbeiten]
+  über WLAN ([Wemos ebusd-esp](wemosebus))
   oder LAN (USR-ES1 Modul mit W5500) verbunden.
 * ebusd  
   stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.

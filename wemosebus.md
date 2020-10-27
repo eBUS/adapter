@@ -1,29 +1,36 @@
 ---
-ref: wemosebus
+ref: wemos
 lang: de
-navorder: 6
+navorder: 3
 navtitle: Wemos
 ---
 ## Wemos D1 mini Firmware für eBUS
 
-Aufgrund viel zu hoher Latenzzeiten lässt sich leider ESPEasy oder eine andere Firmware nicht für einen stabilen Zugriff
-auf den eBUS mit ebusd nutzen.
-Deshalb gibt es dafür eine eigene [Low-Latency Firmware hier](https://github.com/john30/ebusd-esp).
+Die Kommunikation am eBUS ist heikel in Bezug auf Latenzzeiten, also die Verzögerung von gesendeten oder empfangenen
+Bytes. So muss bspw. ein Folgebyte einer Nachricht zwingend innerhalb von nur 50 ms gesendet werden, da die Nachricht
+andernfalls verworfen wird.
 
-Die Konfiguration ist hier noch einmal in Deutsch beschrieben.
+Werden eBUS Nachrichten via WLAN über einen Wemos transportiert, dann muss die Wemos Firmware also dafür sorgen, dass
+das mit kleinstmöglicher Verzögerungszeit geschieht.
+
+Aus diesem Grund wurde die [ebusd-esp Firmware](https://github.com/john30/ebusd-esp) entwickelt, mit der die
+Verzögerung unter normalen Bedingungen unter 5 [TODO] ms bleibt.
+
+Mit Einführung des enhanced ebusd Protokolls seit [Version 4.0](https://github.com/john30/ebusd) [TODO Link] wird der besonders
+kritische Teil der Arbitrierung am eBUS in die Hardware verlagert (PIC Controller).
+Dadurch kann jetzt auch Wemos Firmware eingesetzt werden, die ein Port-Forwarding vom Netzwerk an die serielle
+Schnittstelle erlaubt und bspw. durch Ausführung anderer Tasks eine höhere Latenzzeit ausweist.
+
+Bis dato sind folgende Wemos Firmwares mit ebusd enhanced Protokoll als funktionstüchtig gestestet worden:
+ 
+* [ebusd-esp](#ebusd-esp)
+* ESPEasy [TODO Testen]
+* ESP-Link [TODO Testen]
+* ESPHome mit [TODO] plugin [TODO Testen]
 
 
-### Warum ebusd-esp?
-
-ebusd-esp wurde von John extra für dieses Projekt programmiert und diese Firmware ermöglicht sehr kleine Latenzzeiten von 5 Millisekunden.
-
-ESPEasy und ESP-Link haben zu große Latenzzeiten und können im derzeitigen Entwicklungsstand leider nicht für eBUS eingesetzt werden.
-
-Der Empfang würde zwar meist funktionieren, aber das Senden an den eBUS funktioniert nicht bzw. nur schlecht und funkt sozusagen ständig den anderen Teilnehmern am Bus dazwischen und stört deren Kommunikation.
-
-
-### Software Konfiguration Wemos ebusd-esp
-
+### Konfiguration ebusd-esp
+{:id="ebusd-esp"}
 Der Wemos muss [laut Anleitung geflasht](https://github.com/john30/ebusd-esp) und dann mit einer der folgenden beiden Methoden konfiguriert werden:
 * [mit serieller Konsole](#konfiguration-mit-serieller-konsole) (z.B.: Arduino serieller Monitor)
 * [über WLAN](#konfiguration-mit-wlan)
@@ -38,7 +45,7 @@ Hier sollte dann über die Menüpunkte am besten eine statische IP eingestellt w
 Unter Punkt 6 wird gewählt ob RX und TX geswappt werden soll, hier im Beispiel wird direkt gewählt.
 
 Nachdem die Änderungen eingetragen sind, muss noch "speichern" aufgerufen werden.
-
+[TODO update]
 ```
 Welcome to eBUS adapter 2.0, build 20171230
 ebusd device string: 10.0.0.161:8889
@@ -77,11 +84,11 @@ Enter your choice:
 
 Nachdem einer neuer Wemos (oder ein alter, der einen Factory Reset via serieller Konsole bekommen hat) mit der ebusd-esp Firmware geflasht wurde, aktiviert dieser einen WLAN Access Point mit SSID "EBUS".
 
-[<img src="img/wemosebus-wlan.jpg" width="200" alt="WLAN" title="WLAN">](img/wemosebus-wlan.jpg)  
+[<img src="v2/img/wemosebus-wlan.jpg" width="200" alt="WLAN" title="WLAN">](v2/img/wemosebus-wlan.jpg)  
 Hat man sich mit diesem WLAN verbunden (kein Passwort notwendig), lässt sich der Wemos im Web-Browser unter der Adresse [http://192.168.4.1](http://192.168.4.1) aufrufen und konfigurieren.
 
 Dabei werden neu eingegebene Werte/Parameter zunächst mit "Check & Update" geprüft und anschließend mit "Save & Reset" gespeichert und der Wemos neu gestartet.
-[<img src="img/wemosebus-webcfg.png" width="300" alt="Web configuration" title="Web configuration">](img/wemosebus-webcfg.png)
+[<img src="v2/img/wemosebus-webcfg.png" width="300" alt="Web configuration" title="Web configuration">](v2/img/wemosebus-webcfg.png)
 
 
 ### ebusd Konfiguration
