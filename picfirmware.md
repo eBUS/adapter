@@ -21,13 +21,13 @@ der Wemos D1 mini bzw. das USR-ES1 Modul entfernt und die Jumper J1 und J4 richt
 Um den Bootloader zu aktivieren, werden am Jumper J11 die Pins 3 und 4 verbunden und erst dann die Stromversorgung
 hergestellt.
 
-Wenn der Bootloader aktiv ist, dann leuchtet die blaue LED sofort in voller Helligkeit, [siehe hier](#led).
+Wenn der Bootloader aktiv ist, leuchtet die blaue LED sofort in voller Helligkeit, [siehe hier](#led).
 
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Wort-Adresse 0x400 geflasht.
 
 Mit dem
 [PIC Loader](https://github.com/john30/ebus3/tree/master/tools/picloader) [TODO finale URL]
-geht das bspw. so (wobei `/dev/ttyUSB0` evt. durch das richtige USB serial device ersetzt werden muss):
+geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial device ersetzt werden muss):
 `picloader -f firmware.hex /dev/ttyUSB0`
 
 ### Firmware Versionen
