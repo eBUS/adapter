@@ -24,9 +24,9 @@ Schnittstelle erlaubt und bspw. durch Ausführung anderer Tasks eine höhere Lat
 Bis dato sind folgende Wemos Firmwares mit ebusd enhanced Protokoll als funktionstüchtig gestestet worden:
  
 * [ebusd-esp](#ebusd-esp)
-* ESPEasy [TODO Testen]
-* ESP-Link [TODO Testen]
-* ESPHome mit [TODO] plugin [TODO Testen]
+* [ESPEasy](#espeasy) [TODO Testen]
+* [ESPHome](#esphome) mit [TODO] plugin [TODO Testen]
+* [ESP-Link](#esplink) [TODO Testen]
 
 
 ### Konfiguration ebusd-esp
@@ -91,15 +91,27 @@ Dabei werden neu eingegebene Werte/Parameter zunächst mit "Check & Update" gepr
 [<img src="v2/img/wemosebus-webcfg.png" width="300" alt="Web configuration" title="Web configuration">](v2/img/wemosebus-webcfg.png)
 
 
+### ESPEasy Konfiguration
+{:id="espeasy"}
+[TODO]
+
+### ESPHome Konfiguration
+{:id="esphome"}
+[TODO]
+
+### ESP-Link Konfiguration
+{:id="esplink"}
+[TODO]
+
 ### ebusd Konfiguration
 
-Die in diesem Beispiel verwendete IP und Portnummer 8889 sollte in der /etc/default/ebusd dann so aussehen:
+Die in diesem Beispiel verwendete IP und Portnummer 9999 sollte in der /etc/default/ebusd dann so aussehen:
 
-`EBUSD_OPTS="-d 10.0.0.161:8889 -l /var/log/ebusd.log --scanconfig --latency=20000 --address=01"`
+`EBUSD_OPTS="-d 10.0.0.161:9999 -l /var/log/ebusd.log --scanconfig --latency=20000 --address=01"`
 
 Hier wurde auch mit "--address=..." eine neue Adresse vergeben, damit dieser Wlan Adapter nicht mit einem 2. Adapter kollidiert. Die default Adresse (keine Angabe) ist die "31" (hex).
 
-Alternativ: Wenn der der Einsatz von mehr als einem Adpater geplant ist, dann muss die Master-Adresse der zweiten ebusd Instanz geändert werden, sonst kollidieren die default Adressen miteinander.
+Alternativ: Wenn der Einsatz von mehr als einem Adpater geplant ist, dann muss die Master-Adresse der zweiten ebusd Instanz geändert werden, sonst kollidieren die default Adressen miteinander.
 
 
 ### Logauszug Rawdata
