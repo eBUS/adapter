@@ -182,7 +182,10 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 |**J10**      |Buchsenleiste USR-ES1 |-            |-           |-            |USR-ES1-W5500  |
 |**J11**      |PIC PROG              |-            |-           |-            |5-6            |
 |**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper   |PIC Jumper     |
-|**J13**      |eBUS-Anschluss        |eBUS         |eBUS        |eBUS         |eBUS           |
+|**J13/J14**  |eBUS-Anschluss        |eBUS         |eBUS        |eBUS         |eBUS           |
+
+[<img src="img/smd-jumper.png" height="400" alt="schema" title="Jumper">](img/smd-jumper.png)
+
 
 ### LEDs
 Der Adapter verfügt über 4 LEDs mit folgender Zuordnung:
