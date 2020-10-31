@@ -42,9 +42,9 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
  * [TODO] vorweg noch Stromverbrauch über Masse an USB und +3,3 V an J4/Pin 2 messen?
  * USB-Buchse an eine Stromversorgung anschließen (USB Netzteil oder Host)
    * gelbe LED leuchtet permanent
+   * blaue LED leuchtet nicht
    * grüne LED leuchtet permanent
    * rote LED leuchtet nicht
-   * blaue LED leuchtet nicht
  * RX-Test:
    * Spannung an eBUS-Buchse mit 330 Ohm Widerstand anlegen (Labornetzteil) [TODO richtig so?]
    * eBUS Stromverbrauch geht auf auf maximal [TODO] mA
@@ -66,9 +66,9 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
  * USB-Buchse an Host anschließen
    * USB serial wird vom Host erkannt und als COM Schnittstelle eingerichtet
    * gelbe LED leuchtet permanent
+   * blaue LED leuchtet sofort permanent (Bootloader Modus)
    * grüne LED leuchtet permanent
    * rote LED leuchtet nicht
-   * blaue LED leuchtet sofort permanent (Bootloader Modus)
  * `picloader /dev/ttyUSB0` gibt ohne Fehlermeldung aus:
     ```text
     Device ID: 30b0 (PIC16F15356)
@@ -128,12 +128,12 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
 {:id="check"}
  * nach Stromversorgung:
    * gelbe LED leuchtet permanent
-   * grüne LED leuchtet permanent
-   * rote LED leuchtet nicht
    * blaue LED:
      * fade-up auf volle Helligkeit (enhanced Modus)  
      * zusätzlich bei Ethernet:
        * Blinken bis USR-ES1 antwortet, Link aufgebaut ist, IP-Adresse zugewiesen wurde 
+   * grüne LED leuchtet permanent
+   * rote LED leuchtet nicht
  * ebusd starten mit `ebusd -f -s --lograwdata -a ff -d enh:DEVICE`
    * Verbindung zu Device steht (keine device errors)
    * no signal
