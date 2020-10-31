@@ -9,7 +9,8 @@ Funktion des Adapters festzustellen.
 Ausgangslage ist ein vom Bestücker gelieferter Adapter mit allen aufgelöteten SMD Bauteilen, jedoch ohne
 Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
 
-[TODO Bild]
+[<img src="img/smd-finalrpi.jpeg" width="203" alt="schema" title="RPI">](img/smd-finalrpi.jepg)
+[TODO richtiges Bild]
 
 ### Fertigstellung
 
@@ -24,7 +25,8 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
    * zusätzlich für Raspberry Pi:
      * Stiftleisten J3, J5, J7
      * verkürzte Stiftleiste J6 (nur Pins 1-4, bei Universaladapter jedoch volle 6 Pins!)
-     * Raspberry Pi GPIO Buchsenleiste J8
+     * Raspberry Pi GPIO Buchsenleiste J8  
+     [<img src="img/smd-finalrpi.jpeg" width="203" alt="schema" title="RPI">](img/smd-finalrpi.jepg)
    * zusätzlich für Wemos:
      * Stiftleisten J3, J5, J6, J7
      * Wemos Buchsenleiste J9
