@@ -106,8 +106,8 @@ Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
 Die Ethernet Konfiguration (IP-Adresse, Netzmaske, Gateway) wird durch den Bootloader im PIC ermöglicht und über den
 USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernet-konfiguration).
-
-Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:8880`, wobei `192.168.178.2` durch die richtige
+[TODO default port]
+Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `192.168.178.2` durch die richtige
 IP-Adresse ersetzt werden muss.
 
 ### Schaltplan
