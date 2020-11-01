@@ -39,22 +39,27 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
 [TODO Bilder]
 
 #### Elektrische Prüfung
- * Jumper J1 auf USB
+ * 3,3V an J5 Pin 4 (GND) und Pin 3 (Vdd) anschließen
+   * Stromverbrauch bleibt unter 90 mA
+   * Stromversorgung wieder trennen
+ * 5V an J5 Pin 4 (GND) J4 Pin 2 (Vdd) anschließen
+   * Stromverbrauch bleibt unter 60 mA
+   * Stromversorgung wieder trennen
  * Jumper J4 auf USB
- * [TODO] vorweg noch Stromverbrauch über Masse an USB und +3,3 V an J4/Pin 2 messen?
- * USB-Buchse an eine Stromversorgung anschließen (USB Netzteil oder Host)
+ * USB-Buchse an Stromversorgung anschließen (USB Netzteil oder Host)
    * gelbe LED leuchtet permanent
-   * blaue LED leuchtet nicht
+   * blaue LED leuchtet nicht (da noch keine Firmware drauf ist)
    * grüne LED leuchtet permanent
    * rote LED leuchtet nicht
  * RX-Test:
-   * Spannung an eBUS-Buchse mit 330 Ohm Widerstand anlegen (Labornetzteil) [TODO richtig so?]
-   * eBUS Stromverbrauch geht auf auf maximal [TODO] mA
-   * ab [TODO] 12 V geht grüne LED aus
+   * 14 V an eBUS-Buchse mit 330 Ohm Widerstand anlegen (Labornetzteil)
+   * eBUS Stromverbrauch geht auf maximal 0,5 mA
+   * ab 14,8 V (am Netzteil oder an eBUS-Buchse) geht grüne LED aus
  * TX-Test:
-   * C1/TX am PIC auf High setzen [TODO Option in Bootloader oder Firmware einbauen "TX-Test"]
-   * eBUS Stromverbrauch geht auf maximal [TODO] mA
-   * Spannung an eBUS-Buchse geht runter auf maximal [TODO] V
+   * 17 V an eBUS-Buchse mit 330 Ohm Widerstand anlegen (Labornetzteil)
+   * C1/TX am PIC auf High setzen Jumper J11 Pins 3-4 verbinden (TX-Test)
+   * eBUS Stromverbrauch geht auf maximal 17 mA
+   * Spannung an eBUS-Buchse geht runter auf maximal 11,3 V
 
 #### Flashen der Firmware
  * PICKit mit J11 verbinden
@@ -101,7 +106,11 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
  * Jumper J1 auf RPI
  * Jumper J4 auf RPI
  * Jumper J11+J12 leer
- * weiter bei [Prüfen Kommunikation](#check) mit /dev/ttyAM0 als DEVICE
+ * weiter bei [Prüfen Kommunikation](#check) mit DEVICE wie folgt:
+   * `/dev/ttyS0` für RPi 4
+   * `/dev/ttyAMA0` für RPi 3 und 2, dann aber zusätzlich noch `--latency=50`
+   * alternativ `/dev/ttyebus` gepatcht auf 9600 Bd für RPi 3 und 2 (ohne zusätzliche latency)  
+     [TODO update ttyebus]
 
 #### WLAN Variante
  * Jumper J1 auf RPI
@@ -124,7 +133,7 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
    * Wiederholen ab [Prüfen Kommunikation](#check) mit eingestellter IP-Adresse und Port 8880 [TODO 9999] als DEVICE
 
 #### Universal-Variante
- * alles von oben durchgehen
+ * alle Varianten von oben der Reihe nach durchgehen
 
 #### Prüfen Kommunikation
 {:id="check"}
@@ -136,14 +145,14 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
        * Blinken bis USR-ES1 antwortet, Link aufgebaut ist, IP-Adresse zugewiesen wurde 
    * grüne LED leuchtet permanent
    * rote LED leuchtet nicht
- * ebusd starten mit `ebusd -f -s --lograwdata -a ff -d enh:DEVICE`
+ * ebusd im Vordergrund starten mit `ebusd -f -s --lograwdata -d enh:DEVICE` (DEVICE entsprechend der Variante ersetzen)
    * Verbindung zu Device steht (keine device errors)
-   * no signal
+   * ebusd meldet kein `signal acquired`
  * eBUS anschließen:
    * grüne LED flackert regelmäßig ohne eBUS Aktivität bzw. unregelmäßig mit
-   * ebusd meldet signal acquired
+   * ebusd meldet `signal acquired`
    * Messages trudeln ein
-   * keine ungewöhnlichen Fehlermeldungen
+   * keine ungewöhnlichen Fehlermeldungen (inbesondere device)
  * Scan starten, bspw. mit `ebusctl scan 08`:
    * rote LED flackert beim Schreiben auf eBUS
    * Slave antwortet
@@ -152,7 +161,7 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
 
 ### Optionale Tests
 #### non-enhanced Modus
-Optional können sämtliche Test mit eBUS zusätzlich oder alternativ mit non-enhanced ebusd protocol durchgeführt werden.
+Optional können sämtliche Test mit eBUS zusätzlich oder alternativ im non-enhanced ebusd Protokoll durchgeführt werden.
 
 #### Reset Jumper
 Beim Verbinden von Pin 7-8 am Jumper J12 führt der PIC einen Reset durch.
@@ -163,10 +172,21 @@ In der WIFI Variante wird der Wemos dabei auch resettet, ebenso wie der USR-ES1 
 ### Test von Sensoren/Display
 In den Varianten Wemos und Raspberry Pi können Sensoren und/oder Displays an J3, J5, J6 und J7 angeschlossen werden.
 
-#### Sensoren mit Wemos
-Am einfachsten mit ESPEasy.
-tbc
-
 #### Sensoren mit Raspberry Pi
 Am einfachsten mit gpio und/oder i2c Tool.
+* J3: Pin 18 / GPIO. 5 / BCM 24 auf Raspberry Pi Connector:
+  * `gpio -1 mode 18 in`
+  * `gpio -1 mode 18 up`
+  * `gpio -1 read 18` liefert `1` wenn J3 offen bzw. `0` wenn geschlossen  
+* J7: Pin 7 / GPIO 7 / BCM 4 auf Raspberry Pi Connector:
+  * mit `raspi-config` 1-wire aktivieren
+  * mit `ls /sys/bus/w1/devices/` gefundene Geräte auflisten
+  * z.B. mit `cat /sys/bus/w1/devices/28-*/temperature` BME 280 Temperatur auslesen
+* J5 und J6: Pins 3+5 / SDA.1+SCL.1 / BCM 2+3 auf Raspberry Pi Connector:
+  * mit `raspi-config` I2C aktivieren
+  * `i2cdetect -a 1`
+  * z.B. `i2cdump 1 0x76` um Slave 0x76 abzufragen
+
+#### Sensoren mit Wemos
+Am einfachsten mit ESPEasy.
 tbc
