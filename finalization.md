@@ -126,11 +126,11 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
  * Jumper J11 leer
  * Jumper J12: Pins 5-6 verbinden (Ethernet Modus)
  * USR-ES1 aufstecken und mit LAN verbinden
- * weiter bei [Prüfen Kommunikation](#check) mit zugewiesener IP-Adresse und Port 8880 [TODO 9999] als DEVICE
+  * weiter bei [Prüfen Kommunikation](#check) mit zugewiesener IP-Adresse und Port 9999 als DEVICE
  * optional fixe IP-Adresse konfigurieren:
    * Jumper J1 auf USB
    * Setzen der IP Konfiguration mit `picloader -i 192.168.1.10 -m 24 /dev/ttyUSB0`
-   * Wiederholen ab [Prüfen Kommunikation](#check) mit eingestellter IP-Adresse und Port 8880 [TODO 9999] als DEVICE
+   * Wiederholen ab [Prüfen Kommunikation](#check) mit eingestellter IP-Adresse und Port 9999 als DEVICE
 
 #### Universal-Variante
  * alle Varianten von oben der Reihe nach durchgehen
