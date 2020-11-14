@@ -32,7 +32,7 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
 
 ### Firmware Versionen
 {:id="versions"}
-* [Version 20201101](firmware/20201101-offset.hex):  
+* [Version 20201114](firmware/20201114-offset.hex):  
   Features: ebusd enhanced protocol V1, Ethernet  
   Minimale ebusd Version: 3.5 (enhanced protocol)  
   Anschlussbelegung J12:  
