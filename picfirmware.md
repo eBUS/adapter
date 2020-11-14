@@ -37,13 +37,18 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
   Minimale ebusd Version: 3.5 (enhanced protocol)  
   Anschlussbelegung J12:  
   * Pin 1: Vdd
-  * Pin 2: ebusd protocol: offen=enhanced, GND=standard
+  * Pin 2: ebusd protocol:
+    * offen: enhanced protocol (ebusd)
+    * gegen GND: standard protocol (eBUS direkt)
   * Pin 3: GND
-  * Pin 4: -
-  * Pin 5: Ethernet: offen=ohne Ethernet, GND=mit Ethernet
+  * Pin 4: (WIFI-Check)
+  * Pin 5: Variante:
+    * offen: RPi oder USB
+    * gegen WIFI-Check (Pin 4): WIFI
+    * gegen GND (Pin 6): Ethernet
   * Pin 6: GND
-  * Pin 7: LOW
-  * Pin 8: Reset: kurz gegen GND oder LOW (Pin 7)
+  * Pin 7: (LOW)
+  * Pin 8: Reset: kurz gegen LOW (Pin 7) oder GND
 
 **Wichtiger Hinweis:** Die Pins am J12 dürfen nie mit irgendeinem Pin der anderen Jumper/Stecker-/Buchsenleisten in
 Verbindung gebracht werden, da hier getrennte Stromquellen zum Einsatz kommen. Jegliche Verbindung gefährdet den Adapter
