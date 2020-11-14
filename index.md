@@ -110,6 +110,10 @@ USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#etherne
 Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `192.168.178.2` durch die richtige
 IP-Adresse ersetzt werden muss.
 
+Durch die PIC Firmware wird die MAC Adresse des Adapters im LAN auf AE:B0:53:XX:XX:XX gesetzt, wobei die XX von der ID
+des PIC abhängen (`AEB053` steht für Adapter eBUS 3). 
+
+
 ### Schaltplan
 
 [<img src="img/smd-circuit.png" width="600" alt="Schaltplan" title="Schaltplan">](img/smd-circuit.png)
@@ -206,7 +210,9 @@ Hier einige Links, die zum Thema beitragen, bzw. Basisinformationen und Grundlag
 * [eBUS Spezifikation (physikalische Schicht OSI 1)](Spec_Prot_12_V1_3_1.pdf)
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
 * [Dokumentation Adapter V 2.0-2.2](v2/)
-* [Reichelt Warenkorb Stift-/Buchsenleisten](https://www.reichelt.de/my/1758624)
-  [TODO "BKL 10120910" für 2 Jumper "MPE 149-3-002-F0" einsetzen]
+* [Reichelt Warenkorb Stift-/Buchsenleisten](https://www.reichelt.de/my/1774398):
+  * die kurzen Stiftleisten und Jumper sind für J1, J4, J11 und J12
+  * die 1x6 Buchsenleisten sind für J10
+  * die langen Stiftleisten sind für J3, J5, J6 und J7
 * [ebusd-esp Firmware für Wemos D1](https://github.com/john30/ebusd-esp)
 * [ebusd Wiki](https://github.com/john30/ebusd/wiki)
