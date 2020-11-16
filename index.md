@@ -211,7 +211,7 @@ Hier einige Links, die zum Thema beitragen, bzw. Basisinformationen und Grundlag
 * [Wiki über Platine V 1.6](https://wiki.fhem.de/wiki/eBUS)
 * [Dokumentation Adapter V 2.0-2.2](v2/)
 * [Reichelt Warenkorb Stift-/Buchsenleisten](https://www.reichelt.de/my/1774398):
-  * die kurzen Stiftleisten und Jumper sind für J1, J4, J11 und J12
+  * die kurzen Stiftleisten und Jumper sind für J1, J4, J11 und J12 (1x6 in 2 Stück 1x3 teilen, 1x14 in 1x8 + 1x6 teilen)
   * die 1x6 Buchsenleisten sind für J10
   * die langen Stiftleisten sind für J3, J5, J6 und J7
 * [ebusd-esp Firmware für Wemos D1](https://github.com/john30/ebusd-esp)
