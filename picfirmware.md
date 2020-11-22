@@ -32,7 +32,7 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
 
 ### Firmware Versionen
 {:id="versions"}
-* [Version 20201114](firmware/20201114-offset.hex):  
+* [Version 20201122](firmware/20201122-offset.hex):  
   Features: ebusd enhanced protocol V1, Ethernet  
   Minimale ebusd Version: 3.5 (enhanced protocol)  
   Anschlussbelegung J12:  
@@ -73,11 +73,12 @@ Wenn die LED nach Anschließen der Stromversorgung sofort permanent in voller He
 Bootloader-Modus und wartet auf Daten an der seriellen Schnittstelle.
 
 #### LED bei normalem Betrieb (ohne Ethernet)
-Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zunächst aus und erhöht dann in mehreren
-Schritten die Helligkeit:
+Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zunächst aus.
+* Beim Betrieb mit WIFI blinkt die LED dann langsam mit geringer Helligkeit, bis der Wemos seine Bereitschaft
+  signalisiert (dazu muss der Jumper auf WIFI-Check konfiguriert sein).
 * Bleibt die LED mit sehr geringer Helligkeit an, dann ist das enhanced ebusd Protokoll deaktiviert
   ([siehe Jumper](index#jumper)). 
-* Ansonsten wird die Helligkeit bis zum Maximum erhöht und bleibt dann an.
+* Ansonsten wird die Helligkeit bis zum Maximum in mehreren Schritten erhöht und bleibt dann an.
 
 #### LED bei Betrieb mit Ethernet
 Ist das Ethernet Modul aufgesteckt und der Jumper an J12 entsprechend gesetzt, dann hat die blaue LED noch weitere
