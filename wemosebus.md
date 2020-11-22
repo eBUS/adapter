@@ -16,12 +16,12 @@ das mit kleinstmöglicher Verzögerungszeit geschieht.
 Aus diesem Grund wurde die [ebusd-esp Firmware](https://github.com/john30/ebusd-esp) entwickelt, mit der die
 Verzögerung unter normalen Bedingungen unter 5 [TODO] ms bleibt.
 
-Mit Einführung des enhanced ebusd Protokolls seit [Version 4.0](https://github.com/john30/ebusd) [TODO Link] wird der besonders
-kritische Teil der Arbitrierung am eBUS in die Hardware verlagert (PIC Controller).
+Mit Einführung des enhanced ebusd Protokolls seit [ebusd Version 4.0](https://github.com/john30/ebusd) [TODO Link]
+wird der besonders kritische Teil der Arbitrierung am eBUS in die Hardware verlagert (PIC Controller).
 Dadurch kann jetzt auch Wemos Firmware eingesetzt werden, die ein Port-Forwarding vom Netzwerk an die serielle
 Schnittstelle erlaubt und bspw. durch Ausführung anderer Tasks eine höhere Latenzzeit ausweist.
 
-Bis dato sind folgende Wemos Firmwares mit ebusd enhanced Protokoll als funktionstüchtig gestestet worden:
+Bis dato sind folgende Wemos Firmwares mit ebusd enhanced Protokoll als funktionstüchtig getestet worden:
  
 * [ebusd-esp](#ebusd-esp)
 * [ESPEasy](#espeasy) [TODO Testen]
@@ -31,8 +31,9 @@ Bis dato sind folgende Wemos Firmwares mit ebusd enhanced Protokoll als funktion
 
 ### Konfiguration ebusd-esp
 {:id="ebusd-esp"}
-Der Wemos muss [laut Anleitung geflasht](https://github.com/john30/ebusd-esp) und dann mit einer der folgenden beiden Methoden konfiguriert werden:
+Der Wemos muss [laut Anleitung geflasht](https://github.com/john30/ebusd-esp) und dann mit einer der folgenden Methoden konfiguriert werden:
 * [mit serieller Konsole](#konfiguration-mit-serieller-konsole) (z.B.: Arduino serieller Monitor)
+  Achtung: Das geht nur, während der Wemos **nicht** auf dem Adapter steckt.
 * [über WLAN](#konfiguration-mit-wlan)
 
 
@@ -40,38 +41,37 @@ Der Wemos muss [laut Anleitung geflasht](https://github.com/john30/ebusd-esp) un
 
 Nach Reset des Wemos muss innerhalb von 5 Sekunden eine Taste gedrückt werden (im Arduino einfach "Senden" drücken), um in die Konfiguration zu gelangen.  
 
-Hier sollte dann über die Menüpunkte am besten eine statische IP eingestellt werden same Netzwerk Maske und Gateway.
-
-Unter Punkt 6 wird gewählt ob RX und TX geswappt werden soll, hier im Beispiel wird direkt gewählt.
+Hier sollte dann über die Menüpunkte am besten eine statische IP eingestellt werden samt Netzwerk Maske und Gateway.
 
 Nachdem die Änderungen eingetragen sind, muss noch "speichern" aufgerufen werden.
-[TODO update]
 ```
-Welcome to eBUS adapter 2.0, build 20171230
-ebusd device string: 10.0.0.161:8889
+Welcome to eBUS adapter 3, build 20201122
+ebusd device string: 10.0.0.161:9999
 Press any key within 5 seconds to change the configuration...
 Entering configuration mode.
 Chip ID: ********
-CPU frequency: 80
-Free heap: 37648
 Hostname: ebus-******
 
 Configuration:
- 1. WIFI SSID: SSID des eigenen WLAN
- 2. WIFI secret: Passwort
+ 1. WIFI SSID: <SSID des eigenen WLAN>
+ 2. WIFI secret: <WLAN Passwort>
  3. WIFI IP address: 10.0.0.161/24, gateway: 10.0.0.254
- 4. ebusd TCP/UDP mode: TCP
- 5. ebusd TCP port: 8889
- 6. ebusd RX+TX PINs: direct RX+TX (GPIO3+1)
- 7. Management TCP port: 9999
+ w. WIFI power: normal
+ 4. WIFI hostname: ebus-******
+ 5. eBUS RX+TX PINs: Adapter 3 RX+TX (GPIO3+1)
+ 6. ebusd connection: enhanced on port 9999
+ 7. HTTP TCP port: 80
  8. LED PINs: RX:disabled, TX:disabled
- 9. Initial PIN direction: D0:L, D4:L
+ 9. Initial PINs: D4:H
 
- d. Set current PIN direction: D0:L, D4:L
+ p. Set current PINs: D4:H
  t. Toggle current output PIN
+ s. Scan & read sensors
+ c. Connect WIFI
  e. Dump EEPROM content
  f. Load factory settings
  F. Factory reset (i.e. erase EEPROM)
+ o. OTA enabled: waiting
  r. Reboot (without saving)
  E. Start with temporary echo (for debugging only!)
  0. Start
