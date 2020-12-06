@@ -55,6 +55,7 @@ Verbindung gebracht werden, da hier getrennte Stromquellen zum Einsatz kommen. J
 und Geräte am eBUS!
 
 ### Ethernet Konfiguration
+{:id="ethernetconfig"}
 Wenn für den Einsatz mit USR-ES1 Modul eine feste IP-Adresse eingestellt werden soll, anstelle diese via DHCP zu beziehen,
 dann kann das mit dem
 [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
@@ -69,10 +70,12 @@ Die blaue LED wird zur Signalisierung von Zuständen aus der PIC Firmware genutz
 Bootloader und normalem Modus unterschieden werden.
 
 #### LED im Bootloader
+{:id="ledboot"}
 Wenn die LED nach Anschließen der Stromversorgung sofort permanent in voller Helligkeit leuchtet, dann ist der PIC im
 Bootloader-Modus und wartet auf Daten an der seriellen Schnittstelle.
 
 #### LED bei normalem Betrieb (ohne Ethernet)
+{:id="ledregular"}
 Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zunächst aus.
 * Beim Betrieb mit WIFI blinkt die LED dann langsam mit geringer Helligkeit, bis der Wemos seine Bereitschaft
   signalisiert (dazu muss der Jumper auf WIFI-Check konfiguriert sein).
@@ -81,6 +84,7 @@ Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zun
 * Ansonsten wird die Helligkeit bis zum Maximum in mehreren Schritten erhöht und bleibt dann an.
 
 #### LED bei Betrieb mit Ethernet
+{:id="ledethernet"}
 Ist das Ethernet Modul aufgesteckt und der Jumper an J12 entsprechend gesetzt, dann hat die blaue LED noch weitere
 Bedeutungen zusätzlich zu den oben beschriebenen, die in folgenden Stufen durchlaufen werden:
 1. Bis der W5500 des USR-ES1 Moduls nach dem Reset antwortet, blinkt die LED (2x pro Sekunde).
