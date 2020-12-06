@@ -11,7 +11,7 @@ Auf dem PIC ist ein Bootloader enthalten, womit die Firmware über den USB-Ansch
 aktualisiert werden kann.
 
 Dazu wird entweder der
-[PIC Loader](https://github.com/john30/ebus3/tree/master/tools/picloader) [TODO finale URL]
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
 benötigt, mit dem sich auch eine feste IP-Adresse für den W5500 des USR-ES1 Moduls setzen lässt,
 oder die [Bootloader Host Application](https://www.microchip.com/promo/8-bit-bootloader) von Microchip.
 
@@ -26,15 +26,15 @@ Wenn der Bootloader aktiv ist, leuchtet die blaue LED sofort in voller Helligkei
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Wort-Adresse 0x400 geflasht.
 
 Mit dem
-[PIC Loader](https://github.com/john30/ebus3/tree/master/tools/picloader) [TODO finale URL]
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
 geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial device ersetzt werden muss):
-`picloader -f firmware.hex /dev/ttyUSB0`
+`ebuspicloader -f firmware.hex /dev/ttyUSB0`
 
 ### Firmware Versionen
 {:id="versions"}
 * [Version 20201129](firmware/20201129-offset.hex):  
   Features: ebusd enhanced protocol V1, Ethernet  
-  Minimale ebusd Version: 3.5 (enhanced protocol)  
+  Minimale ebusd Version: [3.5]([ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device) (enhanced protocol) [TODO finale URL]
   Anschlussbelegung J12:  
   * Pin 1: Vdd
   * Pin 2: ebusd protocol:
@@ -57,12 +57,12 @@ und Geräte am eBUS!
 ### Ethernet Konfiguration
 Wenn für den Einsatz mit USR-ES1 Modul eine feste IP-Adresse eingestellt werden soll, anstelle diese via DHCP zu beziehen,
 dann kann das mit dem
-[PIC Loader](https://github.com/john30/ebus3/tree/master/tools/picloader) [TODO finale URL]
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
 über den USB-Anschluss oder den Raspberry Pi GPIO/ttyAMA0 vorgenommen werden.
 
-Um bspw. die IP-Adresse 192.168.10.20 mit einer Netzmaske von 255.255.255.0 (=Länge 24) einzustellen, wird der PIC
+Um bspw. die IP-Adresse 192.168.10.20 mit einer Netzmaske von 255.255.255.0 (=Länge 24) einzustellen, wird der ebus PIC
 Loader wie folgt aufgerufen (wobei `/dev/ttyUSB0` evt. durch das richtige USB serial device ersetzt werden muss):
-`picloader -i 192.168.10.20 -m 24 /dev/ttyUSB0`
+`ebuspicloader -i 192.168.10.20 -m 24 /dev/ttyUSB0`
 
 ### LED
 Die blaue LED wird zur Signalisierung von Zuständen aus der PIC Firmware genutzt. Hier muss grundsätzlich zwischen

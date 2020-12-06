@@ -16,7 +16,7 @@ das mit kleinstmöglicher Verzögerungszeit geschieht.
 Aus diesem Grund wurde die [ebusd-esp Firmware](https://github.com/john30/ebusd-esp) entwickelt, mit der die
 Verzögerung unter normalen Bedingungen unter 5 [TODO] ms bleibt.
 
-Mit Einführung des enhanced ebusd Protokolls seit [ebusd Version 4.0](https://github.com/john30/ebusd) [TODO Link]
+Mit Einführung des enhanced ebusd Protokolls seit [ebusd Version 3.5](https://github.com/john30/ebusd/blob/enhanced_device) [TODO finale URL]
 wird der besonders kritische Teil der Arbitrierung am eBUS in die Hardware verlagert (PIC Controller).
 Dadurch kann jetzt auch Wemos Firmware eingesetzt werden, die ein Port-Forwarding vom Netzwerk an die serielle
 Schnittstelle erlaubt und bspw. durch Ausführung anderer Tasks eine höhere Latenzzeit ausweist.
