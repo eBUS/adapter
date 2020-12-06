@@ -88,6 +88,7 @@ dann lässt sicher der Adapter via WLAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
 * J4: offen
+* J12: Pins 4-5 verbinden (WIFI-Check)
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
 
@@ -101,6 +102,7 @@ dann lässt sich der Adapter via LAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
 * J4: USB
+* J12: Pins 5-6 verbinden (Ethernet Modus)
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
@@ -184,8 +186,8 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 |**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-            |-              |
 |**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos D1 mini|-              |
 |**J10**      |Buchsenleiste USR-ES1 |-            |-           |-            |USR-ES1-W5500  |
-|**J11**      |PIC PROG              |-            |-           |-            |5-6            |
-|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper   |PIC Jumper     |
+|**J11**      |PIC PROG              |-            |-           |-            |               |
+|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper: 4-5 |PIC Jumper: 5-6 |
 |**J13/J14**  |eBUS-Anschluss        |eBUS         |eBUS        |eBUS         |eBUS           |
 
 [<img src="img/smd-jumper.png" height="400" alt="schema" title="Jumper">](img/smd-jumper.png)

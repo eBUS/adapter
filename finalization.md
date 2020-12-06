@@ -115,7 +115,8 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
 #### WLAN Variante
  * Jumper J1 auf RPI
  * Jumper J4 leer
- * Jumper J11+J12 leer
+ * Jumper J11 leer
+ * Jumper J12: Pins 4-5 verbinden (WIFI-Check)
  * Wemos mit ebusd-esp Firmware aufstecken und konfigurieren (in Adapter 3 Modus)
  * Stromversorgung über USB-Buchse am Wemos
  * weiter bei [Prüfen Kommunikation](#check) mit ebusd IP/Port laut Wemos Konfigurationsseite als DEVICE
