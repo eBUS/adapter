@@ -174,21 +174,24 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 ### Überblick Jumper/Pinleisten, Funktionen
 {:id="jumper"}
 
-|**Anschluss**|Funktion              |USB          |Raspberry Pi|Wemos D1 mini|USR-ES1-W5500  |
-|:-----------:|----------------------|-------------|------------|-------------|---------------|
-|**J1**       |Jumper TX             |USB          |RPI         |RPI          |RPI            |
-|**J2**       |USB-Anschluss         |USB-Anschluss|-           |-            |Strom-Anschluss|
-|**J3**       |Gassensor             |-            |Gassensor   |Gassensor    |-              |
-|**J4**       |Jumper POW            |USB          |RPI         |-            |USB            |
-|**J5**       |I2C                   |-            |I2C         |I2C          |-              |
-|**J6**       |I2C                   |-            |I2C         |I2C+ext      |-              |
-|**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor |-              |
-|**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-            |-              |
-|**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos D1 mini|-              |
-|**J10**      |Buchsenleiste USR-ES1 |-            |-           |-            |USR-ES1-W5500  |
-|**J11**      |PIC PROG              |-            |-           |-            |               |
-|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper: 4-5 |PIC Jumper: 5-6 |
-|**J13/J14**  |eBUS-Anschluss        |eBUS         |eBUS        |eBUS         |eBUS           |
+|**Anschluss**|Funktion              |USB          |Raspberry Pi|WIFI           |Ethernet       |
+|:-----------:|----------------------|-------------|------------|---------------|---------------|
+|**J1**       |Jumper TX             |USB          |RPI         |RPI            |RPI            |
+|**J2**       |USB-Anschluss         |USB-Anschluss|-           |-              |Strom-Anschluss|
+|**J3**       |Gassensor             |-            |Gassensor   |Gassensor      |-              |
+|**J4**       |Jumper POW            |USB          |RPI         |-              |USB            |
+|**J5**       |I2C                   |-            |I2C         |(I2C)*         |-              |
+|**J6**       |I2C                   |-            |I2C         |(I2C)*+ext     |-              |
+|**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor   |-              |
+|**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-              |-              |
+|**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos D1 mini  |-              |
+|**J10**      |Buchsenleiste USR-ES1 |-            |-           |-              |USR-ES1 W5500  |
+|**J11**      |PIC PROG              |-            |-           |-              |-              |
+|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper: 4-5|PIC Jumper: 5-6|
+|**J13/J14**  |eBUS-Anschluss        |eBUS         |eBUS        |eBUS           |eBUS           |
+
+\* Zu den Punkten in Klammern:
+  * I2C wird derzeit noch nicht von der [ebusd-esp](https://github.com/john30/ebusd-esp) Firmware unterstützt.
 
 [<img src="img/smd-jumper.png" height="400" alt="schema" title="Jumper">](img/smd-jumper.png)
 
