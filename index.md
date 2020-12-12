@@ -113,7 +113,7 @@ Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `1
 IP-Adresse ersetzt werden muss.
 
 Durch die PIC Firmware wird die MAC Adresse des Adapters im LAN auf AE:B0:53:XX:XX:XX gesetzt, wobei die XX von der ID
-des PIC abhängen (`AEB053` steht für Adapter eBUS 3). 
+des PIC abhängen (`AEB053` steht für "Adapter eBUS 3"). 
 
 
 ### Schaltplan
