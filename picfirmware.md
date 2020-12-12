@@ -23,7 +23,7 @@ hergestellt.
 
 Wenn der Bootloader aktiv ist, leuchtet die blaue LED sofort in voller Helligkeit, [siehe hier](#led).
 
-Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 9600 Baud ab Wort-Adresse 0x400 geflasht.
+Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 115200 Baud ab Wort-Adresse 0x400 geflasht.
 
 Mit dem
 [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
