@@ -67,8 +67,9 @@ Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
 Die ebusd device Konfiguration lautet z.B. `-d enh:/dev/ttyUSB0`, wobei `ttyUSB0` bei mehreren angeschlossenen
-USB serial Adaptern anders lauten kann. 
+USB serial Adaptern anders lauten kann.
 
+[TODO Bild]
 #### Raspberry Pi
 {:.rpi id="rpi"}
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den
@@ -81,20 +82,26 @@ Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
 
 Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
 
+[TODO Bild]
 #### WIFI
 {:.wifi}
 Wird ein [LOLIN/Wemos D1 mini mit ESP-8266](https://docs.wemos.cc/en/latest/d1/d1_mini.html) auf J9 gesteckt,
 dann lässt sicher der Adapter via WLAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: RPI
-* J4: offen
+* J4: offen (oder auf RPI)
 * J12: Pins 4-5 verbinden (WIFI-Check)
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
 
+Der Wemos muss mit einer passenden Firmware geflasht werden, z.B. [ebusd-esp](https://github.com/john30/ebusd-esp)
+(ab [Version 22.11.2020](https://github.com/john30/ebusd-esp/blob/master/Changelog.md#build-20201122)).
+ebusd-esp muss dann auf "Adapter 3 RX+TX" eingestellt werden.
+
 Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `192.168.178.2` durch die richtige
 IP-Adresse ersetzt werden muss.
 
+[TODO Bild]
 #### Ethernet
 {:.ethernet}
 Wird ein [USR-ES1 Modul mit W5500](https://www.pusr.com/download/ES1/USR-ES1-EN-V1.0.pdf) auf J10 gesteckt,
@@ -113,8 +120,9 @@ Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `1
 IP-Adresse ersetzt werden muss.
 
 Durch die PIC Firmware wird die MAC Adresse des Adapters im LAN auf AE:B0:53:XX:XX:XX gesetzt, wobei die XX von der ID
-des PIC abhängen (`AEB053` steht für "Adapter eBUS 3"). 
+des PIC abhängen (`AEB053` steht für "Adapter eBUS 3").
 
+[TODO Bild]
 
 ### Schaltplan
 
@@ -124,7 +132,7 @@ des PIC abhängen (`AEB053` steht für "Adapter eBUS 3").
 In den Varianten mit Wemos und Raspberry Pi stehen folgende Pin Header für den Anschluss weiterer Komponenten zur
 Verfügung:
 * J3: Gassensor oder Schalter
-* J5: I2C, z.B. OLED SSD1306 oder Nextion 
+* J5: I2C, z.B. OLED SSD1306 oder Nextion
 * J6:
   * bei Raspberry Pi: I2C wie oben (Pins 1-4)
   * bei Wemos: I2C (Pins 1-4) und zusätzlich noch Wemos D0 (Pin 5) und A0 (Pin 6)
@@ -168,7 +176,7 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 **Achtung:** immer nur eine Stromversorgung verbinden, also maximal einen Anschluss von:
 * USB-Anschluss J2 des Adapters
 * Raspberry Pi Buchsenleiste J8 des Adapters
-* USB-Anschluss am Wemos 
+* USB-Anschluss am Wemos
 
 
 ### Überblick Jumper/Pinleisten, Funktionen
@@ -179,7 +187,7 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 |**J1**       |Jumper TX             |USB          |RPI         |RPI            |RPI            |
 |**J2**       |USB-Anschluss         |USB-Anschluss|-           |-              |Strom-Anschluss|
 |**J3**       |Gassensor             |-            |Gassensor   |Gassensor      |-              |
-|**J4**       |Jumper POW            |USB          |RPI         |-              |USB            |
+|**J4**       |Jumper POW            |USB          |RPI         |(RPI)          |USB            |
 |**J5**       |I2C                   |-            |I2C         |(I2C)*         |-              |
 |**J6**       |I2C                   |-            |I2C         |(I2C)*+ext     |-              |
 |**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor   |-              |
@@ -192,6 +200,7 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 
 \* Zu den Punkten in Klammern:
   * I2C wird derzeit noch nicht von der [ebusd-esp](https://github.com/john30/ebusd-esp) Firmware unterstützt.
+  * bei WIFI kann J4 weggelassen oder auf RPI gesteckt werden.
 
 [<img src="img/smd-jumper.png" height="400" alt="schema" title="Jumper">](img/smd-jumper.png)
 
