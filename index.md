@@ -60,6 +60,7 @@ Diese ist notwendig, um bspw. die PIC Firmware zu aktualisieren oder die Etherne
 
 #### USB
 {:.usb}
+[<img src="img/smd-3dusb.png" width="200" alt="USB" title="USB">](img/smd-3dusb.png)  
 Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt gesetzt werden:
 * J1: USB
 * J4: USB
@@ -69,9 +70,9 @@ Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 Die ebusd device Konfiguration lautet z.B. `-d enh:/dev/ttyUSB0`, wobei `ttyUSB0` bei mehreren angeschlossenen
 USB serial Adaptern anders lauten kann.
 
-[TODO Bild]
 #### Raspberry Pi
 {:.rpi id="rpi"}
+[<img src="img/smd-3drpi.png" width="200" alt="RPI" title="RPI">](img/smd-3drpi.png)    
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den
 [Raspberry Pi](https://www.raspberrypi.org/) aufstecken.
 Die Jumper müssen dazu wie folgt gesetzt werden:
@@ -82,9 +83,9 @@ Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
 
 Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
 
-[TODO Bild]
 #### WIFI
 {:.wifi}
+[<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.png)        
 Wird ein [LOLIN/Wemos D1 mini mit ESP-8266](https://docs.wemos.cc/en/latest/d1/d1_mini.html) auf J9 gesteckt,
 dann lässt sicher der Adapter via WLAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
@@ -101,9 +102,9 @@ ebusd-esp muss dann auf "Adapter 3 RX+TX" eingestellt werden.
 Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `192.168.178.2` durch die richtige
 IP-Adresse ersetzt werden muss.
 
-[TODO Bild]
 #### Ethernet
 {:.ethernet}
+[<img src="img/smd-3deth.png" width="200" alt="Ethernet" title="Ethernet">](img/smd-3deth.png)  
 Wird ein [USR-ES1 Modul mit W5500](https://www.pusr.com/download/ES1/USR-ES1-EN-V1.0.pdf) auf J10 gesteckt,
 dann lässt sich der Adapter via LAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
@@ -122,7 +123,6 @@ IP-Adresse ersetzt werden muss.
 Durch die PIC Firmware wird die MAC Adresse des Adapters im LAN auf AE:B0:53:XX:XX:XX gesetzt, wobei die XX von der ID
 des PIC abhängen (`AEB053` steht für "Adapter eBUS 3").
 
-[TODO Bild]
 
 ### Schaltplan
 
