@@ -53,6 +53,7 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
   stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
 
 ### Varianten
+{:id="variants"}
 In allen Varianten ist die Unterstützung für USB fest verbaut, da der CP2102 immer direkt auf der Platine bestückt ist.
 Diese ist notwendig, um bspw. die PIC Firmware zu aktualisieren oder die Ethernet Konfiguration vorzunehmen.
 
@@ -104,7 +105,7 @@ IP-Adresse ersetzt werden muss.
 
 #### Ethernet
 {:.ethernet}
-[<img src="img/smd-3deth.png" width="200" alt="Ethernet" title="Ethernet">](img/smd-3deth.png)  
+[<img src="img/smd-3dethernet.png" width="200" alt="Ethernet" title="Ethernet">](img/smd-3dethernet.png)  
 Wird ein [USR-ES1 Modul mit W5500](https://www.pusr.com/download/ES1/USR-ES1-EN-V1.0.pdf) auf J10 gesteckt,
 dann lässt sich der Adapter via LAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
