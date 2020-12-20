@@ -21,7 +21,7 @@ Dies wird durch Einsatz eines PIC ermöglicht, der u.a. folgende Vorteile mit si
    * [Raspberry Pi](#raspberry-pi){:.rpi} über GPIO/ttyAMA0
    * [WIFI](#wifi){:.wifi} über LOLIN/Wemos D1 mini mit ESP-8266
    * [Ethernet](#ethernet){:.ethernet} über USR-ES1 Modul mit W5500
- * volle Unterstützung für ebusd enhanced Protokoll Version 1 sowie standard Protokoll
+ * volle Unterstützung für ebusd enhanced protocol Version 1 sowie standard protocol
  * aktualisierbare [Firmware](picfirmware) mittels seriellem Bootloader
 
 Um all diese Optionen auf einer 5cm x 5cm großen Platine realisieren zu können, wird fast nur mit SMD bestückt:
@@ -73,7 +73,7 @@ USB serial Adaptern anders lauten kann.
 
 #### Raspberry Pi
 {:.rpi id="rpi"}
-[<img src="img/smd-3drpi.png" width="200" alt="RPI" title="RPI">](img/smd-3drpi.jpg)    
+[<img src="img/smd-3drpi.png" width="200" alt="RPI" title="RPI">](img/smd-3drpi.jpg)  
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den
 [Raspberry Pi](https://www.raspberrypi.org/) aufstecken.
 Die Jumper müssen dazu wie folgt gesetzt werden:
@@ -116,7 +116,7 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
 Die Ethernet Konfiguration (IP-Adresse, Netzmaske, Gateway) wird durch den Bootloader im PIC ermöglicht und über den
-USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernet-konfiguration).
+USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernetconfig).
 
 Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `192.168.178.2` durch die richtige
 IP-Adresse ersetzt werden muss.
@@ -158,14 +158,14 @@ Verbindung gebracht werden, da hier verschiedene isolierte Stromquellen zum Eins
 Jegliche Verbindung gefährdet den Adapter und potentiell auch Geräte am eBUS!
 
 Hier ist ein Bild, das die beiden isolierten Hälften der Platine darstellt: rot für eBUS und grün für USB etc.:  
-<img src="img/smd-2power.png" width="200" alt="schema" title="Layout">
+<img src="img/smd-2power.png" width="200" alt="2 Stromkreise" title="2 Stromkreise">
 
 ### Verwendung
 
 Neben dem Adapter wird eine Software benötigt, die den eBUS Verkehr interpretiert und auswertet. Das übernimmt bspw.
 [ebusd](https://github.com/john30/ebusd/), der auch auf einen Raspberry Pi installiert werden kann.
 
-#### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren:
+#### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren
 [TODO Testen]  
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * J1: USB
@@ -174,7 +174,7 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter und RX/TX des Wemos samt seines USB serial sind
 nicht nutzbar (auf RX kommt eBUS Traffic an).
 
-**Achtung:** immer nur eine Stromversorgung verbinden, also maximal einen Anschluss von:
+**Achtung:** Immer nur eine Stromversorgung verbinden, also maximal einen Anschluss von:
 * USB-Anschluss J2 des Adapters
 * Raspberry Pi Buchsenleiste J8 des Adapters
 * USB-Anschluss am Wemos
@@ -188,7 +188,7 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 |**J1**       |Jumper TX             |USB          |RPI         |RPI            |RPI            |
 |**J2**       |USB-Anschluss         |USB-Anschluss|-           |-              |Strom-Anschluss|
 |**J3**       |Gassensor             |-            |Gassensor   |Gassensor      |-              |
-|**J4**       |Jumper POW            |USB          |RPI         |(RPI)          |USB            |
+|**J4**       |Jumper POWER          |USB          |RPI         |(RPI)          |USB            |
 |**J5**       |I2C                   |-            |I2C         |(I2C)*         |-              |
 |**J6**       |I2C                   |-            |I2C         |(I2C)*+ext     |-              |
 |**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor   |-              |
@@ -203,7 +203,7 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
   * I2C wird derzeit noch nicht von der [ebusd-esp](https://github.com/john30/ebusd-esp) Firmware unterstützt.
   * bei WIFI kann J4 weggelassen oder auf RPI gesteckt werden.
 
-[<img src="img/smd-jumper.png" height="400" alt="schema" title="Jumper">](img/smd-jumper.png)
+[<img src="img/smd-jumper.png" height="400" alt="Jumper" title="Jumper">](img/smd-jumper.png)
 
 
 ### LEDs
@@ -217,6 +217,7 @@ Nur wenn die gelbe LED leuchtet, ist der PIC mit Strom versorgt und kann überha
 Die grüne und rote LED leuchten beim entsprechenden eBUS Traffic, wobei die grüne permanent leuchtet, wenn die eBUS
 Leitung noch nicht angeschlossen ist oder wenn auf der Leitung zu wenig Spannung vorgefunden wird.
 Die blaue LED wird von der PIC Firmware gesteuert, was [hier beschrieben ist](picfirmware#led).
+
 
 ### Weiterführende Links
 

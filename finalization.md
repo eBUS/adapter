@@ -162,7 +162,7 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
 
 ### Optionale Tests
 #### non-enhanced Modus
-Optional können sämtliche Test mit eBUS zusätzlich oder alternativ im non-enhanced ebusd Protokoll durchgeführt werden.
+Optional können sämtliche Test mit eBUS zusätzlich oder alternativ im non-enhanced ebusd protocol durchgeführt werden.
 
 #### Reset Jumper
 Beim Verbinden von Pin 7-8 am Jumper J12 führt der PIC einen Reset durch.

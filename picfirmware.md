@@ -39,8 +39,8 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
   Anschlussbelegung J12:  
   * Pin 1: Vdd
   * Pin 2: ebusd protocol:
-    * offen: enhanced protocol (ebusd)
-    * gegen GND: standard protocol (eBUS direkt)
+    * offen (oder verbunden mit Pin 1): enhanced protocol (ebusd)
+    * gegen GND (Pin 3): standard protocol (eBUS direkt)
   * Pin 3: GND
   * Pin 4: (WIFI-Check)
   * Pin 5: Variante:
@@ -73,15 +73,15 @@ Bootloader und normalem Modus unterschieden werden.
 #### LED im Bootloader
 {:id="ledboot"}
 Wenn die LED nach Anschließen der Stromversorgung sofort permanent in voller Helligkeit leuchtet, dann ist der PIC im
-Bootloader-Modus und wartet auf Daten an der seriellen Schnittstelle.
+Bootloader-Modus und wartet auf Kommandos auf der seriellen Schnittstelle.
 
 #### LED bei normalem Betrieb (ohne Ethernet)
 {:id="ledregular"}
 Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zunächst aus.
 * Beim Betrieb mit WIFI blinkt die LED dann langsam mit geringer Helligkeit, bis der Wemos seine Bereitschaft
   signalisiert (dazu muss der Jumper auf WIFI-Check konfiguriert sein).
-* Bleibt die LED mit sehr geringer Helligkeit an, dann ist das enhanced ebusd Protokoll deaktiviert
-  ([siehe Jumper](index#jumper)). 
+* Bleibt die LED mit sehr geringer Helligkeit an, dann ist das enhanced ebusd protocol deaktiviert
+  ([siehe Jumper](index#jumper)).
 * Ansonsten wird die Helligkeit bis zum Maximum in mehreren Schritten erhöht und bleibt dann an.
 
 #### LED bei Betrieb mit Ethernet
