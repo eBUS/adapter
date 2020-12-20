@@ -61,7 +61,7 @@ Diese ist notwendig, um bspw. die PIC Firmware zu aktualisieren oder die Etherne
 
 #### USB
 {:.usb}
-[<img src="img/smd-3dusb.png" width="200" alt="USB" title="USB">](img/smd-3dusb.png)  
+[<img src="img/smd-3dusb.png" width="200" alt="USB" title="USB">](img/smd-3dusb.jpg)  
 Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt gesetzt werden:
 * J1: USB
 * J4: USB
@@ -73,7 +73,7 @@ USB serial Adaptern anders lauten kann.
 
 #### Raspberry Pi
 {:.rpi id="rpi"}
-[<img src="img/smd-3drpi.png" width="200" alt="RPI" title="RPI">](img/smd-3drpi.png)    
+[<img src="img/smd-3drpi.png" width="200" alt="RPI" title="RPI">](img/smd-3drpi.jpg)    
 Durch Einsatz einer 2x13 poligen Buchsenleiste an J8 lässt sich der Adapter auf den
 [Raspberry Pi](https://www.raspberrypi.org/) aufstecken.
 Die Jumper müssen dazu wie folgt gesetzt werden:
@@ -86,7 +86,7 @@ Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
 
 #### WIFI
 {:.wifi}
-[<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.png)        
+[<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.jpg)        
 Wird ein [LOLIN/Wemos D1 mini mit ESP-8266](https://docs.wemos.cc/en/latest/d1/d1_mini.html) auf J9 gesteckt,
 dann lässt sicher der Adapter via WLAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
@@ -105,7 +105,7 @@ IP-Adresse ersetzt werden muss.
 
 #### Ethernet
 {:.ethernet}
-[<img src="img/smd-3dethernet.png" width="200" alt="Ethernet" title="Ethernet">](img/smd-3dethernet.png)  
+[<img src="img/smd-3dethernet.png" width="200" alt="Ethernet" title="Ethernet">](img/smd-3dethernet.jpg)  
 Wird ein [USR-ES1 Modul mit W5500](https://www.pusr.com/download/ES1/USR-ES1-EN-V1.0.pdf) auf J10 gesteckt,
 dann lässt sich der Adapter via LAN verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
