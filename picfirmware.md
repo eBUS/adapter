@@ -11,7 +11,7 @@ Auf dem PIC ist ein Bootloader enthalten, womit die Firmware über den USB-Ansch
 aktualisiert werden kann.
 
 Dazu wird entweder der
-[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md)
 benötigt, mit dem sich auch eine feste IP-Adresse für den W5500 des USR-ES1 Moduls setzen lässt,
 oder die [Bootloader Host Application](https://www.microchip.com/promo/8-bit-bootloader) von Microchip.
 
@@ -26,14 +26,14 @@ Wenn der Bootloader aktiv ist, leuchtet die blaue LED sofort in voller Helligkei
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 115200 Baud ab Wort-Adresse 0x400 geflasht.
 
 Mit dem
-[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md)
 geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial device ersetzt werden muss):
 `ebuspicloader -f firmware.hex /dev/ttyUSB0`
 
 ### Firmware Versionen
 {:id="versions"}
 * [Version 20201219](firmware/20201219-offset.hex):  
-  Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp): `1 [c5e7]`  
+  Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md): `1 [c5e7]`  
   Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP  
   Minimale ebusd Version: [3.5](https://github.com/john30/ebusd/blob/enhanced_device) (enhanced protocol) [TODO finale URL]  
   Anschlussbelegung J12:  
@@ -57,9 +57,9 @@ und Geräte am eBUS!
 
 ### Ethernet Konfiguration
 {:id="ethernetconfig"}
-Wenn für den Einsatz mit USR-ES1 Modul eine feste IP-Adresse eingestellt werden soll, anstelle diese via DHCP zu beziehen,
+Wenn für den Einsatz mit USR-ES1 Modul eine feste IP-Adresse eingestellt werden soll, anstatt diese via DHCP zu beziehen,
 dann kann das mit dem
-[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/ebuspicloader.cpp)
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md)
 über den USB-Anschluss oder den Raspberry Pi GPIO/ttyAMA0 vorgenommen werden.
 
 Um bspw. die IP-Adresse 192.168.10.20 mit einer Netzmaske von 255.255.255.0 (=Länge 24) einzustellen, wird der ebus PIC
