@@ -73,7 +73,7 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
  * USB-Buchse an Host anschließen
    * USB serial wird vom Host erkannt und als COM Schnittstelle eingerichtet
    * gelbe LED leuchtet permanent
-   * blaue LED leuchtet sofort permanent (Bootloader Modus)
+   * blaue LED leuchtet sofort permanent wesentlich heller als alle anderen (Bootloader Modus)
    * grüne LED leuchtet permanent
    * rote LED leuchtet nicht
  * `picloader /dev/ttyUSB0` gibt ohne Fehlermeldung aus:

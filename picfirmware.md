@@ -21,7 +21,7 @@ der Wemos D1 mini bzw. das USR-ES1 Modul entfernt und die Jumper J1 und J4 richt
 Um den Bootloader zu aktivieren, werden am Jumper J11 die Pins 3 und 4 verbunden und erst dann die Stromversorgung
 hergestellt.
 
-Wenn der Bootloader aktiv ist, leuchtet die blaue LED sofort in voller Helligkeit, [siehe hier](#led).
+Wenn der Bootloader aktiv ist, leuchtet die blaue LED sofort sehr hell (heller als alle anderen), [siehe hier](#led).
 
 Die Firmware wird dann über eines der o.g. Tools über die serielle Schnittstelle mit 115200 Baud ab Wort-Adresse 0x400 geflasht.
 
@@ -32,8 +32,8 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
 
 ### Firmware Versionen
 {:id="versions"}
-* [Version 20201219](firmware/20201219-offset.hex):  
-  Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md): `1 [c5e7]`  
+* [Version 20201227](firmware/20201227-offset.hex):  
+  Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md): `1 [32f6]`  
   Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP  
   Minimale ebusd Version: [3.5](https://github.com/john30/ebusd/blob/enhanced_device) (enhanced protocol) [TODO finale URL]  
   Anschlussbelegung J12:  
@@ -72,8 +72,8 @@ Bootloader und normalem Modus unterschieden werden.
 
 #### LED im Bootloader
 {:id="ledboot"}
-Wenn die LED nach Anschließen der Stromversorgung sofort permanent in voller Helligkeit leuchtet, dann ist der PIC im
-Bootloader-Modus und wartet auf Kommandos auf der seriellen Schnittstelle.
+Wenn die LED nach Anschließen der Stromversorgung sofort permanent sehr hell leuchtet (heller als alle anderen), dann
+ist der PIC im Bootloader-Modus und wartet auf Kommandos auf der seriellen Schnittstelle.
 
 #### LED bei normalem Betrieb (ohne Ethernet)
 {:id="ledregular"}
@@ -82,7 +82,9 @@ Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zun
   signalisiert (dazu muss der Jumper auf WIFI-Check konfiguriert sein).
 * Bleibt die LED mit sehr geringer Helligkeit an, dann ist das enhanced ebusd protocol deaktiviert
   ([siehe Jumper](index#jumper)).
-* Ansonsten wird die Helligkeit bis zum Maximum in mehreren Schritten erhöht und bleibt dann an.
+* Ansonsten wird sie bis zur normalen Helligkeit hochgedimmt.
+* Nach jeder Initialisierung im enhanced protocol leuchtet sie für 2 Sekunden sehr hell (heller als alle anderen).
+* Im Falle eines Protokollfehlers auf eBUS oder Host Seite leuchtet sie für 5 Sekunden sehr hell (heller als alle anderen).
 
 #### LED bei Betrieb mit Ethernet
 {:id="ledethernet"}

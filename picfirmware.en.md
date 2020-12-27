@@ -19,7 +19,7 @@ the Wemos D1 mini / USR-ES1 module have to be removed and the jumpers J1 and J4 
 
 To activate the bootloader, pins 3 and 4 on jumper J11 have to be short cut before supplying power.
 
-When the bootloader is active, the blue LED lights up immediately in full brightness, [see here](#led).
+When the bootloader is active, the blue LED lights up immediately very brightly (more than all others), [see here](#led).
 
 The firmware is then flashed by using one of the above tools via the serial interface with 115200 baud from word address 0x400.
 
@@ -30,8 +30,8 @@ it works like this (where `/ dev / ttyUSB0` may have to be replaced by the actua
 
 ### Firmware Versions
 {:id="versions"}
-* [Version 20201219](firmware/20201219-offset.hex):  
-  Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md): `1 [c5e7]`  
+* [Version 20201227](firmware/20201227-offset.hex):  
+  Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md): `1 [32f6]`  
   Features: ebusd enhanced protocol V1, Ethernet with DHCP or fix IP  
   Minimal ebusd version: [3.5](https://github.com/john30/ebusd/blob/enhanced_device) (enhanced protocol) [TODO finale URL]  
   Pins on J12:  
@@ -68,8 +68,8 @@ The blue LED is used to signal states from the PIC firmware. In general, the boo
 
 #### LED in Bootloader
 {:id="ledboot"}
-If the LED lights up permanently with full brightness immediately after supplying power, the PIC is in bootloader mode
-and is waiting for commands on the serial interface.
+If the LED lights up permanently very brightly (more than all others) immediately after supplying power, the PIC is in
+bootloader mode and is waiting for commands on the serial interface.
 
 #### LED in normal operation (without Ethernet)
 {:id="ledregular"}
@@ -77,7 +77,9 @@ In normal operation, the blue LED is initially turned off after supplying power.
 * When operating with WIFI, the LED flashes slowly with low brightness until the Wemos signals its readiness  
   (the jumper must be configured to WIFI-check).
 * If the LED stays on with very low brightness, the enhanced ebusd protocol is deactivated ([see jumpers](index.en#jumper)).
-* Otherwise, the brightness is increased in several steps to the maximum and then remains on.
+* Otherwise, it is fading up to normal brightness.
+* After each initialization in the enhanced protocol, it lights up very brightly (more than all others) for 2 seconds.
+* In case of a protocol error on eBUS or host, it lights up very brightly (more than all others) for 5 seconds.
 
 #### LED in Ethernet operation
 {:id="ledethernet"}
