@@ -109,7 +109,7 @@ Bei neueren Raspberry Pi Modellen wird standardmäßig die `miniUART` Variante g
 eine andere Möglichkeit, zum Beispiel wenn Bluettoth benötigt wird, besteht darin dem Bluetooth-Dienst den MiniUART zuzuweisen:
 * die Datei `/boot/config.txt` um die Zeilen `dtoverlay=miniuart-bt` und `enable_uart=1` ergänzen. Damit kann jedoch die Performance des Systems beeinträchtigt werden, da der GPU Takt auf 250Mhz festgelegt wird.
 
-##### 2. Raspberry Pi Version 4 (ungetestet!)
+##### 3. Raspberry Pi Version 4 (ungetestet!)
 Raspberrys der Version 4 haben mehrere Hardware UARTs. Hier reicht gemäß https://www.raspberrypi.org/forums/viewtopic.php?f=107&t=244827&start=25#p1590882 die Zeile `enable_uart=1` in der Datei `/boot/config.txt` zu ergänzen. Wichtig: Der Ebus-Adapter benutzt dann das Gerät `/dev/ttyAMA0`
 
 #### WIFI
