@@ -81,8 +81,36 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 * J4: RPI
 
 Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
+Die Kommunikation läuft über die Pins 8 (GPIO 14, TX) und 10 (GPIO 15, RX). 
 
-Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
+Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`.
+
+Im laufe des Betatests hat sich herausgestellt, dass bestimmte Anlagen (Vaillant) unter Umständen eine angepasste Konfiguration benötigen, um eine höhere Latenz zu erlauben:
+ `-d enh:/dev/ttyAMA0 --latency=20000`.
+
+##### Konfiguration mit Raspberry Pi OS (Version 2020-12-02)
+Standardmäßig werden die für den Ebus-Adapter benötigten Pins vom Raspberry Pi OS verwendet um die serielle Konsole auszugeben.
+Leider unterscheiden sich hier die Hardware Versionen der Raspberrys, sodass unterschieden werden muss.
+
+Details dazu finden sich in der offiziellen Raspberry Pi OS Dokumentation unter: https://www.raspberrypi.org/documentation/configuration/uart.md
+
+##### 1. Alle Raspberry Pi Versionen
+Die serielle Schnittstelle muss deaktiviert werden.
+* `sudo raspi-config` ausführen
+ * "3 Interface Options" auswählen
+ * "P6 Serial Port" auswählen
+ * "Would you like a login shell to be accessible over serial?" - "Nein" auswählen
+ 
+##### 2. Raspberry Pi Version 3, 4, Zero W
+Bei neueren Raspberry Pi Modellen wird standardmäßig die `miniUART` Variante genutzt um die Pins 8 und 10 anzusteuern. Der benötigte Hardware UART (PL011) wird für Bluetooth verwendet. Am einfachsten ist es Bluetooth auszuschalten, um den miniUART mit dem UART zu ersetzen:
+* die Datei `/boot/config.txt` um die Zeile `dtoverlay=disable-bt` ergänzen.
+* mit dem Befehl `sudo systemctl disable hciuart` den Bluetooth-Dienst deaktivieren.
+
+eine andere Möglichkeit, zum Beispiel wenn Bluettoth benötigt wird, besteht darin dem Bluetooth-Dienst den MiniUART zuzuweisen:
+* die Datei `/boot/config.txt` um die Zeilen `dtoverlay=miniuart-bt` und `enable_uart=1` ergänzen. Damit kann jedoch die Performance des Systems beeinträchtigt werden, da der GPU Takt auf 250Mhz festgelegt wird.
+
+##### 2. Raspberry Pi Version 4 (ungetestet!)
+Raspberrys der Version 4 haben mehrere Hardware UARTs. Hier reicht gemäß https://www.raspberrypi.org/forums/viewtopic.php?f=107&t=244827&start=25#p1590882 die Zeile `enable_uart=1` in der Datei `/boot/config.txt` zu ergänzen. Wichtig: Der Ebus-Adapter benutzt dann das Gerät `/dev/ttyAMA0`
 
 #### WIFI
 {:.wifi}
