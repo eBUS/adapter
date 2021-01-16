@@ -83,6 +83,8 @@ The power is supplied directly via the Raspberry Pi socket J8.
 
 The ebusd device configuration is: `-d enh:/dev/ttyAMA0`
 
+[Details on setting up the Raspberry Pi can be found here](raspberrypi.en).
+
 #### WIFI
 {:.wifi}
 [<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.jpg)        

@@ -1,5 +1,5 @@
 ---
-ref: raspberrypi
+ref: v2raspberrypi
 lang: en
 navorder: 4
 navtitle: Raspberry Pi

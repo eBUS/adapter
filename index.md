@@ -84,6 +84,8 @@ Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
 
 Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
 
+[Details zur Einrichtung des Raspberry Pi finden sich hier](raspberrypi).
+
 #### WIFI
 {:.wifi}
 [<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.jpg)        
