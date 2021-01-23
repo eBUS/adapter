@@ -19,7 +19,7 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
  * Einlöten der Stift-/Buchsenleisten, Jumper und eBUS Buchse, je nach Variante:
    * für alle Varianten:
      * Jumper J1, J4
-     * Stiftleisten J11, J12
+     * Stiftleiste J12 (optional mit J11)
      * eBUS Buchse J13 bzw. J14  
        [<img src="img/smd-usb.jpg" width="203" alt="USB" title="USB">](img/smd-usb.jpg)
    * zusätzlich für Raspberry Pi:
@@ -55,7 +55,7 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
    * 14 V an eBUS-Buchse mit 330 Ohm Widerstand anlegen (Labornetzteil)
    * eBUS Stromverbrauch geht auf maximal 0,5 mA
    * ab 14,8 V (am Netzteil oder an eBUS-Buchse) geht grüne LED aus
- * TX-Test:
+ * TX-Test (geht nur mit spezieller Firmware inclusive ENABLE_TRANSMIT_TEST):
    * 17 V an eBUS-Buchse mit 330 Ohm Widerstand anlegen (Labornetzteil)
    * C1/TX am PIC auf High setzen Jumper J11 Pins 3-4 verbinden (TX-Test)
    * eBUS Stromverbrauch geht auf maximal 17 mA
