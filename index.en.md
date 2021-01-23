@@ -63,8 +63,8 @@ The desired variant can be configured via jumpers.
 {:.usb}
 [<img src="img/smd-3dusb.png" width="200" alt="USB" title="USB">](img/smd-3dusb.jpg)  
 To use the adapter via USB port J2, the jumpers have to be set as follows:
-* J1: USB
-* J4: USB
+* [J1: USB](img/smd-usb.jpg)
+* [J4: USB](img/smd-usb.jpg)
 
 The power is supplied directly via the USB connector J2 on the adapter.
 
@@ -76,8 +76,8 @@ devices are connected.
 [<img src="img/smd-3drpi.png" width="200" alt="RPI" title="RPI">](img/smd-3drpi.jpg)  
 Using the 2x13 socket J8, the adapter can be plugged onto the [Raspberry Pi](https://www.raspberrypi.org/) directly.
 The jumpers have to be set as follows:
-* J1: RPI
-* J4: RPI
+* [J1: RPI](img/smd-rpi.jpg)
+* [J4: RPI](img/smd-rpi.jpg)
 
 The power is supplied directly via the Raspberry Pi socket J8.
 
@@ -87,13 +87,13 @@ The ebusd device configuration is: `-d enh:/dev/ttyAMA0`
 
 #### WIFI
 {:.wifi}
-[<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.jpg)        
+[<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.jpg)  
 By plugging a [LOLIN/Wemos D1 mini with ESP-8266](https://docs.wemos.cc/en/latest/d1/d1_mini.html) onto socket J9,
 the adapter can be used via WLAN.
 The jumpers have to be set as follows:
-* J1: RPI
-* J4: open (or set to RPI)
-* J12: connect pins 4-5 (WIFI-check)
+* [J1: RPI](img/smd-wifi.jpg)
+* [J4: open (or set to RPI)](img/smd-wifi.jpg)
+* [J12: connect pins 4-5 (WIFI-check)](img/smd-wifi.jpg)
 
 The power is supplied directly via the USB connector of the Wemos.
 
@@ -110,9 +110,9 @@ right IP address.
 By plugging a [USR-ES1 modul with W5500](https://www.pusr.com/download/ES1/USR-ES1-EN-V1.0.pdf) onto socket J10,
 the adapter can be used via LAN.
 The jumpers have to be set as follows:
-* J1: RPI
-* J4: USB
-* J12: connect pins 5-6 (Ethernet mode)
+* [J1: RPI](img/smd-ethernet.jpg)
+* [J4: USB](img/smd-ethernet.jpg)
+* [J12: connect pins 5-6 (Ethernet mode)](img/smd-ethernet.jpg)
 
 The power is supplied directly via the USB connector J2 on the adapter.
 
@@ -181,12 +181,12 @@ be used (on RX eBUS traffic comes in).
 ### Overview of jumpers/pin headers, functions
 {:id="jumper"}
 
-|**Connector**|Function              |USB          |Raspberry Pi|WIFI           |Ethernet       |
+|**Connector**|Function              |[USB](img/smd-usb.jpg)          |[Raspberry Pi](img/smd-rpi.jpg)|[WIFI](img/smd-wifi.jpg)           |[Ethernet](img/smd-ethernet.jpg)         |
 |:-----------:|----------------------|-------------|------------|---------------|---------------|
-|**J1**       |Jumper TX             |USB          |RPI         |RPI            |RPI            |
+|**J1**       |Jumper TX             |[USB](img/smd-usb.jpg)          |[RPI](img/smd-rpi.jpg)         |[RPI](img/smd-wifi.jpg)            |[RPI](img/smd-ethernet.jpg)            |
 |**J2**       |USB connector         |USB connector|-           |-              |power connector|
 |**J3**       |Gas sensor            |-            |Gas sensor  |Gas sensor     |-              |
-|**J4**       |Jumper POWER          |USB          |RPI         |(RPI)          |USB            |
+|**J4**       |Jumper POWER          |[USB](img/smd-usb.jpg)          |[RPI](img/smd-rpi.jpg)         |[(RPI)](img/smd-wifi.jpg)          |[USB](img/smd-ethernet.jpg)            |
 |**J5**       |I2C                   |-            |I2C         |(I2C)*         |-              |
 |**J6**       |I2C                   |-            |I2C         |(I2C)*+ext     |-              |
 |**J7**       |1wire sensor          |-            |1wire sensor|1wire sensor   |-              |
