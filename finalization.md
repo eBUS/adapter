@@ -9,8 +9,7 @@ Funktion des Adapters festzustellen.
 Ausgangslage ist ein vom Bestücker gelieferter Adapter mit allen aufgelöteten SMD Bauteilen, jedoch ohne
 Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
 
-[<img src="img/smd-finalrpi.jpeg" width="203" alt="schema" title="RPI">](img/smd-finalrpi.jepg)
-[TODO richtiges Bild]
+[<img src="img/smd-blank.jpg" width="203" alt="blank" title="blank">](img/smd-blank.jpg)
 
 ### Fertigstellung
 
@@ -21,22 +20,23 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
    * für alle Varianten:
      * Jumper J1, J4
      * Stiftleisten J11, J12
-     * eBUS Buchse J13 bzw. J14
+     * eBUS Buchse J13 bzw. J14  
+       [<img src="img/smd-usb.jpg" width="203" alt="USB" title="USB">](img/smd-usb.jpg)
    * zusätzlich für Raspberry Pi:
      * Stiftleisten J3, J5, J7
      * verkürzte Stiftleiste J6 (nur Pins 1-4, bei Universaladapter jedoch volle 6 Pins!)
      * Raspberry Pi GPIO Buchsenleiste J8  
-     [<img src="img/smd-finalrpi.jpeg" width="203" alt="schema" title="RPI">](img/smd-finalrpi.jepg)
-   * zusätzlich für Wemos:
+       [<img src="img/smd-rpi.jpg" width="203" alt="RPI" title="RPI">](img/smd-rpi.jpg)
+   * zusätzlich für Wifi:
      * Stiftleisten J3, J5, J6, J7
      * Wemos Buchsenleiste J9
-     * Stiftleiste am Wemos selbst
-   * zusätzlich für USR-ES1:
+     * Stiftleiste am Wemos selbst  
+       [<img src="img/smd-wifi.jpg" width="203" alt="WIFI" title="WIFI">](img/smd-wifi.jpg)
+   * zusätzlich für Ethernet:
      * USR-ES1 Buchsenleiste J10
-     * Stiftleiste am USR-ES1 selbst
+     * Stiftleiste am USR-ES1 selbst  
+       [<img src="img/smd-ethernet.jpg" width="203" alt="Ethernet" title="Ethernet">](img/smd-ethernet.jpg)
  * Kontrolle der neuen Lötstellen
-
-[TODO Bilder]
 
 #### Elektrische Prüfung
  * 3,3V an J5 Pin 4 (GND) und Pin 3 (Vdd) anschließen
