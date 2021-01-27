@@ -191,3 +191,15 @@ Am einfachsten mit gpio und/oder i2c Tool.
 #### Sensoren mit Wemos
 Am einfachsten mit ESPEasy.
 tbc
+
+### Reihenfolge Abarbeitung
+1. PIC flashen
+2. J1, J4, J12 einlöten
+3. Jumper J1+J4 auf USB einsetzen
+4. Bootloader prüfen
+5. Variante fertig löten
+6. Variante Testen (bei Universal nur eine)
+7. Verpacken:
+  * bei RPI und Universal: Abstandshalter dazu packen
+  * bei Universal: Wemos aufstecken, USR-ES1 dazu packen
+8. Versenden
