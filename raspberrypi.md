@@ -13,7 +13,7 @@ Pins am [Raspberry Pi GPIO](https://www.raspberrypi.org/documentation/usage/gpio
 * TxD: Pin 8 (GPIO 14)
 * RxD: Pin 10 (GPIO 15)
 
-Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
+Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0 --latency=50`
 
 
 ### Konfiguration mit Raspberry Pi OS

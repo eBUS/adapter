@@ -107,8 +107,7 @@ Diese Tests werden ohne Anschluss am eBUS durchgeführt.
  * Jumper J4 auf RPI
  * Jumper J11+J12 leer
  * weiter bei [Prüfen Kommunikation](#check) mit DEVICE wie folgt:
-   * `/dev/ttyS0` für RPi 4
-   * `/dev/ttyAMA0` für RPi 3 und 2, dann aber zusätzlich noch `--latency=50`
+   * `/dev/ttyAMA0 --latency=50`
    * alternativ `/dev/ttyebus` gepatcht auf 9600 Bd für RPi 3 und 2 (ohne zusätzliche latency)  
      [TODO update ttyebus]
 

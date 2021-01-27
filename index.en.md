@@ -81,7 +81,7 @@ The jumpers have to be set as follows:
 
 The power is supplied directly via the Raspberry Pi socket J8.
 
-The ebusd device configuration is: `-d enh:/dev/ttyAMA0`
+The ebusd device configuration is: `-d enh:/dev/ttyAMA0 --latency=50`
 
 [Details on setting up the Raspberry Pi can be found here](raspberrypi.en).
 

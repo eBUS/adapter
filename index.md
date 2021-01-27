@@ -82,7 +82,7 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 
 Die Stromversorgung erfolgt direkt über die Raspberry Pi Buchsenleiste J8.
 
-Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0`
+Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0 --latency=50`
 
 [Details zur Einrichtung des Raspberry Pi finden sich hier](raspberrypi).
 
