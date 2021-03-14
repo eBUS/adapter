@@ -10,7 +10,7 @@ navtitle: PIC Firmware
 On the PIC, there is a bootloader that allows to update the firmware via the USB port or the Raspberry Pi GPIO/ttyAMA0.
 
 Either the
-[ebus PIC Loader] (https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md)
+[ebus PIC Loader] (https://github.com/john30/ebusd/blob/master/src/tools/README.md)
 is needed which also allows setting a fixed IP address for the W5500 of the USR-ES1 module,
 or the [Bootloader Host Application] (https://www.microchip.com/promo/8-bit-bootloader) from Microchip.
 
@@ -24,14 +24,14 @@ When the bootloader is active, the blue LED lights up immediately very brightly 
 The firmware is then flashed by using one of the above tools via the serial interface with 115200 baud from word address 0x400.
 
 With the
-[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md)
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md)
 it works like this (where `/ dev / ttyUSB0` may have to be replaced by the actual USB serial device):
 `ebuspicloader -f firmware.hex /dev/ttyUSB0`
 
 ### Firmware Versions
 {:id="versions"}
 * [Version 20210106](firmware/20210106-offset.hex):  
-  Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md): `1 [a220]`  
+  Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [a220]`  
   Features: ebusd enhanced protocol V1, Ethernet with DHCP or fix IP  
   Minimal ebusd version: [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol)  
   Pins on J12:  
@@ -56,7 +56,7 @@ separate power sources are used here. Any connection endangers the adapter and d
 {:id="ethernetconfig"}
 If a fixed IP address is supposed to be used with the USR-ES1 module instead of obtaining it via DHCP,
 this can be done with the
-[ebus PIC Loader](https://github.com/john30/ebusd/blob/enhanced_device/src/tools/README.md)
+[ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md)
 via the USB connection or the Raspberry Pi GPIO/ttyAMA0.
 
 For example, to set the IP address 192.168.10.20 with a network mask of 255.255.255.0 (=length 24), the ebus PIC
