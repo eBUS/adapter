@@ -97,6 +97,10 @@ The jumpers have to be set as follows:
 
 The power is supplied directly via the USB connector of the Wemos.
 
+**Attention:** The Wemos are incredibly delicate with regard to the power supply!
+A variety of effects come up when the power supply is insufficient,
+e.g. reboots, or no connection at all, or only poor and unstable connection to the Access Point.
+
 The Wemos has to be flashed with a suitable firmware, e.g. [ebusd-esp](https://github.com/john30/ebusd-esp)
 (starting from [version 22.11.2020](https://github.com/john30/ebusd-esp/blob/master/Changelog.md#build-20201122)).
 ebusd-esp then has to be configured to "Adapter 3 RX+TX".

@@ -98,6 +98,10 @@ Die Jumper müssen dazu wie folgt gesetzt werden:
 
 Die Stromversorgung erfolgt direkt über den USB-Anschluss am Wemos.
 
+**Achtung:** Die Wemos sind unglaublich heikel in Bezug auf die Stromversorgung!
+Da kommen die unterschiedlichsten Effekte zum Vorschein, wenn die Stromversorgung ungenügend ist,
+wie z.B. reboots oder gar keine bzw. nur schlechte und instabile Verbindung zum Access Point.
+
 Der Wemos muss mit einer passenden Firmware geflasht werden, z.B. [ebusd-esp](https://github.com/john30/ebusd-esp)
 (ab [Version 22.11.2020](https://github.com/john30/ebusd-esp/blob/master/Changelog.md#build-20201122)).
 ebusd-esp muss dann auf "Adapter 3 RX+TX" eingestellt werden.
