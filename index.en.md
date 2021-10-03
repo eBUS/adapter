@@ -9,6 +9,9 @@ navtitle: Welcome
 This is the documentation of the eBUS adapter, which can be used to communicate with an eBUS enabled heating,
 ventilation or solar system.
 
+You can [reserve such an adapter here](https://ebusd.eu/myadapter/)
+and it will then be sent in sequence as soon as the next batch becomes available.
+
 ### Introduction
 
 Version 3 of the eBUS adapter fulfils the arbitration times required by the eBUS specification for the first time.

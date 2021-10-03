@@ -9,6 +9,9 @@ navtitle: Willkommen
 Dies ist die Dokumentation des eBUS Adapters, mit dessen Hilfe man mit einer eBUS-fähigen Heizungs-, Lüftungs- oder
 Solaranlage kommunizieren kann.
 
+Einen solchen [Adapter kann man hier reservieren](https://ebusd.de/meinadapter/)
+und dieser wird dann der Reihe nach versendet, sobald die nächste Charge verfügbar wird.
+
 ### Einführung
 
 Version 3 des eBUS Adapters erfüllt erstmals die von der eBUS Spezifikation geforderten Zeiten bei der Arbitrierung.
