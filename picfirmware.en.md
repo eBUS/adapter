@@ -30,9 +30,9 @@ it works like this (where `/ dev / ttyUSB0` may have to be replaced by the actua
 
 ### Firmware Versions
 {:id="versions"}
-* [Version 20210106](firmware/20210106-offset.hex):  
-  Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [a220]`  
-  Features: ebusd enhanced protocol V1, Ethernet with DHCP or fix IP  
+* [Version 20211120](firmware/20211120-offset.hex):  
+  Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [4dea]`  
+  Features: ebusd enhanced protocol V1, Ethernet with DHCP or fix IP, extra infos, configurable arbitration delay  
   Minimal ebusd version: [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol)  
   Pins on J12:  
   * Pin 1: Vdd
