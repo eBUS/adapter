@@ -32,9 +32,10 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
 
 ### Firmware Versionen
 {:id="versions"}
-* [Version 20211128](firmware/20211128-offset.hex):  
-  Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [554f]`  
-  Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP, extra Infos, konfigurierbares Arbitrierungs-Delay und genaueres Timing  
+* [Version 20220220](firmware/20220220-offset.hex):  
+  Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [9939]`  
+  Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP, extra Infos, konfigurierbares Arbitrierungs-Delay  
+  Änderungen: siehe [Changelog](firmware/ChangeLog)  
   Minimale ebusd Version: [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol)  
   Anschlussbelegung J12:  
   * Pin 1: Vdd
