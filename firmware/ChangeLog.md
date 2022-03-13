@@ -4,7 +4,10 @@ lang: en
 ---
 ## Firmware change history
 
-### [Version 20220220](20220220-offset.hex), reported as `1 [9939]`:
+### [Version 20220313](20220313-offset.hex), reported as `1 [dc99]`:
+* feat: wait for Wemos to signal readiness after it rebooted autonomously
+
+### Version 20220220, reported as `1 [9939]`:
 * fix: for potential irregular W5500 disconnected state
 * feat: add firmware checksum and jumpers to extra info 0x00
 
