@@ -4,7 +4,12 @@ lang: en
 ---
 ## Firmware change history
 
-### [Version 20220313](20220313-offset.hex), reported as `1 [dc99]`:
+### [Version 20220327](20220327-offset.hex), reported as `1 [63aa]`:
+* feat: signal alive on blue LED as ping every 4 seconds
+* feat: delay sending errors to host
+* fix: remove TX buffers to avoid potential stuck condition after Wemos reboot
+
+### Version 20220313, reported as `1 [dc99]`:
 * feat: wait for Wemos to signal readiness after it rebooted autonomously
 
 ### Version 20220220, reported as `1 [9939]`:
