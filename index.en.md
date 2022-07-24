@@ -10,7 +10,7 @@ This is the documentation of the eBUS adapter, which can be used to communicate 
 ventilation or solar system.
 
 You can [reserve such an adapter here](https://ebusd.eu/myadapter/)
-and it will then be sent in sequence as soon as the next batch becomes available.
+and it will then be sent in sequence as soon as the next batch is available.
 
 ### Introduction
 
@@ -24,7 +24,7 @@ This is made possible by the use of a PIC which, among other things, brings the 
    * [Raspberry Pi](#raspberry-pi){:.rpi} via GPIO/ttyAMA0
    * [WIFI](#wifi){:.wifi} via LOLIN/Wemos D1 mini with ESP-8266
    * [Ethernet](#ethernet){:.ethernet} via USR-ES1 module with W5500
- * full support for ebusd enhanced protocol version 1 and standard protocol
+ * full support for ebusd enhanced protocol and standard protocol
  * updatable [firmware](picfirmware.en) using a serial bootloader
 
 In order to be able to get all these options on a 5cm x 5cm board, almost only SMD is used:
@@ -50,10 +50,11 @@ This is an overview of the individual components and their connections:
   connected to ebusd either via
   * USB (UART),
   * GPIO (UART) of the Raspberry Pi,
-  * WLAN ([Wemos](wemosebus)) or
+  * WIFI ([Wemos](wemosebus)) or
   * LAN (USR-ES1 module with W5500).
-* ebusd
-  provides TCP Client, MQTT and HTTP for FHEM, Node-Red, ioBroker and others.
+* ebusd  
+  interprets the eBUS protocol and provides the data bidirectionally via TCP, HTTP, MQTT and KNX
+  for FHEM, Home-Assistant, Node-Red, and others.
 
 ### Variants
 {:id="variants"}
@@ -61,6 +62,15 @@ USB support is built into all variants, as the CP2102 is always installed direct
 This is necessary, to e.g. update the PIC firmware or to adjust the Ethernet configuration.
 
 The desired variant can be configured via jumpers.
+
+The protocol between ebusd and the adapter is either the eBUS protocol directly ("standard protocol") or the
+ebusd "enhanced protocol". The enhanced protocol uses all advantages of the adapter by handling the eBUS
+arbitration directly from the PIC firmware.
+
+For the enhanced protocol, a high-speed variant may be used for serial connections (USB, RPI and WIFI) that avoids
+unnecessary delays due to the transfer of data from/to ebusd. This can be activated by setting a jumpers on J12.
+The ebusd device configuration then needs to be changed from `enh:` prefix to `ens:` prefix for direct serial
+connections (i.e. USB or RPI). For WIFI, the ESP firmware needs to be configured accordingly.
 
 #### USB
 {:.usb}
@@ -92,7 +102,7 @@ The ebusd device configuration is: `-d enh:/dev/ttyAMA0 --latency=50`
 {:.wifi}
 [<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.jpg)  
 By plugging a [LOLIN/Wemos D1 mini with ESP-8266](https://docs.wemos.cc/en/latest/d1/d1_mini.html) onto socket J9,
-the adapter can be used via WLAN.
+the adapter can be used via WIFI.
 The jumpers have to be set as follows:
 * [J1: RPI](img/smd-wifi.jpg)
 * [J4: open (or set to RPI)](img/smd-wifi.jpg)
@@ -188,21 +198,21 @@ be used (on RX eBUS traffic comes in).
 ### Overview of jumpers/pin headers, functions
 {:id="jumper"}
 
-|**Connector**|Function              |[USB](img/smd-usb.jpg)          |[Raspberry Pi](img/smd-rpi.jpg)|[WIFI](img/smd-wifi.jpg)           |[Ethernet](img/smd-ethernet.jpg)         |
-|:-----------:|----------------------|-------------|------------|---------------|---------------|
-|**J1**       |Jumper TX             |[USB](img/smd-usb.jpg)          |[RPI](img/smd-rpi.jpg)         |[RPI](img/smd-wifi.jpg)            |[RPI](img/smd-ethernet.jpg)            |
-|**J2**       |USB connector         |USB connector|-           |-              |power connector|
-|**J3**       |Gas sensor            |-            |Gas sensor  |Gas sensor     |-              |
-|**J4**       |Jumper POWER          |[USB](img/smd-usb.jpg)          |[RPI](img/smd-rpi.jpg)         |[(RPI)](img/smd-wifi.jpg)          |[USB](img/smd-ethernet.jpg)            |
-|**J5**       |I2C                   |-            |I2C         |(I2C)*         |-              |
-|**J6**       |I2C                   |-            |I2C         |(I2C)*+ext     |-              |
-|**J7**       |1wire sensor          |-            |1wire sensor|1wire sensor   |-              |
-|**J8**       |RPi GPIO connector    |-            |Raspberry Pi|-              |-              |
-|**J9**       |Wemos connector       |-            |-           |Wemos D1 mini  |-              |
-|**J10**      |USR-ES1 connector     |-            |-           |-              |USR-ES1 W5500  |
-|**J11**      |PIC PROG              |-            |-           |-              |-              |
-|**J12**      |PIC AUX               |PIC jumper   |PIC jumper  |PIC jumper: 4-5|PIC jumper: 5-6|
-|**J13/J14**  |eBUS connector        |eBUS         |eBUS        |eBUS           |eBUS           |
+| **Connector** | Function           | [USB](img/smd-usb.jpg)       | [Raspberry Pi](img/smd-rpi.jpg) | [WIFI](img/smd-wifi.jpg)          | [Ethernet](img/smd-ethernet.jpg)  |
+|:-------------:|--------------------|------------------------------|---------------------------------|-----------------------------------|-----------------------------------|
+|    **J1**     | Jumper TX          | [USB](img/smd-usb.jpg)       | [RPI](img/smd-rpi.jpg)          | [RPI](img/smd-wifi.jpg)           | [RPI](img/smd-ethernet.jpg)       |
+|    **J2**     | USB connector      | USB connector                | -                               | -                                 | power connector                   |
+|    **J3**     | Gas sensor         | -                            | Gas sensor                      | Gas sensor                        | -                                 |
+|    **J4**     | Jumper POWER       | [USB](img/smd-usb.jpg)       | [RPI](img/smd-rpi.jpg)          | [(RPI)](img/smd-wifi.jpg)         | [USB](img/smd-ethernet.jpg)       |
+|    **J5**     | I2C                | -                            | I2C                             | (I2C)*                            | -                                 |
+|    **J6**     | I2C                | -                            | I2C                             | (I2C)*+ext                        | -                                 |
+|    **J7**     | 1wire sensor       | -                            | 1wire sensor                    | 1wire sensor                      | -                                 |
+|    **J8**     | RPi GPIO connector | -                            | Raspberry Pi                    | -                                 | -                                 |
+|    **J9**     | Wemos connector    | -                            | -                               | Wemos D1 mini                     | -                                 |
+|    **J10**    | USR-ES1 connector  | -                            | -                               | -                                 | USR-ES1 W5500                     |
+|    **J11**    | PIC PROG           | -                            | -                               | -                                 | -                                 |
+|    **J12**    | PIC AUX            | [PIC Jumper](picfirmware.en) | [PIC Jumper](picfirmware.en)    | [PIC Jumper](picfirmware.en): 4-5 | [PIC Jumper](picfirmware.en): 5-6 |
+|  **J13/J14**  | eBUS connector     | eBUS                         | eBUS                            | eBUS                              | eBUS                              |
 
 \* To the points in brackets:
   * I2C is currently not yet supported by the [ebusd-esp](https://github.com/john30/ebusd-esp) firmware.

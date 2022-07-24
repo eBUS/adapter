@@ -32,12 +32,14 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
 
 ### Firmware Versionen
 {:id="versions"}
-* [Version 20220327](firmware/20220327-offset.hex):  
-  Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [63aa]`  
-  Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP, extra Infos, konfigurierbares Arbitrierungs-Delay  
-  Änderungen: siehe [Changelog](firmware/ChangeLog)  
-  Minimale ebusd Version: [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol)  
-  Anschlussbelegung J12:  
+Aktuelle [Version 20220327](firmware/20220327-offset.hex):  
+* Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [63aa]`  
+* Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP, extra Infos, konfigurierbares Arbitrierungs-Delay  
+* Änderungen: siehe [Changelog](firmware/ChangeLog)  
+* Minimale ebusd Version: 
+  * [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol, normal-speed)  
+  * [22.3](https://github.com/john30/ebusd/releases/tag/v22.3) (enhanced protocol, high-speed)
+* Anschlussbelegung J12:  
   * Pin 1: Vdd
   * Pin 2: ebusd protocol:
     * offen (oder verbunden mit Pin 1): enhanced protocol (ebusd)
@@ -49,8 +51,12 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
     * gegen WIFI-Check (Pin 4): WIFI
     * gegen GND (Pin 6): Ethernet
   * Pin 6: GND
-  * Pin 7: (LOW)
+  * Pin 7:
+    * offen: normal-speed serial
+    * gegen GND (Pin 6): high-speed serial (nur für enhanced protocol, ab Version TODO upcoming)
   * Pin 8: Reset: kurz gegen LOW (Pin 7) oder GND
+
+Frühere Versionen: siehe [Changelog](firmware/ChangeLog)
 
 **Wichtiger Hinweis:** Die Pins am J12 dürfen nie mit irgendeinem Pin der anderen Jumper/Stecker-/Buchsenleisten in
 Verbindung gebracht werden, da hier getrennte Stromquellen zum Einsatz kommen. Jegliche Verbindung gefährdet den Adapter

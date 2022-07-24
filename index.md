@@ -10,7 +10,7 @@ Dies ist die Dokumentation des eBUS Adapters, mit dessen Hilfe man mit einer eBU
 Solaranlage kommunizieren kann.
 
 Einen solchen [Adapter kann man hier reservieren](https://ebusd.de/meinadapter/)
-und dieser wird dann der Reihe nach versendet, sobald die nächste Charge verfügbar wird.
+und dieser wird dann der Reihe nach versendet, sobald die nächste Charge verfügbar ist.
 
 ### Einführung
 
@@ -24,7 +24,7 @@ Dies wird durch Einsatz eines PIC ermöglicht, der u.a. folgende Vorteile mit si
    * [Raspberry Pi](#raspberry-pi){:.rpi} über GPIO/ttyAMA0
    * [WIFI](#wifi){:.wifi} über LOLIN/Wemos D1 mini mit ESP-8266
    * [Ethernet](#ethernet){:.ethernet} über USR-ES1 Modul mit W5500
- * volle Unterstützung für ebusd enhanced protocol Version 1 sowie standard protocol
+ * volle Unterstützung für ebusd enhanced protocol sowie standard protocol
  * aktualisierbare [Firmware](picfirmware) mittels seriellem Bootloader
 
 Um all diese Optionen auf einer 5cm x 5cm großen Platine realisieren zu können, wird fast nur mit SMD bestückt:
@@ -47,20 +47,31 @@ Hier ist eine Übersicht der einzelnen Komponenten mit ihren Verbindungen:
 * Heizung  
   wird mit dem Adapter über eine 2-Drahtleitung verbunden.
 * Adapter  
-  wird mit ebusd entweder über
+  wird mit ebusd verbunden über
   * USB (UART),
   * GPIO (UART) des Raspberry Pi,
-  * WLAN ([Wemos](wemosebus)) oder
-  * LAN (USR-ES1 Modul mit W5500) verbunden.
+  * WIFI ([Wemos](wemosebus)) oder
+  * LAN (USR-ES1 Modul mit W5500).
 * ebusd  
-  stellt TCP Client, MQTT und HTTP für FHEM, Node-Red, ioBroker und weitere zur Verfügung.
+  interpretiert das eBUS Protokoll und macht die Daten bidirektional via TCP, HTTP, MQTT und KNX
+  für FHEM, Home-Assistant, Node-Red und weitere verfügbar.
 
 ### Varianten
 {:id="variants"}
 In allen Varianten ist die Unterstützung für USB fest verbaut, da der CP2102 immer direkt auf der Platine bestückt ist.
-Diese ist notwendig, um bspw. die PIC Firmware zu aktualisieren oder die Ethernet Konfiguration vorzunehmen.
+Diese ist notwendig, um bspw. die PIC Firmware zu aktualisieren oder eine spezielle Ethernet Konfiguration vorzunehmen.
 
-Über Jumper kann die gewünschte Variante konfiguriert werden.
+Über Jumper wird die entsprechende Variante konfiguriert.
+
+Als Protokoll zwischen ebusd und dem Adapter kann sowohl direkt das eBUS Protokoll ("standard protocol"), als auch das
+ebusd "enhanced protocol" verwendet werden. Das enhanced protocol nutzt alle Vorteile des Adapters, indem die eBUS
+Arbitrierung direkt durch die PIC Firmware übernommen wird.
+
+Für das enhanced protocol gibt es bei serieller Verbindung (USB, RPI und WIFI) zusätzlich die Variante high-speed, womit
+unnötige Verzögerungszeiten durch den Transfer der Daten von/zu ebusd vermieden werden. Dies wird durch Setzen eines
+Jumpers an J12 aktiviert.
+Die ebusd device Konfiguration muss dann vom Präfix `enh:` auf den Präfix `ens:` gesetzt werden, sofern eine direkte
+serielle Verbindung vorliegt (d.h. bei USR oder RPI). Für WIFI muss die ESP Firmware entsprechend konfiguriert werden.
 
 #### USB
 {:.usb}
@@ -93,7 +104,7 @@ Die ebusd device Konfiguration lautet: `-d enh:/dev/ttyAMA0 --latency=50`
 {:.wifi}
 [<img src="img/smd-3dwifi.png" width="200" alt="WIFI" title="WIFI">](img/smd-3dwifi.jpg)  
 Wird ein [LOLIN/Wemos D1 mini mit ESP-8266](https://docs.wemos.cc/en/latest/d1/d1_mini.html) auf J9 gesteckt,
-dann lässt sicher der Adapter via WLAN verwenden.
+dann lässt sicher der Adapter via WIFI verwenden.
 Die Jumper müssen dazu wie folgt gesetzt werden:
 * [J1: RPI](img/smd-wifi.jpg)
 * [J4: offen (oder auf RPI)](img/smd-wifi.jpg)
@@ -192,21 +203,21 @@ nicht nutzbar (auf RX kommt eBUS Traffic an).
 ### Überblick Jumper/Pinleisten, Funktionen
 {:id="jumper"}
 
-|**Anschluss**|Funktion              |[USB](img/smd-usb.jpg)            |[Raspberry Pi](img/smd-rpi.jpg)  |[WIFI](img/smd-wifi.jpg)           |[Ethernet](img/smd-ethernet.jpg)         |
-|:-----------:|----------------------|-------------|------------|---------------|---------------|
-|**J1**       |Jumper TX             |[USB](img/smd-usb.jpg)          |[RPI](img/smd-rpi.jpg)         |[RPI](img/smd-wifi.jpg)            |[RPI](img/smd-ethernet.jpg)            |
-|**J2**       |USB-Anschluss         |USB-Anschluss|-           |-              |Strom-Anschluss|
-|**J3**       |Gassensor             |-            |Gassensor   |Gassensor      |-              |
-|**J4**       |Jumper POWER          |[USB](img/smd-usb.jpg)          |[RPI](img/smd-rpi.jpg)         |[(RPI)](img/smd-wifi.jpg)          |[USB](img/smd-ethernet.jpg)            |
-|**J5**       |I2C                   |-            |I2C         |(I2C)*         |-              |
-|**J6**       |I2C                   |-            |I2C         |(I2C)*+ext     |-              |
-|**J7**       |1wire Sensor          |-            |1wire Sensor|1wire Sensor   |-              |
-|**J8**       |Buchsenleiste RPi GPIO|-            |Raspberry Pi|-              |-              |
-|**J9**       |Buchsenleiste Wemos   |-            |-           |Wemos D1 mini  |-              |
-|**J10**      |Buchsenleiste USR-ES1 |-            |-           |-              |USR-ES1 W5500  |
-|**J11**      |PIC PROG              |-            |-           |-              |-              |
-|**J12**      |PIC AUX               |PIC Jumper   |PIC Jumper  |PIC Jumper: 4-5|PIC Jumper: 5-6|
-|**J13/J14**  |eBUS-Anschluss        |eBUS         |eBUS        |eBUS           |eBUS           |
+| **Anschluss** | Funktion               | [USB](img/smd-usb.jpg)    | [Raspberry Pi](img/smd-rpi.jpg) | [WIFI](img/smd-wifi.jpg)       | [Ethernet](img/smd-ethernet.jpg) |
+|:-------------:|------------------------|---------------------------|---------------------------------|--------------------------------|----------------------------------|
+|    **J1**     | Jumper TX              | [USB](img/smd-usb.jpg)    | [RPI](img/smd-rpi.jpg)          | [RPI](img/smd-wifi.jpg)        | [RPI](img/smd-ethernet.jpg)      |
+|    **J2**     | USB-Anschluss          | USB-Anschluss             | -                               | -                              | Strom-Anschluss                  |
+|    **J3**     | Gassensor              | -                         | Gassensor                       | Gassensor                      | -                                |
+|    **J4**     | Jumper POWER           | [USB](img/smd-usb.jpg)    | [RPI](img/smd-rpi.jpg)          | [(RPI)](img/smd-wifi.jpg)      | [USB](img/smd-ethernet.jpg)      |
+|    **J5**     | I2C                    | -                         | I2C                             | (I2C)*                         | -                                |
+|    **J6**     | I2C                    | -                         | I2C                             | (I2C)*+ext                     | -                                |
+|    **J7**     | 1wire Sensor           | -                         | 1wire Sensor                    | 1wire Sensor                   | -                                |
+|    **J8**     | Buchsenleiste RPi GPIO | -                         | Raspberry Pi                    | -                              | -                                |
+|    **J9**     | Buchsenleiste Wemos    | -                         | -                               | Wemos D1 mini                  | -                                |
+|    **J10**    | Buchsenleiste USR-ES1  | -                         | -                               | -                              | USR-ES1 W5500                    |
+|    **J11**    | PIC PROG               | -                         | -                               | -                              | -                                |
+|    **J12**    | PIC AUX                | [PIC Jumper](picfirmware) | [PIC Jumper](picfirmware)       | [PIC Jumper](picfirmware): 4-5 | [PIC Jumper](picfirmware): 5-6   |
+|  **J13/J14**  | eBUS-Anschluss         | eBUS                      | eBUS                            | eBUS                           | eBUS                             |
 
 \* Zu den Punkten in Klammern:
   * I2C wird derzeit noch nicht von der [ebusd-esp](https://github.com/john30/ebusd-esp) Firmware unterstützt.

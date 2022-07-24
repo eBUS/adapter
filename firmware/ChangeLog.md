@@ -4,6 +4,10 @@ lang: en
 ---
 ## Firmware change history
 
+### upcoming version:
+* feat: add high speed serial mode, requires ebusd version >=[22.3](https://github.com/john30/ebusd/releases/tag/v22.3)
+* feat: support v3.1 schematic
+
 ### [Version 20220327](20220327-offset.hex), reported as `1 [63aa]`:
 * feat: signal alive on blue LED as ping every 4 seconds
 * feat: delay sending errors to host
