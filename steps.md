@@ -19,7 +19,7 @@ In jeder Variante sollten die Jumper J1 und J4 kontrolliert werden, auch wenn di
 gesetzt wurden, siehe dazu die [Details der Variante](index#variants).
 
 Ebenso sollte geprüft werden, ob die Jumper an J12 stimmen, insbesondere für die Varianten-Einstellung (Pins 4-6) und
-den enhanced mode (Pins 1-2).
+den enhanced mode (Pins 1-2 sowie 6-7 für high-speed).
 
 Danach kann man den Adapter entsprechend der Variante verbinden, also via USB-Anschluss J2 bei USB und Ethernet, über
 den Wemos direkt bei der WIFI Variante oder aufgesteckt auf den Raspberry Pi.

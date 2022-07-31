@@ -19,7 +19,7 @@ In each variant, the jumpers J1 and J4 should be checked, even if they have usua
 see the [details of the variant](index.en#variants).
 
 You should also check whether the jumpers at J12 are correct, especially for the variant setting (pins 4-6) and enhanced
-mode (pins 1-2).
+mode (pins 1-2 as well as 6-7 for high-speed).
 
 Then you can connect the adapter according to the variant, i.e. via USB connection J2 with USB and Ethernet, via the
 Wemos directly with the WIFI variant or plugged onto the Raspberry Pi.

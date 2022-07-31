@@ -67,7 +67,7 @@ Diese Schritte sind durch das halb-automatisierte Testing abgelöst und werden n
 
 #### Flashen der Firmware
  * PICKit mit J11 verbinden
- * mit MPLAB X IPE combined Firmware flashen (somti inkl. CONFIG)
+ * mit MPLAB X IPE combined Firmware flashen (somit inkl. CONFIG)
 
 
 ### Test des Bootloaders
@@ -200,8 +200,8 @@ Am einfachsten mit ESPEasy.
 tbc
 
 ### Reihenfolge Abarbeitung
-1. [PIC flashen](#Flashen der Firmware)
-2. [Lötarbeiten durchführen](#Lötarbeiten)
+1. [PIC flashen](#flashen-der-firmware)
+2. [Lötarbeiten durchführen](#lötarbeiten)
 3. halb-automatisiertes Testing durchführen
 4. Jumper setzen je nach Variante:
    * USB: J1=USB, J4=USB, J12: 1-2, 6 offen
