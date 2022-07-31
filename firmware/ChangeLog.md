@@ -4,11 +4,11 @@ lang: en
 ---
 ## Firmware change history
 
-### upcoming version:
-* feat: add high speed serial mode, requires ebusd version >=[22.3](https://github.com/john30/ebusd/releases/tag/v22.3)
+### [Version 20220731](20220731-offset.hex), reported as `1 [54eb]`:
+* feat: add high speed serial mode, requires ebusd version >=[22.4](https://github.com/john30/ebusd/releases/latest)
 * feat: support v3.1 schematic
 
-### [Version 20220327](20220327-offset.hex), reported as `1 [63aa]`:
+### Version 20220327, reported as `1 [63aa]`:
 * feat: signal alive on blue LED as ping every 4 seconds
 * feat: delay sending errors to host
 * fix: remove TX buffers to avoid potential stuck condition after Wemos reboot

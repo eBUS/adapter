@@ -30,13 +30,13 @@ it works like this (where `/ dev / ttyUSB0` may have to be replaced by the actua
 
 ### Firmware Versions
 {:id="versions"}
-Current [Version 20220327](firmware/20220327-offset.hex):  
-* Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [63aa]`  
+Current [Version 20220731](firmware/20220731-offset.hex):  
+* Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [54eb]`  
 * Features: ebusd enhanced protocol V1, Ethernet with DHCP or fix IP, extra infos, configurable arbitration delay  
 * Changes: see [Changelog](firmware/ChangeLog)  
 * Minimal ebusd version:
   * [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol, normal-speed)
-  * [22.3](https://github.com/john30/ebusd/releases/tag/v22.3) (enhanced protocol, high-speed)
+  * [22.4](https://github.com/john30/ebusd/releases/latest) (enhanced protocol, high-speed)
 * Pins on J12:  
   * Pin 1: Vdd
   * Pin 2: ebusd protocol:
@@ -51,7 +51,7 @@ Current [Version 20220327](firmware/20220327-offset.hex):
   * Pin 6: GND
   * Pin 7:
     * open: normal-speed serial
-    * to GND (Pin 6): high-speed serial (only for enhanced protocol, since version TODO upcoming)
+    * to GND (Pin 6): high-speed serial (only for enhanced protocol, since version 20220731)
   * Pin 8: Reset: shortly to LOW (Pin 7) or GND
 
 Former versions: see [Changelog](firmware/ChangeLog)

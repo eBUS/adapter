@@ -68,9 +68,11 @@ ebusd "enhanced protocol". The enhanced protocol uses all advantages of the adap
 arbitration directly from the PIC firmware.
 
 For the enhanced protocol, a high-speed variant may be used for serial connections (USB, RPI and WIFI) that avoids
-unnecessary delays due to the transfer of data from/to ebusd. This can be activated by setting a jumpers on J12.
+unnecessary delays due to the transfer of data from/to ebusd (or ESP).
+This can be activated by setting a [jumper on J12](picfirmware.en).  
 The ebusd device configuration then needs to be changed from `enh:` prefix to `ens:` prefix for direct serial
-connections (i.e. USB or RPI). For WIFI, the ESP firmware needs to be configured accordingly.
+connections (i.e. USB or RPI).  
+For WIFI, the ESP firmware needs to be configured accordingly and the ebusd device configuration remains at `enh:`.
 
 #### USB
 {:.usb}

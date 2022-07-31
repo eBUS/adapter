@@ -68,10 +68,11 @@ ebusd "enhanced protocol" verwendet werden. Das enhanced protocol nutzt alle Vor
 Arbitrierung direkt durch die PIC Firmware übernommen wird.
 
 Für das enhanced protocol gibt es bei serieller Verbindung (USB, RPI und WIFI) zusätzlich die Variante high-speed, womit
-unnötige Verzögerungszeiten durch den Transfer der Daten von/zu ebusd vermieden werden. Dies wird durch Setzen eines
-Jumpers an J12 aktiviert.
+unnötige Verzögerungszeiten durch den Transfer der Daten von/zu ebusd (oder ESP)vermieden werden.
+Das wird durch Setzen eines [Jumpers an J12](picfirmware) aktiviert.  
 Die ebusd device Konfiguration muss dann vom Präfix `enh:` auf den Präfix `ens:` gesetzt werden, sofern eine direkte
-serielle Verbindung vorliegt (d.h. bei USR oder RPI). Für WIFI muss die ESP Firmware entsprechend konfiguriert werden.
+serielle Verbindung vorliegt (d.h. bei USR oder RPI).  
+Für WIFI muss die ESP Firmware entsprechend konfiguriert werden und die ebusd device Konfiguration bleibt bei `enh:`.
 
 #### USB
 {:.usb}

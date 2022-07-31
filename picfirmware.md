@@ -32,13 +32,13 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
 
 ### Firmware Versionen
 {:id="versions"}
-Aktuelle [Version 20220327](firmware/20220327-offset.hex):  
-* Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [63aa]`  
+Aktuelle [Version 20220731](firmware/20220731-offset.hex):  
+* Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [54eb]`  
 * Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP, extra Infos, konfigurierbares Arbitrierungs-Delay  
 * Änderungen: siehe [Changelog](firmware/ChangeLog)  
 * Minimale ebusd Version: 
   * [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol, normal-speed)  
-  * [22.3](https://github.com/john30/ebusd/releases/tag/v22.3) (enhanced protocol, high-speed)
+  * [22.4](https://github.com/john30/ebusd/releases/latest) (enhanced protocol, high-speed)
 * Anschlussbelegung J12:  
   * Pin 1: Vdd
   * Pin 2: ebusd protocol:
@@ -53,7 +53,7 @@ Aktuelle [Version 20220327](firmware/20220327-offset.hex):
   * Pin 6: GND
   * Pin 7:
     * offen: normal-speed serial
-    * gegen GND (Pin 6): high-speed serial (nur für enhanced protocol, ab Version TODO upcoming)
+    * gegen GND (Pin 6): high-speed serial (nur für enhanced protocol, ab Version 20220731)
   * Pin 8: Reset: kurz gegen LOW (Pin 7) oder GND
 
 Frühere Versionen: siehe [Changelog](firmware/ChangeLog)
