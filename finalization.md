@@ -67,7 +67,7 @@ Diese Schritte sind durch das halb-automatisierte Testing abgelöst und werden n
 
 #### Flashen der Firmware
  * PICKit mit J11 verbinden
- * mit MPLAB X IPE combined Firmware flashen (somit inkl. CONFIG)
+ * mit MPLAB X IPE combined Firmware flashen (somit inkl. CONFIG, [siehe Firmware](picfirmware#versions) mit "combined" statt "offset")
 
 
 ### Test des Bootloaders
