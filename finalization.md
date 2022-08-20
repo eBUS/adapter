@@ -14,31 +14,31 @@ Stift-/Buchsenleisten, Jumper oder eBUS Buchse, und ohne Firmware im PIC.
 ### Fertigstellung
 
 #### Lötarbeiten
- * Kontrolle der SMD Lötstellen, insbesondere im Hinblick auf potenzielle Lötbrücken am PIC und CP2102
- * Kontrolle der Einbaurichtung der ICs
- * Einlöten der Stift-/Buchsenleisten, Jumper und eBUS Buchse, je nach Variante:
-   * für alle Varianten:
-     * Jumper J1, J4
-     * Stiftleiste J12
-     * eBUS Buchse J13 bzw. J14  
-       [<img src="img/smd-usb.jpg" width="203" alt="USB" title="USB">](img/smd-usb.jpg)
-   * zusätzlich für Raspberry Pi:
-     * Raspberry Pi GPIO Buchsenleiste J8  
-       [<img src="img/smd-rpi.jpg" width="203" alt="RPI" title="RPI">](img/smd-rpi.jpg)
-     * nicht mehr gelötet, nur beigelegt als 1x13 Stiftleiste:
-       * Stiftleisten J3, J5, J7)
-       * verkürzte Stiftleiste J6 (nur Pins 1-4, bei Universaladapter jedoch volle 6 Pins!)
-   * zusätzlich für Wifi:
-     * Wemos Buchsenleiste J9
-     * Stiftleiste am Wemos selbst  
-       [<img src="img/smd-wifi.jpg" width="203" alt="WIFI" title="WIFI">](img/smd-wifi.jpg)
-     * nicht mehr gelötet, nur beigelegt als 1x15 Stiftleiste:
-       * Stiftleisten J3, J5, J6, J7
-   * zusätzlich für Ethernet:
-     * USR-ES1 Buchsenleiste J10
-     * Stiftleiste am USR-ES1 selbst (i.d.R. bereits gelötet geliefert)  
-       [<img src="img/smd-ethernet.jpg" width="203" alt="Ethernet" title="Ethernet">](img/smd-ethernet.jpg)
- * Kontrolle der neuen Lötstellen
+  * Kontrolle der SMD Lötstellen, insbesondere im Hinblick auf potenzielle Lötbrücken am PIC und CP2102
+  * Kontrolle der Einbaurichtung der ICs
+  * Einlöten der Stift-/Buchsenleisten, Jumper und eBUS Buchse, je nach Variante:
+    * für alle Varianten:
+      * Jumper J1, J4
+      * Stiftleiste J12
+      * eBUS Buchse J13 bzw. J14  
+        [<img src="img/smd-usb.jpg" width="203" alt="USB" title="USB">](img/smd-usb.jpg)
+    * zusätzlich für Raspberry Pi:
+      * Raspberry Pi GPIO Buchsenleiste J8  
+        [<img src="img/smd-rpi.jpg" width="203" alt="RPI" title="RPI">](img/smd-rpi.jpg)
+      * nicht mehr gelötet, nur beigelegt als 1x13 Stiftleiste:
+        * Stiftleisten J3, J5, J7)
+        * verkürzte Stiftleiste J6 (nur Pins 1-4, bei Universaladapter jedoch volle 6 Pins!)
+    * zusätzlich für Wifi:
+      * Wemos Buchsenleiste J9
+      * Stiftleiste am Wemos selbst  
+        [<img src="img/smd-wifi.jpg" width="203" alt="WIFI" title="WIFI">](img/smd-wifi.jpg)
+      * nicht mehr gelötet, nur beigelegt als 1x15 Stiftleiste:
+        * Stiftleisten J3, J5, J6, J7
+    * zusätzlich für Ethernet:
+      * USR-ES1 Buchsenleiste J10
+      * Stiftleiste am USR-ES1 selbst (i.d.R. bereits gelötet geliefert)  
+        [<img src="img/smd-ethernet.jpg" width="203" alt="Ethernet" title="Ethernet">](img/smd-ethernet.jpg)
+  * Kontrolle der neuen Lötstellen
 
 #### Elektrische Prüfung
 Diese Schritte sind durch das halb-automatisierte Testing abgelöst und werden nur bei dortigem Fehler benötigt:
@@ -209,8 +209,8 @@ tbc
    * WIFI: J1=RPI, J4=RPI, J12: 1-2, 4-5, 6-7
    * Ethernet: J1=RPI, J4=USB, J12: 1-2, 5-6
 5. Verpacken:
-  * USB: nur Adapter
-  * RPI: Abstandshalter und Stiftleiste 1x13 dazu
-  * WIFI: Wemos aufstecken, Stiftleiste 1x15 und Wemos Tütchen (mit Resten) dazu
-  * Ethernet: USR-ES1 aufstecken
+   * USB: nur Adapter
+   * RPI: Abstandshalter und Stiftleiste 1x13 dazu
+   * WIFI: Wemos aufstecken, Stiftleiste 1x15 und Wemos Tütchen (mit Resten) dazu
+   * Ethernet: USR-ES1 aufstecken
 6. Versenden
