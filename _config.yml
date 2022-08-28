@@ -12,3 +12,5 @@ github:
 markdown: kramdown
 gems:
   - jekyll-font-awesome-sass
+sass:
+  style: compressed
