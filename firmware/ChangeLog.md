@@ -4,7 +4,13 @@ lang: en
 ---
 ## Firmware change history
 
-### [Version 20220731](20220731-offset.hex), reported as `1 [54eb]`:
+### [Version 20220831](20220831-offset.hex), reported as `1 [2ded]`:
+* feat: add bootloader version to extra info, requires ebusd version >=[22.4](https://github.com/john30/ebusd/releases/latest)
+* feat: add extra info with boot cause (reported as unknown for bootloader v1), requires ebusd version >=[22.4](https://github.com/john30/ebusd/releases/latest)
+* feat: do not write to eBUS as soon as start bit was received
+* fix: potential bytes skipped in transfer to Ethernet host
+
+### Version 20220731, reported as `1 [54eb]`:
 * feat: add high speed serial mode, requires ebusd version >=[22.4](https://github.com/john30/ebusd/releases/latest)
 * feat: support v3.1 schematic
 
@@ -38,3 +44,12 @@ lang: en
 * feat: ebusd enhanced protocol V1, requires ebusd version >=3.5
 * feat: WiFi with wait for readiness
 * feat: Ethernet with DHCP or fix IP
+
+
+## Bootloader change history
+
+### Bootloader version 20201025, reported as `2 [4646]`
+* feat: save reset infos and restart count for firmware
+
+### Bootloader version 20201025, reported as `1 [0a6c]`
+* feat: first version
