@@ -191,21 +191,6 @@ Hier ist ein Bild, das die beiden isolierten Hälften der Platine darstellt: rot
 Neben dem Adapter wird eine Software benötigt, die den eBUS Verkehr interpretiert und auswertet. Das übernimmt bspw.
 [ebusd](https://github.com/john30/ebusd/), der auch auf einen Raspberry Pi installiert werden kann.
 
-#### Gleichzeitige Verwendung von USB für ebusd und Wemos für Sensoren
-[TODO Testen]  
-Die Jumper müssen dazu wie folgt gesetzt werden:
-* J1: USB
-* J4: USB
-
-Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter und RX/TX des Wemos samt seines USB serial sind
-nicht nutzbar (auf RX kommt eBUS Traffic an).
-
-**Achtung:** Immer nur eine Stromversorgung verbinden, also maximal einen Anschluss von:
-* USB-Anschluss J2 des Adapters
-* Raspberry Pi Buchsenleiste J8 des Adapters
-* USB-Anschluss am Wemos
-
-
 ### Überblick Jumper/Pinleisten, Funktionen
 {:id="jumper"}
 
