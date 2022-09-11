@@ -8,7 +8,11 @@ description:
   de: Hardware-Adapter zur Kommunikation mit eBUS Heizsystemen
   en: Hardware interface for communicating with eBUS heating system
 github:
-  is_project_page: false
+  is_project_page: true
+  repository_url: https://github.com/eBUS/adapter
+  repository_name: eBUS/adapter
+  owner_url: https://github.com/eBUS
+  owner_name: eBUS adapter team
 markdown: kramdown
 plugins:
   - jekyll-font-awesome-sass
