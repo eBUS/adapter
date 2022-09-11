@@ -10,7 +10,14 @@ description:
 github:
   is_project_page: false
 markdown: kramdown
-gems:
+plugins:
   - jekyll-font-awesome-sass
 sass:
   style: compressed
+exclude:
+  - 'README.md'
+  - '*.sh'
+  - '*.tgz'
+  - 'Gemfile*'
+  - LICENSE
+  - todo.md
