@@ -36,7 +36,8 @@ Current [Version 20220831](firmware/20220831-offset.hex):
   * ebusd enhanced protocol V1 including high-speed mode
   * Ethernet with DHCP or fix IP
   * extra infos
-  * configurable arbitration delay  
+  * configurable arbitration delay
+  * schematic v3.0 and v3.1  
 * Changes: see [Changelog](firmware/ChangeLog)  
 * Minimal ebusd version:
   * [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol, normal-speed)
@@ -47,10 +48,10 @@ Current [Version 20220831](firmware/20220831-offset.hex):
     * open (or connected to pin 1): enhanced protocol (ebusd)
     * to GND (pin 3): standard protocol (eBUS direct)
   * Pin 3: GND
-  * Pin 4: (WIFI-check)
+  * Pin 4: (WIFI-check, only needed for schematic v3.0)
   * Pin 5: Variant:
     * open: RPi or USB
-    * to WIFI-check (Pin 4): WIFI
+    * to WIFI-check (Pin 4): WIFI (only needed for schematic v3.0)
     * to GND (Pin 6): Ethernet
   * Pin 6: GND
   * Pin 7:
