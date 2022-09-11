@@ -1,6 +1,7 @@
 ---
 ref: index
 lang: en
+ishome: true
 navorder: 1
 navtitle: Welcome
 ---

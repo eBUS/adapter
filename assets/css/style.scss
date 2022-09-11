@@ -5,15 +5,31 @@
 $fa-font-path: "/assets/fonts/font-awesome";
 @import "font-awesome";
 
-.main-content {
+.page-header {
   @include large {
-    max-width: 70rem;
-    padding: 2rem 20rem 2rem 2rem;
+    padding: 2rem;
   }
+
   @include medium {
-    max-width: 50rem;
+    padding: 1rem;
+  }
+
+  @include small {
+    padding: 0.5rem;
+  }
+
+  a {
+    color: $header-heading-color;
   }
 }
+
+.main-content {
+  @include large {
+    max-width: $large-breakpoint + 20em;
+    padding: 2rem 20rem 2rem 2rem;
+  }
+}
+
 .main-menu {
   &:before {
     content: 'Inhalt';
@@ -28,7 +44,7 @@ $fa-font-path: "/assets/fonts/font-awesome";
   @include large {
     top: 18rem;
     width: 20rem;
-    padding: 0rem 1rem;
+    padding: 0 1rem;
     margin: 0 auto;
   }
 
@@ -37,6 +53,20 @@ $fa-font-path: "/assets/fonts/font-awesome";
   }
 
   @include small {
+    display: none;
+  }
+}
+
+html:lang(en) {
+  .main-menu {
+    &:before {
+      content: 'Content';
+    }
+  }
+}
+
+@media print {
+  .main-menu {
     display: none;
   }
 }
@@ -106,4 +136,18 @@ ul.nav-menu {
 
 .main-content .ethernet, .ethernet {
   @include fasicon(network-wired);
+}
+
+details {
+  summary {
+    @include fasicon(caret-right);
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+  &.open, &[open] {
+    summary {
+      @include fasicon(caret-down);
+    }
+  }
 }
