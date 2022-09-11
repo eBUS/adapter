@@ -46,6 +46,11 @@ $fa-font-path: "/assets/fonts/font-awesome";
     width: 20rem;
     padding: 0 1rem;
     margin: 0 auto;
+
+    &.stick {
+      position: fixed;
+      top: 1rem;
+    }
   }
 
   @include medium {

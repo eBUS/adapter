@@ -1,1 +1,20 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" >
+<script>
+    var el, fy;
+    function scroll() {
+        if (!el) {
+            el = document.getElementsByClassName("main-menu");
+            if (!el || !el.length || !el[0]) {
+                return;
+            }
+            el = el[0];
+            fy = el.offsetTop - 16;
+        }
+        if (document.body.scrollTop > fy || document.documentElement.scrollTop > fy) {
+            el.classList.add("stick");
+        } else {
+            el.classList.remove("stick");
+        }
+    }
+    window.onscroll = scroll;
+</script>
