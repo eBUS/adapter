@@ -67,7 +67,9 @@ The protocol between ebusd and the adapter is either the eBUS protocol directly 
 ebusd "enhanced protocol". The enhanced protocol uses all advantages of the adapter by handling the eBUS
 arbitration directly from the PIC firmware.
 
-For the enhanced protocol, a high-speed variant may be used for serial connections (USB, RPI and WIFI) that avoids
+**Note for high-speed enhanced mode:**  
+{:id="ens"}  
+For the enhanced protocol, a **high-speed** variant may be used for serial connections (USB, RPI and WIFI) that avoids
 unnecessary delays due to the transfer of data from/to ebusd (or ESP).
 This can be activated by setting a [jumper on J12](picfirmware.en).  
 The ebusd device configuration then needs to be changed from `enh:` prefix to `ens:` prefix for direct serial
@@ -84,7 +86,8 @@ To use the adapter via USB port J2, the jumpers have to be set as follows:
 The power is supplied directly via the USB connector J2 on the adapter.
 
 The ebusd device configuration is e.g. `-d enh:/dev/ttyUSB0`, where `ttyUSB0` might be different when several USB serial
-devices are connected.
+devices are connected.  
+For high-speed enhanced mode, [see the hint above](#ens).
 
 #### Raspberry Pi
 {:.rpi id="rpi"}
@@ -96,7 +99,8 @@ The jumpers have to be set as follows:
 
 The power is supplied directly via the Raspberry Pi socket J8.
 
-The ebusd device configuration is: `-d enh:/dev/ttyAMA0 --latency=50`
+The ebusd device configuration is: `-d enh:/dev/ttyAMA0 --latency=50`  
+For high-speed enhanced mode, [see the hint above](#ens).
 
 [Details on setting up the Raspberry Pi can be found here](raspberrypi.en).
 
@@ -121,7 +125,8 @@ The Wemos has to be flashed with a suitable firmware, e.g. [ebusd-esp](https://g
 ebusd-esp then has to be configured to "Adapter 3 RX+TX".
 
 The ebusd device configuration is e.g. `-d enh:192.168.178.2:9999`, where `192.168.178.2` has to be replaced with the
-right IP address.
+right IP address (ebusd enhanced high-speed mode is not valid for network traffic).  
+For high-speed enhanced mode as transfer between the adapter and ebusd-esp, [see the hint above](#ens).
 
 #### Ethernet
 {:.ethernet}
@@ -139,7 +144,7 @@ The Ethernet configuration (IP address, network mask, gateway) is done via the b
 port J2, [see here: Ethernet configuration](picfirmware.en#ethernetconfig).
 
 The ebusd device configuration is e.g. `-d enh:192.168.178.2:9999`, where `192.168.178.2` has to be replaced with the
-right IP address.
+right IP address (ebusd enhanced high-speed mode is not valid for network traffic).
 
 The PIC firmware sets the MAC address of the adapter in the LAN to AE:B0:53:XX:XX:XX, where the "XX" depend on the ID of
 the PIC (`AEB053` stands for "Adapter eBUS 3").
@@ -181,21 +186,6 @@ Here is a picture showing the two isolated halves of the board: red for eBUS and
 ### Usage
 In addition to the adapter, software is required that interprets and evaluates the eBUS traffic. This is done for
 example by [ebusd](https://github.com/john30/ebusd/), which can also be installed on a Raspberry Pi.
-
-#### Simultaneous use of USB for ebusd and Wemos for sensors
-[TODO Testen]  
-The jumpers have to be set as follows:
-* J1: USB
-* J4: USB
-
-The power is supplied directly via the USB connector J2 on the adapter and RX/TX of the Wemos and its USB serial cannot
-be used (on RX eBUS traffic comes in).
-
-**Attention:** Always connect only one power supply, i.e. a maximum of one connection of:
-* USB connector J2 of the adapter
-* Raspberry Pi socket connector J8 of the adapter
-* USB connector of the Wemos
-
 
 ### Overview of jumpers/pin headers, functions
 {:id="jumper"}

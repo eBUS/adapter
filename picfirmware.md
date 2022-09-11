@@ -34,7 +34,11 @@ geht das bspw. so (wobei `/dev/ttyUSB0` evtl. durch das richtige USB serial devi
 {:id="versions"}
 Aktuelle [Version 20220831](firmware/20220831-offset.hex):  
 * Firmware Version laut [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [2ded]`  
-* Features: ebusd enhanced protocol V1, Ethernet mit DHCP oder fester IP, extra Infos, konfigurierbares Arbitrierungs-Delay  
+* Features:
+  * ebusd enhanced protocol V1 inkl. high-speed Modus
+  * Ethernet mit DHCP oder fester IP
+  * extra Infos
+  * konfigurierbares Arbitrierungs-Delay  
 * Änderungen: siehe [Changelog](firmware/ChangeLog)  
 * Minimale ebusd Version: 
   * [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol, normal-speed)  
@@ -98,5 +102,5 @@ Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zun
 Ist das Ethernet Modul aufgesteckt und der Jumper an J12 entsprechend gesetzt, dann hat die blaue LED noch weitere
 Bedeutungen zusätzlich zu den oben beschriebenen, die in folgenden Stufen durchlaufen werden:
 1. Bis der W5500 des USR-ES1 Moduls nach dem Reset antwortet, blinkt die LED (2x pro Sekunde).
-2. Bis ein Link auf der Leitung gefunden wurde, blinkt die LED sehr schnell LED (20x pro Sekunde).
-3. Im Fall von DHCP blinkt die LED schnell LED (4x pro Sekunde), bis eine IP-Adresse per DHCP ausgehandelt wurde. 
+2. Bis ein Link auf der Leitung gefunden wurde, blinkt die LED sehr schnell (20x pro Sekunde).
+3. Im Fall von DHCP blinkt die LED schnell (4x pro Sekunde), bis eine IP-Adresse per DHCP ausgehandelt wurde. 

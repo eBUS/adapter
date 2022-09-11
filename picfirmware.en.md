@@ -32,7 +32,11 @@ it works like this (where `/ dev / ttyUSB0` may have to be replaced by the actua
 {:id="versions"}
 Current [Version 20220831](firmware/20220831-offset.hex):  
 * Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [2ded]`  
-* Features: ebusd enhanced protocol V1, Ethernet with DHCP or fix IP, extra infos, configurable arbitration delay  
+* Features:
+  * ebusd enhanced protocol V1 including high-speed mode
+  * Ethernet with DHCP or fix IP
+  * extra infos
+  * configurable arbitration delay  
 * Changes: see [Changelog](firmware/ChangeLog)  
 * Minimal ebusd version:
   * [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol, normal-speed)

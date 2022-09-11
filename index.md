@@ -67,8 +67,10 @@ Als Protokoll zwischen ebusd und dem Adapter kann sowohl direkt das eBUS Protoko
 ebusd "enhanced protocol" verwendet werden. Das enhanced protocol nutzt alle Vorteile des Adapters, indem die eBUS
 Arbitrierung direkt durch die PIC Firmware übernommen wird.
 
-Für das enhanced protocol gibt es bei serieller Verbindung (USB, RPI und WIFI) zusätzlich die Variante high-speed, womit
-unnötige Verzögerungszeiten durch den Transfer der Daten von/zu ebusd (oder ESP)vermieden werden.
+**Hinweis zu high-speed enhanced Modus:**  
+{:id="ens"}  
+Für das enhanced protocol gibt es bei serieller Verbindung (USB, RPI und WIFI) zusätzlich die Variante **high-speed**, womit
+unnötige Verzögerungszeiten durch den Transfer der Daten von/zu ebusd (oder ESP) vermieden werden.
 Das wird durch Setzen eines [Jumpers an J12](picfirmware) aktiviert.  
 Die ebusd device Konfiguration muss dann vom Präfix `enh:` auf den Präfix `ens:` gesetzt werden, sofern eine direkte
 serielle Verbindung vorliegt (d.h. bei USR oder RPI).  
@@ -84,7 +86,8 @@ Zur Nutzung des Adapters über den USB-Anschluss J2 müssen die Jumper wie folgt
 Die Stromversorgung erfolgt direkt über den USB-Anschluss J2 am Adapter.
 
 Die ebusd device Konfiguration lautet z.B. `-d enh:/dev/ttyUSB0`, wobei `ttyUSB0` bei mehreren angeschlossenen
-USB serial Adaptern anders lauten kann.
+USB serial Adaptern anders lauten kann.  
+Für den high-speed enhanced Modus, [siehe Hinweis oben](#ens).
 
 #### Raspberry Pi
 {:.rpi id="rpi"}
@@ -122,7 +125,8 @@ Der Wemos muss mit einer passenden Firmware geflasht werden, z.B. [ebusd-esp](ht
 ebusd-esp muss dann auf "Adapter 3 RX+TX" eingestellt werden.
 
 Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `192.168.178.2` durch die richtige
-IP-Adresse ersetzt werden muss.
+IP-Adresse ersetzt werden muss (ebusd enhanced high-speed Modus ist nicht für Netzwerk-basierte Übertragung gültig).  
+Für den enhanced high-speed Modus als Transport zwischen Adapter und ebusd-esp, [siehe Hinweis oben](#ens).
 
 #### Ethernet
 {:.ethernet}
@@ -140,7 +144,7 @@ Die Ethernet Konfiguration (IP-Adresse, Netzmaske, Gateway) wird durch den Bootl
 USB-Anschluss J2 vorgenommen, [siehe Ethernet Konfiguration](picfirmware#ethernetconfig).
 
 Die ebusd device Konfiguration lautet z.B. `-d enh:192.168.178.2:9999`, wobei `192.168.178.2` durch die richtige
-IP-Adresse ersetzt werden muss.
+IP-Adresse ersetzt werden muss (ebusd enhanced high-speed Modus ist nicht für Netzwerk-basierte Übertragung gültig).
 
 Durch die PIC Firmware wird die MAC Adresse des Adapters im LAN auf AE:B0:53:XX:XX:XX gesetzt, wobei die XX von der ID
 des PIC abhängen (`AEB053` steht für "Adapter eBUS 3").
