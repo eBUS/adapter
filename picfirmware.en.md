@@ -86,11 +86,12 @@ bootloader mode and is waiting for commands on the serial interface.
 #### LED in normal operation (without Ethernet)
 {:id="ledregular"}
 In normal operation, the blue LED is initially turned off after supplying power.
-* When operating with WIFI, the LED flashes slowly with low brightness until the Wemos signals its readiness  
+* When operating with WIFI, the LED flashes slowly until the Wemos signals readiness  
   (the jumper must be configured to WIFI-check).
 * If the LED stays on with very low brightness, the enhanced ebusd protocol is deactivated ([see jumpers](index.en#jumper)).
 * Otherwise, it is fading up to normal brightness.
 * After each initialization in the enhanced protocol, it lights up very brightly (more than all others) for 2 seconds.
+* As sign-of-life it pings every 4 seconds
 * In case of a protocol error on eBUS or host, it lights up very brightly (more than all others) for 5 seconds.
 
 #### LED in Ethernet operation

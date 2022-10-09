@@ -90,12 +90,13 @@ ist der PIC im Bootloader-Modus und wartet auf Kommandos auf der seriellen Schni
 #### LED bei normalem Betrieb (ohne Ethernet)
 {:id="ledregular"}
 Bei normalem Betrieb ist die blaue LED nach Anschließen der Stromversorgung zunächst aus.
-* Beim Betrieb mit WIFI blinkt die LED dann langsam mit geringer Helligkeit, bis der Wemos seine Bereitschaft
-  signalisiert (dazu muss der Jumper auf WIFI-Check konfiguriert sein).
+* Beim Betrieb mit WIFI blinkt die LED dann langsam, bis der Wemos seine Bereitschaft signalisiert
+  (dazu muss der Jumper auf WIFI-Check konfiguriert sein).
 * Bleibt die LED mit sehr geringer Helligkeit an, dann ist das enhanced ebusd protocol deaktiviert
   ([siehe Jumper](index#jumper)).
 * Ansonsten wird sie bis zur normalen Helligkeit hochgedimmt.
 * Nach jeder Initialisierung im enhanced protocol leuchtet sie für 2 Sekunden sehr hell (heller als alle anderen).
+* Als sign-of-life macht sie alle 4 Sekunden einen kurzen Ping
 * Im Falle eines Protokollfehlers auf eBUS oder Host Seite leuchtet sie für 5 Sekunden sehr hell (heller als alle anderen).
 
 #### LED bei Betrieb mit Ethernet
