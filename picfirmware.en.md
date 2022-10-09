@@ -30,18 +30,18 @@ it works like this (where `/ dev / ttyUSB0` may have to be replaced by the actua
 
 ### Firmware Versions
 {:id="versions"}
-Current [Version 20220831](firmware/20220831-offset.hex):  
-* Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [2ded]`  
+Current [Version 20221009](firmware/20221009-offset.hex):  
+* Firmware version as reported by [ebus PIC Loader](https://github.com/john30/ebusd/blob/master/src/tools/README.md): `1 [87a3]`  
 * Features:
   * ebusd enhanced protocol V1 including high-speed mode
   * Ethernet with DHCP or fix IP
   * extra infos
   * configurable arbitration delay
-  * schematic v3.0 and v3.1  
+  * schematic v3.0 and v3.1
 * Changes: see [Changelog](firmware/ChangeLog)  
 * Minimal ebusd version:
   * [21.1](https://github.com/john30/ebusd/releases/tag/v21.1) (enhanced protocol, normal-speed)
-  * [22.4](https://github.com/john30/ebusd/releases/latest) (enhanced protocol, high-speed)
+  * [22.4](https://github.com/john30/ebusd/releases/tag/v22.4) (enhanced protocol, high-speed)
 * Pins on J12:  
   * Pin 1: Vdd
   * Pin 2: ebusd protocol:
