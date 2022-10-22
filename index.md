@@ -151,11 +151,10 @@ IP-Adresse ersetzt werden muss (ebusd enhanced high-speed Modus ist nicht für N
 Durch die PIC Firmware wird die MAC Adresse des Adapters im LAN auf AE:B0:53:XX:XX:XX gesetzt, wobei die XX von der ID
 des PIC abhängen (`AEB053` steht für "Adapter eBUS 3").
 
-
+{% if site.withcircuit %}
 ### Schaltplan
 
-[<img src="img/smd-circuit.png" width="600" alt="Schaltplan" title="Schaltplan">](img/smd-circuit.png)
-
+{% endif %}
 ### Anschluss von Sensoren, Aktoren oder Displays
 In den Varianten mit Wemos und Raspberry Pi stehen folgende Pin Header für den Anschluss weiterer Komponenten zur
 Verfügung:

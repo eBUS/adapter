@@ -10,11 +10,11 @@ This Variant of the extended [Base Board](base.en) is directly placed on top of 
 
 For construction, assembly, and part list, see the corresponding chapters of the [Base Board](base.en).
 
-
+{% if site.withcircuit %}
 ### Circuit Diagram
 
 [<img src="img/rpi-circuit-v22.png" width="600" alt="Circuit Raspberry Pi Board" title="Circuit Raspberry Pi Board">](img/rpi-circuit-v22.png)
-
+{% endif %}
 
 ### Measuring Plan
 

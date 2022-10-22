@@ -10,11 +10,11 @@ Diese Variante der erweiterten [Basisplatine](base) wird direkt auf einen [Raspb
 
 Zum allgemeinen Aufbau, Bestückung und Bauteileliste siehe die entsprechenden Kapitel der [Basisplatine](base).
 
-
+{% if site.withcircuit %}
 ### Schaltplan
 
 [<img src="img/rpi-circuit-v22.png" width="600" alt="Schaltplan Raspberry Pi Platine" title="Schaltplan Basisplatine">](img/rpi-circuit-v22.png)
-
+{% endif %}
 
 ### Messplan
 

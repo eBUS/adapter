@@ -21,12 +21,12 @@ Die Anzahl der Bauelemente ist wesentlich geringer als bei der Basisplatine und 
 
 Die Spannungsversorgung erfolgt über ein USB Stecker Netzteil direkt am C-Stecker des Wemos.
 
-
+{% if site.withcircuit %}
 ### Schaltplan
 
 [<img src="img/exten-circuit-v22.png" width="600" alt="Schaltplan Erweiterungsplatine" title="Schaltplan Erweiterungsplatine">](img/exten-circuit-v22.png)  
 Ältere Versionen sind hier: [v2.1](img/exten-circuit-v21.png) [v2.0](img/exten-circuit-v20.png)
-
+{% endif %}
 
 ### Bauteileliste
 

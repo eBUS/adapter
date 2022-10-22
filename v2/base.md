@@ -25,12 +25,12 @@ Der Adapter hat eine galvanische Trennung zwischen eBUS und dem Kommunikationste
 
 Die Stromversorgung des UART oder des Wemos erfolgt über ein handelsübliches USB-Stecker Netzteil mit ausreichender Leistung (1A-2A).
 
-
+{% if site.withcircuit %}
 ### Schaltplan
 
 [<img src="img/base-circuit-v22.png" width="600" alt="Schaltplan Basisplatine" title="Schaltplan Basisplatine">](img/base-circuit-v22.png)  
 Ältere Versionen sind hier: [v2.1](img/base-circuit-v21.png) [v2.0](img/base-circuit-v20.png)
-
+{% endif %}
 
 ### Bauteileliste
 

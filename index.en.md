@@ -150,11 +150,10 @@ right IP address (ebusd enhanced high-speed mode is not valid for network traffi
 The PIC firmware sets the MAC address of the adapter in the LAN to AE:B0:53:XX:XX:XX, where the "XX" depend on the ID of
 the PIC (`AEB053` stands for "Adapter eBUS 3").
 
-
+{% if site.withcircuit %}
 ### Circuit diagram
 
-[<img src="img/smd-circuit.png" width="600" alt="circuit" title="Circuit diagram">](img/smd-circuit.png)
-
+{% endif %}
 ### Connection of sensors, actuators or displays
 In the variants with Wemos and Raspberry Pi, the following pin headers are available for connecting additional components:
 * J3: Gas sensor or switch

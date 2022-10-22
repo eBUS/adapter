@@ -25,12 +25,12 @@ The adapter has a galvanic isolation between eBUS and the communication part to 
 
 The power supply for the UART or Wemos is a standard USB power supply with sufficient power (1A-2A).
 
-
+{% if site.withcircuit %}
 ### Circuit Diagram
 
 [<img src="img/base-circuit-v22.png" width="600" alt="Circuit diagram base board" title="Circuit diagram base board">](img/base-circuit-v22.png)  
 Older versions are here: [v2.1](img/base-circuit-v21.png) [v2.0](img/base-circuit-v20.png)
-
+{% endif %}
 
 ### Part List
 

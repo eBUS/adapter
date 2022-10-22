@@ -21,12 +21,12 @@ The number of components is a lot less compared to the base board and it consist
 
 The power is supplied directly to the C-connector of the Wemos via a USB power supply.
 
-
+{% if site.withcircuit %}
 ### Circuit Diagram
 
 [<img src="img/exten-circuit-v22.png" width="600" alt="Circuit diagram exten board" title="Circuit diagram exten board">](img/exten-circuit-v22.png)  
 Older versions are here: [v2.1](img/exten-circuit-v21.png) [v2.0](img/exten-circuit-v20.png)
-
+{% endif %}
 
 ### Part List
 
